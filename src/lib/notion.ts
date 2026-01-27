@@ -1,0 +1,323 @@
+
+import { Client } from "@notionhq/client";
+import { MatchingItem, ProjectItem, PeopleItem, NewsItem } from "./notion-types";
+
+if (!process.env.NOTION_API_KEY) {
+    throw new Error("Missing NOTION_API_KEY environment variable");
+}
+
+const notion = new Client({
+    auth: process.env.NOTION_API_KEY,
+});
+
+// Helper to handle Wiki/Data Source IDs or regular DB IDs consistently
+async function getQueryId(databaseId: string) {
+    try {
+        const db = await notion.databases.retrieve({ database_id: databaseId });
+        const dataSources = (db as any).data_sources;
+        if (dataSources && Array.isArray(dataSources) && dataSources.length > 0) {
+            return { id: dataSources[0].id, isDataSource: true };
+        }
+        return { id: databaseId, isDataSource: false };
+    } catch (error) {
+        console.error("Error retrieving database metadata:", error);
+        return { id: databaseId, isDataSource: false };
+    }
+}
+
+// -----------------------------------------------------------------------------
+// Type Guards & Extraction Helpers
+// -----------------------------------------------------------------------------
+
+function getTitle(page: any, propName: string): string {
+    const prop = page.properties[propName];
+    if (prop && prop.title && prop.title.length > 0) {
+        return prop.title[0].plain_text;
+    }
+    return "";
+}
+
+function getRichText(page: any, propName: string): string {
+    const prop = page.properties[propName];
+    if (prop && prop.rich_text && prop.rich_text.length > 0) {
+        return prop.rich_text.map((part: any) => part.plain_text).join("");
+    }
+    return "";
+}
+
+function getSelect(page: any, propName: string): string {
+    const prop = page.properties[propName];
+    if (prop && prop.select) {
+        return prop.select.name;
+    }
+    return "";
+}
+
+function getMultiSelect(page: any, propName: string): string[] {
+    const prop = page.properties[propName];
+    if (prop && prop.multi_select) {
+        return prop.multi_select.map((item: any) => item.name);
+    }
+    return [];
+}
+
+function getDate(page: any, propName: string): string {
+    const prop = page.properties[propName];
+    if (prop && prop.date) {
+        return prop.date.start;
+    }
+    return "";
+}
+
+function getUrl(page: any, propName: string): string {
+    const prop = page.properties[propName];
+    if (prop && prop.url) {
+        return prop.url;
+    }
+    return "";
+}
+
+function getEmail(page: any, propName: string): string {
+    const prop = page.properties[propName];
+    if (prop && prop.email) {
+        return prop.email;
+    }
+    return "";
+}
+
+function getStatus(page: any, propName: string): string {
+    const prop = page.properties[propName];
+    if (prop && prop.status) {
+        return prop.status.name;
+    }
+    return "";
+}
+
+function getFileUrl(page: any, propName: string): string {
+    const prop = page.properties[propName];
+    if (prop && prop.files && prop.files.length > 0) {
+        const file = prop.files[0];
+        if (file.type === 'file') return file.file.url;
+        if (file.type === 'external') return file.external.url;
+    }
+    return "";
+}
+
+
+// -----------------------------------------------------------------------------
+// Fetchers
+// -----------------------------------------------------------------------------
+
+export async function fetchMatchingItems(): Promise<MatchingItem[]> {
+    const dbId = process.env.NOTION_MATCHING_DB_ID;
+    if (!dbId) return [];
+
+    const { id: queryId, isDataSource } = await getQueryId(dbId);
+
+    let results: any[] = [];
+    try {
+        if (isDataSource && (notion as any).dataSources) {
+            const response = await (notion as any).dataSources.query({ data_source_id: queryId });
+            results = response.results;
+        } else {
+            const response = await (notion.databases as any).query({ database_id: queryId });
+            results = response.results;
+        }
+    } catch (e) {
+        console.error("Error fetching matching items:", e);
+        return [];
+    }
+
+    return results.map((page: any) => ({
+        id: page.id,
+        name: getTitle(page, "Name"),
+        email: getEmail(page, "Email"),
+        practitionerStatus: getStatus(page, "Practitioner Status"),
+        website: getUrl(page, "Website"),
+        domain: getRichText(page, "Domain"),
+        surveyFeedback: getRichText(page, "Survey Feedback"),
+        whatToConserve: getRichText(page, "What to Conserve"),
+        effectiveCollaboration: getRichText(page, "Effective Collaboration"),
+        timeCommitment: getSelect(page, "Time Commitment"),
+        userType: getSelect(page, "User Type"),
+        submissionDate: getDate(page, "Submission Date"),
+        committedTo: getRichText(page, "Committed To"),
+        keywords: getMultiSelect(page, "Keywords"),
+        about: getRichText(page, "About"),
+        organization: getSelect(page, "Organization"),
+        whyImportant: getRichText(page, "Why Important"),
+    }));
+}
+
+export async function fetchProjects(): Promise<ProjectItem[]> {
+    const dbId = process.env.NOTION_PROJECTS_DB_ID;
+    if (!dbId) return [];
+
+    const { id: queryId, isDataSource } = await getQueryId(dbId);
+
+    let results: any[] = [];
+    try {
+        if (isDataSource && (notion as any).dataSources) {
+            const response = await (notion as any).dataSources.query({ data_source_id: queryId });
+            results = response.results;
+        } else {
+            const response = await (notion.databases as any).query({ database_id: queryId });
+            results = response.results;
+        }
+    } catch (e) {
+        console.error("Error fetching projects:", e);
+        return [];
+    }
+
+    return results.map((page: any) => ({
+        id: page.id,
+        name: getTitle(page, "Name"),
+        type: getRichText(page, "Type"),
+        description: getRichText(page, "Description"),
+        coverImage: getFileUrl(page, "Cover Image"),
+        status: getStatus(page, "Status"),
+        slug: getRichText(page, "Slug"),
+    }));
+}
+
+export async function fetchPeople(): Promise<PeopleItem[]> {
+    const dbId = process.env.NOTION_PEOPLE_DB_ID;
+    if (!dbId) return [];
+
+    const { id: queryId, isDataSource } = await getQueryId(dbId);
+
+    let results: any[] = [];
+    try {
+        if (isDataSource && (notion as any).dataSources) {
+            const response = await (notion as any).dataSources.query({ data_source_id: queryId });
+            results = response.results;
+        } else {
+            const response = await (notion.databases as any).query({ database_id: queryId });
+            results = response.results;
+        }
+    } catch (e) {
+        console.error("Error fetching people:", e);
+        return [];
+    }
+
+    return results.map((page: any) => ({
+        id: page.id,
+        name: getTitle(page, "Name"),
+        bio: getRichText(page, "Bio"),
+        website: getUrl(page, "Website"),
+        email: getEmail(page, "Email"),
+        role: getRichText(page, "Role"),
+        headshot: getFileUrl(page, "Headshot"),
+    }));
+}
+
+export async function fetchNews(): Promise<NewsItem[]> {
+    const dbId = process.env.NOTION_NEWS_DB_ID;
+    if (!dbId) return [];
+
+    const { id: queryId, isDataSource } = await getQueryId(dbId);
+
+    let results: any[] = [];
+    try {
+        if (isDataSource && (notion as any).dataSources) {
+            const response = await (notion as any).dataSources.query({ data_source_id: queryId });
+            results = response.results;
+        } else {
+            const response = await (notion.databases as any).query({ database_id: queryId });
+            results = response.results;
+        }
+    } catch (e) {
+        console.error("Error fetching news:", e);
+        return [];
+    }
+
+    return results.map((page: any) => ({
+        id: page.id,
+        title: getTitle(page, "Title"),
+        date: getDate(page, "Date"),
+        type: getSelect(page, "Type"),
+        summary: getRichText(page, "Summary"),
+    }));
+}
+
+export async function fetchPageBlocks(pageId: string): Promise<any[]> {
+    if (!pageId) return [];
+
+    try {
+        const response = await notion.blocks.children.list({ block_id: pageId });
+        return response.results;
+    } catch (e) {
+        console.error(`Error fetching blocks for page ${pageId}:`, e);
+        return [];
+    }
+}
+// -----------------------------------------------------------------------------
+// Mutations
+// -----------------------------------------------------------------------------
+
+export async function createMatchingItem(data: Partial<MatchingItem>): Promise<boolean> {
+    const dbId = process.env.NOTION_MATCHING_DB_ID;
+    if (!dbId) throw new Error("Missing NOTION_MATCHING_DB_ID");
+
+    const { id: queryId } = await getQueryId(dbId);
+
+    try {
+        await notion.pages.create({
+            parent: { database_id: queryId },
+            properties: {
+                "Name": {
+                    title: [{ text: { content: data.name || "Untitled" } }]
+                },
+                "Email": {
+                    email: data.email || null
+                },
+                "Website": {
+                    url: data.website || null
+                },
+                "User Type": {
+                    select: data.userType ? { name: data.userType } : null
+                },
+                "Domain": {
+                    rich_text: [{ text: { content: data.domain || "" } }]
+                },
+                "About": {
+                    rich_text: [{ text: { content: data.about || "" } }]
+                },
+                "Why Important": {
+                    rich_text: [{ text: { content: data.whyImportant || "" } }]
+                },
+                "Committed To": {
+                    rich_text: [{ text: { content: data.committedTo || "" } }]
+                },
+                "What to Conserve": {
+                    rich_text: [{ text: { content: data.whatToConserve || "" } }]
+                },
+                "Effective Collaboration": {
+                    rich_text: [{ text: { content: data.effectiveCollaboration || "" } }]
+                },
+                "Survey Feedback": {
+                    rich_text: [{ text: { content: data.surveyFeedback || "" } }]
+                },
+                "Organization": {
+                    rich_text: [{ text: { content: data.organization || "" } }] // Mapped as Text in image
+                },
+                "Practitioner Status": {
+                    select: data.practitionerStatus ? { name: data.practitionerStatus } : null
+                },
+                "Time Commitment": {
+                    select: data.timeCommitment ? { name: data.timeCommitment } : null
+                },
+                "Keywords": {
+                    multi_select: data.keywords?.map(k => ({ name: k })) || []
+                },
+                "Submission Date": {
+                    date: { start: new Date().toISOString() }
+                }
+            }
+        });
+        return true;
+    } catch (e) {
+        console.error("Error creating matching item:", e);
+        return false;
+    }
+}
