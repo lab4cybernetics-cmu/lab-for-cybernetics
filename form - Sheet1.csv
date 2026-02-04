@@ -1,0 +1,40 @@
+Practitioner questions,short decriptiong for thequestion,Scholar questions,short decriptiong for thequestion,property name,property type
+Full Name:,,Full Name:,,Name,text
+Email,,Email,,Email,email
+Website (if applicable):,,Website (if applicable):,,Wesbite,url
+"What domain is at the core of your research, academic pursuits, or in-world practice?","Short phrases or keywords are best. You might connect to the United Nations' 17 Sustainable Development Goals, though please add specifics — for example, manufactured materials threatening ocean sustainability; the social policies","What domain is at the core of your research, academic pursuits, or in-world practice?","Short phrases or keywords are best. You might connect to the United Nations' 17 Sustainable Development Goals, though please add specifics — for example, manufactured materials threatening ocean sustainability; the social policies",About,text
+What are some keywords that invoke your domain?,Add your response as #keywords,What are some keywords that invoke your domain?,Add your response as #keywords,Keywords,type: multi select
+What are you committed to changing in this domain?,Short phrases are best.,"Why is this domain important to you? Why or how are you emotionally invested in this particular domain? In other words, what is the nature of your concern for it?",Short phrases are best.,Commited to,text
+"While bringing about the change you want, what do you want to conserve even as change takes place? *",,"While bringing about the change you want, what do you want to conserve even as change takes place? *",,What to Conserve,text
+"Are you a member of an organization relevant to your domain? If so, could you please name it and offer something you would you like to share about it?",,"What is your university and school/program affiliation? Are you part of any research groups, labs, or organizations relevant to your domain? If so, please share what draws you to their work.",,Organization,type : select
+"What is important to share about yourself, your work,
+your community, or network?",,"What is important to share about yourself, your work, your community, or network?",,Why important,text
+What makes for a good collaborative relationship? How do you imagine collaborating with a student / scholar?,,What makes for a good collaborative relationship? What do you need?,,Effective Collaboration,text
+None,,"Have you identified potential collaborator(s) or are
+you still seeking names of individuals to contact?",,Practitioner Status,"type : select
+I'm all set with a practitioner
+I'm set with practitioner(s) but would like additional one(s)
+I'm exploring some names but haven't landed one yet & would like additional
+names
+I don't have any names and need candidates"
+How much time would you have available for spending in collaboration? This of course can be renegotiated along the way.,,How much time would you have available for spending in collaboration? This of course can be renegotiated along the way.,,Time Commitment,"type : select
+1-2 Conversations 
+2+ conversations without email follow-up        
+2+ Conversations with email follow-up        
+as-needed"
+"Do you have any suggestions for this survey, what is not clear, what it’s missing?",,"Do you have any suggestions for this survey, what is not clear, what it’s missing?",,Survey Feedback,text
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,ttt,,,,

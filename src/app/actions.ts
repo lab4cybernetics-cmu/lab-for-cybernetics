@@ -7,6 +7,13 @@ export async function submitMatchingApplication(formData: FormData) {
     const rawKeywords = formData.get("keywords") as string;
     const keywords = rawKeywords ? rawKeywords.split(",").map(k => k.trim()).filter(k => k.length > 0) : [];
 
+    const userType = formData.get("userType") as string;
+
+    // For Practitioners, default to "not a scholar" since they don't see the question
+    const practitionerStatus = userType === "Practitioner"
+        ? "not a scholar"
+        : (formData.get("practitionerStatus") as string) || "";
+
     const data = {
         name: formData.get("name") as string,
         email: formData.get("email") as string,
@@ -17,9 +24,9 @@ export async function submitMatchingApplication(formData: FormData) {
         whatToConserve: formData.get("whatToConserve") as string,
         about: formData.get("about") as string,
         effectiveCollaboration: formData.get("effectiveCollaboration") as string,
-        userType: formData.get("userType") as string,
+        userType: userType,
         organization: formData.get("organization") as string,
-        practitionerStatus: formData.get("practitionerStatus") as string,
+        practitionerStatus: practitionerStatus,
         timeCommitment: formData.get("timeCommitment") as string,
         surveyFeedback: formData.get("surveyFeedback") as string,
         keywords: keywords,

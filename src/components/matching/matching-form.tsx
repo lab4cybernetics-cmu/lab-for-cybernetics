@@ -5,25 +5,42 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { CreatableSelect } from "@/components/ui/creatable-select";
+import { CreatableMultiSelect } from "@/components/ui/creatable-multi-select";
 import { submitMatchingApplication } from "@/app/actions";
-import { cn } from "@/lib/utils";
 import { Loader2 } from "lucide-react";
 
 interface MatchingFormProps {
     type: "Scholar" | "Practitioner";
+    organizationOptions: string[];
+    keywordOptions: string[];
+    timeCommitmentOptions: string[];
+    practitionerStatusOptions: string[];
 }
 
-export function MatchingForm({ type }: MatchingFormProps) {
+export function MatchingForm({
+    type,
+    organizationOptions,
+    keywordOptions,
+    timeCommitmentOptions,
+    practitionerStatusOptions,
+}: MatchingFormProps) {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
     const [error, setError] = useState("");
+
+    // State for creatable selects
+    const [organization, setOrganization] = useState("");
+    const [keywords, setKeywords] = useState<string[]>([]);
 
     async function handleSubmit(formData: FormData) {
         setIsSubmitting(true);
         setError("");
 
-        // Append user type automatically
+        // Append user type and controlled fields
         formData.append("userType", type);
+        formData.set("organization", organization);
+        formData.set("keywords", keywords.join(","));
 
         const result = await submitMatchingApplication(formData);
 
@@ -62,111 +79,183 @@ export function MatchingForm({ type }: MatchingFormProps) {
                 </div>
             )}
 
-            <div className="space-y-4">
+            <div className="space-y-6">
+                {/* 1. Full Name */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                        <Label htmlFor="name">Full Name *</Label>
-                        <Input id="name" name="name" required placeholder="e.g. Jane Doe" />
+                        <Label htmlFor="name">Full Name: *</Label>
+                        <Input id="name" name="name" required />
                     </div>
+
+                    {/* 2. Email */}
                     <div className="space-y-2">
                         <Label htmlFor="email">Email *</Label>
-                        <Input id="email" name="email" type="email" required placeholder="jane@example.com" />
+                        <Input id="email" name="email" type="email" required />
                     </div>
                 </div>
 
+                {/* 3. Website */}
                 <div className="space-y-2">
-                    <Label htmlFor="website">Website / Related Work</Label>
+                    <Label htmlFor="website">Website (if applicable):</Label>
                     <Input id="website" name="website" type="url" placeholder="https://" />
                 </div>
 
-                {type === "Practitioner" && (
+                {/* 4. About / Core Domain - same question for both */}
+                <div className="space-y-2">
+                    <Label htmlFor="about">What domain is at the core of your research, academic pursuits, or in-world practice? *</Label>
+                    <Textarea
+                        id="about"
+                        name="about"
+                        required
+                        className="min-h-[100px]"
+                    />
+                    <p className="text-xs text-neutral-400">
+                        Short phrases or keywords are best. You might connect to the United Nations&apos; 17 Sustainable Development Goals, though please add specifics — for example, manufactured materials threatening ocean sustainability; the social policies
+                    </p>
+                </div>
+
+                {/* 5. Keywords - same for both */}
+                <div className="space-y-2">
+                    <Label htmlFor="keywords">What are some keywords that invoke your domain? *</Label>
+                    <CreatableMultiSelect
+                        id="keywords"
+                        name="keywords"
+                        options={keywordOptions}
+                        value={keywords}
+                        onChange={setKeywords}
+                        placeholder="Type to search or add keywords..."
+                        required
+                    />
+                    <p className="text-xs text-neutral-400">Add your response as #keywords</p>
+                </div>
+
+                {/* 6. Committed To - different question per type */}
+                <div className="space-y-2">
+                    <Label htmlFor="committedTo">
+                        {type === "Practitioner"
+                            ? "What are you committed to changing in this domain? *"
+                            : "Why is this domain important to you? Why or how are you emotionally invested in this particular domain? In other words, what is the nature of your concern for it? *"
+                        }
+                    </Label>
+                    <Textarea
+                        id="committedTo"
+                        name="committedTo"
+                        required
+                        className="min-h-[80px]"
+                    />
+                    <p className="text-xs text-neutral-400">Short phrases are best.</p>
+                </div>
+
+                {/* 7. What to Conserve - same for both */}
+                <div className="space-y-2">
+                    <Label htmlFor="whatToConserve">While bringing about the change you want, what do you want to conserve even as change takes place? *</Label>
+                    <Textarea
+                        id="whatToConserve"
+                        name="whatToConserve"
+                        required
+                        className="min-h-[80px]"
+                    />
+                </div>
+
+                {/* 8. Organization - different question per type */}
+                <div className="space-y-2">
+                    <Label htmlFor="organization">
+                        {type === "Practitioner"
+                            ? "Are you a member of an organization relevant to your domain? If so, could you please name it and offer something you would like to share about it?"
+                            : "What is your university and school/program affiliation? Are you part of any research groups, labs, or organizations relevant to your domain? If so, please share what draws you to their work."
+                        }
+                    </Label>
+                    <CreatableSelect
+                        id="organization"
+                        name="organization"
+                        options={organizationOptions}
+                        value={organization}
+                        onChange={setOrganization}
+                        placeholder="Select or type to add..."
+                    />
+                </div>
+
+                {/* 9. Why Important - same for both */}
+                <div className="space-y-2">
+                    <Label htmlFor="whyImportant">What is important to share about yourself, your work, your community, or network? *</Label>
+                    <Textarea
+                        id="whyImportant"
+                        name="whyImportant"
+                        required
+                        className="min-h-[100px]"
+                    />
+                </div>
+
+                {/* 10. Effective Collaboration - different per type */}
+                <div className="space-y-2">
+                    <Label htmlFor="effectiveCollaboration">
+                        {type === "Practitioner"
+                            ? "What makes for a good collaborative relationship? How do you imagine collaborating with a student / scholar? *"
+                            : "What makes for a good collaborative relationship? What do you need? *"
+                        }
+                    </Label>
+                    <Textarea
+                        id="effectiveCollaboration"
+                        name="effectiveCollaboration"
+                        required
+                        className="min-h-[80px]"
+                    />
+                </div>
+
+                {/* 11. Practitioner Status (Scholar only) */}
+                {type === "Scholar" && (
                     <div className="space-y-2">
-                        <Label htmlFor="organization">Organization Membership</Label>
-                        <Input id="organization" name="organization" placeholder="Current organization or affiliation" />
+                        <Label htmlFor="practitionerStatus">Have you identified potential collaborator(s) or are you still seeking names of individuals to contact?</Label>
+                        <select
+                            id="practitionerStatus"
+                            name="practitionerStatus"
+                            className="flex h-11 w-full appearance-none items-center rounded-md border border-neutral-300 bg-white px-4 py-2.5 pr-10 text-sm text-neutral-900 transition-colors focus:border-neutral-500 focus:outline-none focus:ring-2 focus:ring-neutral-200 cursor-pointer bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23666%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:18px] bg-[right_12px_center] bg-no-repeat"
+                        >
+                            <option value="">Select...</option>
+                            {practitionerStatusOptions
+                                .filter((status) => status.toLowerCase() !== "not a scholar")
+                                .map((status) => (
+                                    <option key={status} value={status}>{status}</option>
+                                ))}
+                        </select>
                     </div>
                 )}
 
+                {/* 12. Time Commitment - same for both */}
                 <div className="space-y-2">
-                    <Label htmlFor="domain">Core Domain of Research/Practice *</Label>
-                    <Input id="domain" name="domain" required placeholder="e.g. Second-order Cybernetics, Design Systems" />
+                    <Label htmlFor="timeCommitment">How much time would you have available for spending in collaboration? This of course can be renegotiated along the way. *</Label>
+                    <select
+                        id="timeCommitment"
+                        name="timeCommitment"
+                        className="flex h-11 w-full appearance-none items-center rounded-md border border-neutral-300 bg-white px-4 py-2.5 pr-10 text-sm text-neutral-900 transition-colors focus:border-neutral-500 focus:outline-none focus:ring-2 focus:ring-neutral-200 cursor-pointer bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23666%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:18px] bg-[right_12px_center] bg-no-repeat"
+                        required
+                    >
+                        <option value="">Select...</option>
+                        {timeCommitmentOptions.map((option) => (
+                            <option key={option} value={option}>{option}</option>
+                        ))}
+                    </select>
                 </div>
 
+                {/* 13. Survey Feedback - same for both */}
                 <div className="space-y-2">
-                    <Label htmlFor="keywords">Keywords (comma separated) *</Label>
-                    <Input id="keywords" name="keywords" required placeholder="e.g. conversation, feedback loops, ethics" />
-                    <p className="text-[10px] text-neutral-400">These help others find you in the search.</p>
-                </div>
-
-                <div className="space-y-2">
-                    <Label htmlFor="whyImportant">Why is this domain important to you? *</Label>
-                    <Textarea id="whyImportant" name="whyImportant" required className="min-h-[100px]" placeholder="Share your emotional investment or motivation..." />
-                </div>
-
-                <div className="space-y-2">
-                    <Label htmlFor="committedTo">What are you committed to improving/changing? *</Label>
-                    <Textarea id="committedTo" name="committedTo" required className="min-h-[80px]" />
-                </div>
-
-                <div className="space-y-2">
-                    <Label htmlFor="whatToConserve">What do you want to conserve? *</Label>
-                    <Textarea id="whatToConserve" name="whatToConserve" required className="min-h-[80px]" />
-                </div>
-
-                <div className="space-y-2">
-                    <Label htmlFor="about">Important to share about yourself/work/community *</Label>
-                    <Textarea id="about" name="about" required className="min-h-[120px]" placeholder="Bio or general context..." />
-                </div>
-
-                <div className="space-y-2">
-                    <Label htmlFor="effectiveCollaboration">What makes for good collaboration? *</Label>
-                    <Textarea id="effectiveCollaboration" name="effectiveCollaboration" required className="min-h-[80px]" />
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                        <Label htmlFor="timeCommitment">Time Commitment Available *</Label>
-                        <select
-                            id="timeCommitment"
-                            name="timeCommitment"
-                            className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                            required
-                        >
-                            <option value="">Select...</option>
-                            <option value="as-needed">As Needed</option>
-                            <option value="2+ conversations without email follow-up">2+ conversations</option>
-                            <option value="Weekly">Weekly</option>
-                            <option value="Monthly">Monthly</option>
-                            <option value="One-off">One-off Conversation</option>
-                        </select>
-                    </div>
-
-                    {type === "Scholar" && (
-                        <div className="space-y-2">
-                            <Label htmlFor="practitionerStatus">Practitioner Status</Label>
-                            <select
-                                id="practitionerStatus"
-                                name="practitionerStatus"
-                                className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                            >
-                                <option value="">Select status...</option>
-                                <option value="Still exploring options">Still exploring options</option>
-                                <option value="Seeking Practitioner">Seeking Practitioner</option>
-                                <option value="Open to Connection">Open to Connection</option>
-                            </select>
-                        </div>
-                    )}
-                </div>
-
-                <div className="space-y-2">
-                    <Label htmlFor="surveyFeedback">Survey Feedback (Optional)</Label>
-                    <Textarea id="surveyFeedback" name="surveyFeedback" placeholder="Any thoughts on this form or process?" />
+                    <Label htmlFor="surveyFeedback">Do you have any suggestions for this survey, what is not clear, what it&apos;s missing?</Label>
+                    <Textarea
+                        id="surveyFeedback"
+                        name="surveyFeedback"
+                        className="min-h-[60px]"
+                    />
                 </div>
             </div>
 
-            <Button type="submit" className="w-full" disabled={isSubmitting}>
+            <Button
+                type="submit"
+                className="w-full h-12 text-base font-medium text-white bg-neutral-900 hover:bg-neutral-800 active:bg-neutral-950 active:scale-[0.99] transition-all duration-150"
+                disabled={isSubmitting}
+            >
                 {isSubmitting ? (
                     <>
-                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        <Loader2 className="mr-2 h-5 w-5 animate-spin" />
                         Submitting...
                     </>
                 ) : (

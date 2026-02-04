@@ -24,7 +24,7 @@ export default async function Home() {
           <div className="space-y-6">
             <h3 className="text-2xl font-medium">Welcome</h3>
             <p className="text-lg text-neutral-600">
-              The Laboratory for Cybernetics (Lab4C) at CMU Architecture investigates the intersection of cybernetics, design, and wicked challenges.
+              The Laboratory <em>for</em> Cybernetics (Lab4C) at CMU Architecture investigates the intersection of cybernetics, design, and wicked challenges.
             </p>
           </div>
         )}

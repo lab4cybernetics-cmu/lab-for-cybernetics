@@ -149,6 +149,80 @@ export async function fetchMatchingItems(): Promise<MatchingItem[]> {
     }));
 }
 
+export interface MatchingSelectOptions {
+    organizations: string[];
+    keywords: string[];
+    timeCommitments: string[];
+    practitionerStatuses: string[];
+}
+
+export async function fetchMatchingSelectOptions(): Promise<MatchingSelectOptions> {
+    const dbId = process.env.NOTION_MATCHING_DB_ID;
+    if (!dbId) {
+        return { organizations: [], keywords: [], timeCommitments: [], practitionerStatuses: [] };
+    }
+
+    const { id: queryId, isDataSource } = await getQueryId(dbId);
+
+    // Collect unique values from existing records
+    const organizationsSet = new Set<string>();
+    const keywordsSet = new Set<string>();
+    const timeCommitmentsSet = new Set<string>();
+    const practitionerStatusesSet = new Set<string>();
+
+    try {
+        let results: any[] = [];
+
+        if (isDataSource && (notion as any).dataSources) {
+            const response = await (notion as any).dataSources.query({ data_source_id: queryId });
+            results = response.results;
+        } else {
+            const response = await (notion.databases as any).query({ database_id: queryId });
+            results = response.results;
+        }
+
+        // Iterate through all records and collect unique values
+        for (const page of results) {
+            const props = page.properties;
+            if (!props) continue;
+
+            // Keywords (multi_select)
+            if (props["Keywords"]?.multi_select) {
+                for (const item of props["Keywords"].multi_select) {
+                    if (item.name) keywordsSet.add(item.name);
+                }
+            }
+
+            // Organization (select)
+            if (props["Organization"]?.select?.name) {
+                organizationsSet.add(props["Organization"].select.name);
+            }
+
+            // Time Commitment (select)
+            if (props["Time Commitment"]?.select?.name) {
+                timeCommitmentsSet.add(props["Time Commitment"].select.name);
+            }
+
+            // Practitioner Status (status or select)
+            if (props["Practitioner Status"]?.status?.name) {
+                practitionerStatusesSet.add(props["Practitioner Status"].status.name);
+            } else if (props["Practitioner Status"]?.select?.name) {
+                practitionerStatusesSet.add(props["Practitioner Status"].select.name);
+            }
+        }
+
+        return {
+            organizations: Array.from(organizationsSet).sort(),
+            keywords: Array.from(keywordsSet).sort(),
+            timeCommitments: Array.from(timeCommitmentsSet),
+            practitionerStatuses: Array.from(practitionerStatusesSet),
+        };
+    } catch (e) {
+        console.error("Error fetching matching select options:", e);
+        return { organizations: [], keywords: [], timeCommitments: [], practitionerStatuses: [] };
+    }
+}
+
 export async function fetchProjects(): Promise<ProjectItem[]> {
     const dbId = process.env.NOTION_PROJECTS_DB_ID;
     if (!dbId) return [];
@@ -259,11 +333,12 @@ export async function createMatchingItem(data: Partial<MatchingItem>): Promise<b
     const dbId = process.env.NOTION_MATCHING_DB_ID;
     if (!dbId) throw new Error("Missing NOTION_MATCHING_DB_ID");
 
-    const { id: queryId } = await getQueryId(dbId);
+    // Note: For creating pages, we use the original database ID, not the data source ID
+    // The data source ID is only for queries in Wiki-style databases
 
     try {
         await notion.pages.create({
-            parent: { database_id: queryId },
+            parent: { database_id: dbId },
             properties: {
                 "Name": {
                     title: [{ text: { content: data.name || "Untitled" } }]
@@ -299,10 +374,10 @@ export async function createMatchingItem(data: Partial<MatchingItem>): Promise<b
                     rich_text: [{ text: { content: data.surveyFeedback || "" } }]
                 },
                 "Organization": {
-                    rich_text: [{ text: { content: data.organization || "" } }] // Mapped as Text in image
+                    select: data.organization ? { name: data.organization } : null
                 },
                 "Practitioner Status": {
-                    select: data.practitionerStatus ? { name: data.practitionerStatus } : null
+                    status: data.practitionerStatus ? { name: data.practitionerStatus } : null
                 },
                 "Time Commitment": {
                     select: data.timeCommitment ? { name: data.timeCommitment } : null

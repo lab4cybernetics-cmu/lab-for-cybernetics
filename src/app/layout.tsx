@@ -23,7 +23,7 @@ export default function RootLayout({
         <header className="p-6 mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
           <div className="flex flex-col gap-0 items-start">
             <a href="/" className="group">
-              <h1 className="text-base font-normal text-[#1a0dab] group-hover:underline cursor-pointer">Laboratory for Cybernetics</h1>
+              <h1 className="text-base font-normal text-[#1a0dab] group-hover:underline cursor-pointer">Laboratory <em>for</em> Cybernetics</h1>
             </a>
             <h2 className="text-base font-normal text-neutral-900">Carnegie Mellon—Architecture</h2>
           </div>
