@@ -396,3 +396,99 @@ export async function createMatchingItem(data: Partial<MatchingItem>): Promise<b
         return false;
     }
 }
+
+export async function updateMatchingItem(id: string, data: Partial<MatchingItem>): Promise<boolean> {
+    try {
+        const properties: any = {};
+
+        if (data.name) properties["Name"] = { title: [{ text: { content: data.name } }] };
+        if (data.email) properties["Email"] = { email: data.email };
+        if (data.website) properties["Website"] = { url: data.website };
+        if (data.userType) properties["User Type"] = { select: { name: data.userType } };
+        if (data.domain) properties["Domain"] = { rich_text: [{ text: { content: data.domain } }] };
+        if (data.about) properties["About"] = { rich_text: [{ text: { content: data.about } }] };
+        if (data.whyImportant) properties["Why Important"] = { rich_text: [{ text: { content: data.whyImportant } }] };
+        if (data.committedTo) properties["Committed To"] = { rich_text: [{ text: { content: data.committedTo } }] };
+        if (data.whatToConserve) properties["What to Conserve"] = { rich_text: [{ text: { content: data.whatToConserve } }] };
+        if (data.effectiveCollaboration) properties["Effective Collaboration"] = { rich_text: [{ text: { content: data.effectiveCollaboration } }] };
+        if (data.surveyFeedback) properties["Survey Feedback"] = { rich_text: [{ text: { content: data.surveyFeedback } }] };
+        if (data.organization) properties["Organization"] = { select: { name: data.organization } };
+        if (data.practitionerStatus) properties["Practitioner Status"] = { status: { name: data.practitionerStatus } };
+        if (data.timeCommitment) properties["Time Commitment"] = { select: { name: data.timeCommitment } };
+        if (data.keywords) properties["Keywords"] = { multi_select: data.keywords.map(k => ({ name: k })) };
+
+        await notion.pages.update({
+            page_id: id,
+            properties: properties
+        });
+        return true;
+    } catch (e) {
+        console.error("Error updating matching item:", e);
+        return false;
+    }
+}
+
+export async function storeVerificationCode(id: string, code: string, expiresAt: Date): Promise<boolean> {
+    try {
+        await notion.pages.update({
+            page_id: id,
+            properties: {
+                "Verification Code": { rich_text: [{ text: { content: code } }] },
+                "Code Expires At": { date: { start: expiresAt.toISOString() } },
+                // Reset resend count on new code generation, or handled separately?
+                // Let's not reset resend count here, maybe we should just increment it when requesting?
+                // Actually, logic says max 2 resends. So we need to track resends.
+                // But this function is just storing the code.
+            }
+        });
+        return true;
+    } catch (e) {
+        console.error("Error storing verification code:", e);
+        return false;
+    }
+}
+
+export async function getVerificationData(id: string): Promise<{ code: string; expiresAt: string; resendCount: number; email: string } | null> {
+    try {
+        const page = await notion.pages.retrieve({ page_id: id });
+        return {
+            code: getRichText(page, "Verification Code"),
+            expiresAt: getDate(page, "Code Expires At"),
+            resendCount: (page as any).properties["Resend Count"]?.number || 0,
+            email: getEmail(page, "Email")
+        };
+    } catch (e) {
+        console.error("Error fetching verification data:", e);
+        return null;
+    }
+}
+
+export async function incrementResendCount(id: string, currentCount: number): Promise<boolean> {
+    try {
+        await notion.pages.update({
+            page_id: id,
+            properties: {
+                "Resend Count": { number: currentCount + 1 }
+            }
+        });
+        return true;
+    } catch (e) {
+        console.error("Error incrementing resend count:", e);
+        return false;
+    }
+}
+
+export async function setResendCount(id: string, count: number): Promise<boolean> {
+    try {
+        await notion.pages.update({
+            page_id: id,
+            properties: {
+                "Resend Count": { number: count }
+            }
+        });
+        return true;
+    } catch (e) {
+        console.error("Error setting resend count:", e);
+        return false;
+    }
+}

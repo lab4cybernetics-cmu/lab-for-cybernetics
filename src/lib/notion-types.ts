@@ -20,6 +20,9 @@ export interface MatchingItem extends NotionItem {
     about: string;
     organization: string; // select
     whyImportant: string;
+    verificationCode?: string;
+    codeExpiresAt?: string;
+    resendCount?: number;
 }
 
 export interface ProjectItem extends NotionItem {

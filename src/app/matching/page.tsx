@@ -1,5 +1,5 @@
 
-import { fetchMatchingItems } from "@/lib/notion";
+import { fetchMatchingItems, fetchMatchingSelectOptions } from "@/lib/notion";
 import { MatchingSystem } from "@/components/matching/matching-system";
 import { Button } from "@/components/ui/button";
 
@@ -7,6 +7,7 @@ export const revalidate = 60; // Revalidate every minute
 
 export default async function MatchingPage() {
     const items = await fetchMatchingItems();
+    const options = await fetchMatchingSelectOptions();
 
     return (
         <div className="space-y-8 pb-20">
@@ -42,7 +43,7 @@ export default async function MatchingPage() {
                 </div>
             </div>
 
-            <MatchingSystem items={items} />
+            <MatchingSystem items={items} options={options} />
         </div>
     );
 }

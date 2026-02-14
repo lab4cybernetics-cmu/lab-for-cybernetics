@@ -1,6 +1,7 @@
 "use client";
 
 import { MatchingItem } from "@/lib/notion-types";
+import { MatchingSelectOptions } from "@/lib/notion";
 import { useState, useMemo } from "react";
 import { Input } from "@/components/ui/input";
 import { MatchingCard } from "./matching-card";
@@ -8,9 +9,10 @@ import { Badge } from "@/components/ui/badge";
 
 interface MatchingSystemProps {
     items: MatchingItem[];
+    options: MatchingSelectOptions;
 }
 
-export function MatchingSystem({ items }: MatchingSystemProps) {
+export function MatchingSystem({ items, options }: MatchingSystemProps) {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedType, setSelectedType] = useState<string | null>(null);
 
@@ -69,7 +71,7 @@ export function MatchingSystem({ items }: MatchingSystemProps) {
             {/* Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredItems.map((item) => (
-                    <MatchingCard key={item.id} item={item} />
+                    <MatchingCard key={item.id} item={item} options={options} />
                 ))}
             </div>
 

@@ -1,14 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { CreatableSelect } from "@/components/ui/creatable-select";
 import { CreatableMultiSelect } from "@/components/ui/creatable-multi-select";
-import { submitMatchingApplication } from "@/app/actions";
+import { submitMatchingApplication, updateMatchingApplication } from "@/app/actions";
 import { Loader2 } from "lucide-react";
+import { MatchingItem } from "@/lib/notion-types";
 
 interface MatchingFormProps {
     type: "Scholar" | "Practitioner";
@@ -16,6 +17,9 @@ interface MatchingFormProps {
     keywordOptions: string[];
     timeCommitmentOptions: string[];
     practitionerStatusOptions: string[];
+    initialData?: MatchingItem;
+    itemId?: string;
+    onCancel?: () => void;
 }
 
 export function MatchingForm({
@@ -24,14 +28,21 @@ export function MatchingForm({
     keywordOptions,
     timeCommitmentOptions,
     practitionerStatusOptions,
+    initialData,
+    itemId,
+    onCancel
 }: MatchingFormProps) {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
     const [error, setError] = useState("");
 
-    // State for creatable selects
-    const [organization, setOrganization] = useState("");
-    const [keywords, setKeywords] = useState<string[]>([]);
+    // State for creatable selects and controlled inputs
+    const [organization, setOrganization] = useState(initialData?.organization || "");
+    const [keywords, setKeywords] = useState<string[]>(initialData?.keywords || []);
+
+    // Default values for other fields if editing
+    // We can just rely on defaultValue for uncontrolled inputs, but for "Scholar" specific logic...
+    // Actually simple defaultValue works for inputs.
 
     async function handleSubmit(formData: FormData) {
         setIsSubmitting(true);
@@ -42,7 +53,12 @@ export function MatchingForm({
         formData.set("organization", organization);
         formData.set("keywords", keywords.join(","));
 
-        const result = await submitMatchingApplication(formData);
+        let result;
+        if (itemId) {
+            result = await updateMatchingApplication(itemId, formData);
+        } else {
+            result = await submitMatchingApplication(formData);
+        }
 
         setIsSubmitting(false);
         if (result.success) {
@@ -55,12 +71,23 @@ export function MatchingForm({
     if (submitted) {
         return (
             <div className="bg-green-50 border border-green-200 text-green-800 p-8 rounded-sm text-center">
-                <h3 className="text-xl font-medium mb-2">Application Received!</h3>
-                <p>Thank you for joining the network as a {type}. Your profile will be reviewed and listed shortly.</p>
-                <div className="mt-6">
-                    <a href="/matching">
-                        <Button variant="outline" className="border-green-600 text-green-700">Return to Directory</Button>
-                    </a>
+                <h3 className="text-xl font-medium mb-2">{itemId ? "Entry Updated!" : "Application Received!"}</h3>
+                <p>
+                    {itemId
+                        ? "Your entry has been successfully updated."
+                        : `Thank you for joining the network as a ${type}. Your profile will be reviewed and listed shortly.`
+                    }
+                </p>
+                <div className="mt-6 flex justify-center gap-4">
+                    {itemId && onCancel ? (
+                        <Button variant="outline" className="border-green-600 text-green-700" onClick={onCancel}>
+                            Close
+                        </Button>
+                    ) : (
+                        <a href="/matching">
+                            <Button variant="outline" className="border-green-600 text-green-700">Return to Directory</Button>
+                        </a>
+                    )}
                 </div>
             </div>
         );
@@ -69,8 +96,8 @@ export function MatchingForm({
     return (
         <form action={handleSubmit} className="space-y-8 max-w-2xl mx-auto py-8">
             <div className="space-y-2">
-                <h2 className="text-2xl font-medium">Join as {type}</h2>
-                <p className="text-neutral-500 text-sm">Please fill out the details below to be listed in the directory.</p>
+                <h2 className="text-2xl font-medium">{itemId ? "Edit Entry" : `Join as ${type}`}</h2>
+                {!itemId && <p className="text-neutral-500 text-sm">Please fill out the details below to be listed in the directory.</p>}
             </div>
 
             {error && (
@@ -84,20 +111,20 @@ export function MatchingForm({
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                         <Label htmlFor="name">Full Name: *</Label>
-                        <Input id="name" name="name" required />
+                        <Input id="name" name="name" required defaultValue={initialData?.name} />
                     </div>
 
                     {/* 2. Email */}
                     <div className="space-y-2">
                         <Label htmlFor="email">Email *</Label>
-                        <Input id="email" name="email" type="email" required />
+                        <Input id="email" name="email" type="email" required defaultValue={initialData?.email} />
                     </div>
                 </div>
 
                 {/* 3. Website */}
                 <div className="space-y-2">
                     <Label htmlFor="website">Website (if applicable):</Label>
-                    <Input id="website" name="website" type="url" placeholder="https://" />
+                    <Input id="website" name="website" type="url" placeholder="https://" defaultValue={initialData?.website} />
                 </div>
 
                 {/* 4. About / Core Domain - same question for both */}
@@ -108,6 +135,7 @@ export function MatchingForm({
                         name="about"
                         required
                         className="min-h-[100px]"
+                        defaultValue={initialData?.about}
                     />
                     <p className="text-xs text-neutral-400">
                         Short phrases or keywords are best. You might connect to the United Nations&apos; 17 Sustainable Development Goals, though please add specifics — for example, manufactured materials threatening ocean sustainability; the social policies
@@ -142,6 +170,7 @@ export function MatchingForm({
                         name="committedTo"
                         required
                         className="min-h-[80px]"
+                        defaultValue={initialData?.committedTo}
                     />
                     <p className="text-xs text-neutral-400">Short phrases are best.</p>
                 </div>
@@ -154,6 +183,7 @@ export function MatchingForm({
                         name="whatToConserve"
                         required
                         className="min-h-[80px]"
+                        defaultValue={initialData?.whatToConserve}
                     />
                 </div>
 
@@ -183,6 +213,7 @@ export function MatchingForm({
                         name="whyImportant"
                         required
                         className="min-h-[100px]"
+                        defaultValue={initialData?.whyImportant}
                     />
                 </div>
 
@@ -199,6 +230,7 @@ export function MatchingForm({
                         name="effectiveCollaboration"
                         required
                         className="min-h-[80px]"
+                        defaultValue={initialData?.effectiveCollaboration}
                     />
                 </div>
 
@@ -210,6 +242,7 @@ export function MatchingForm({
                             id="practitionerStatus"
                             name="practitionerStatus"
                             className="flex h-11 w-full appearance-none items-center rounded-md border border-neutral-300 bg-white px-4 py-2.5 pr-10 text-sm text-neutral-900 transition-colors focus:border-neutral-500 focus:outline-none focus:ring-2 focus:ring-neutral-200 cursor-pointer bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23666%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:18px] bg-[right_12px_center] bg-no-repeat"
+                            defaultValue={initialData?.practitionerStatus}
                         >
                             <option value="">Select...</option>
                             {practitionerStatusOptions
@@ -229,6 +262,7 @@ export function MatchingForm({
                         name="timeCommitment"
                         className="flex h-11 w-full appearance-none items-center rounded-md border border-neutral-300 bg-white px-4 py-2.5 pr-10 text-sm text-neutral-900 transition-colors focus:border-neutral-500 focus:outline-none focus:ring-2 focus:ring-neutral-200 cursor-pointer bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23666%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:18px] bg-[right_12px_center] bg-no-repeat"
                         required
+                        defaultValue={initialData?.timeCommitment}
                     >
                         <option value="">Select...</option>
                         {timeCommitmentOptions.map((option) => (
@@ -244,24 +278,30 @@ export function MatchingForm({
                         id="surveyFeedback"
                         name="surveyFeedback"
                         className="min-h-[60px]"
+                        defaultValue={initialData?.surveyFeedback}
                     />
                 </div>
             </div>
 
-            <Button
-                type="submit"
-                className="w-full h-12 text-base font-medium text-white bg-neutral-900 hover:bg-neutral-800 active:bg-neutral-950 active:scale-[0.99] transition-all duration-150"
-                disabled={isSubmitting}
-            >
-                {isSubmitting ? (
-                    <>
-                        <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                        Submitting...
-                    </>
-                ) : (
-                    "Submit Application"
+            <div className="flex gap-4">
+                {onCancel && (
+                    <Button type="button" variant="outline" className="flex-1" onClick={onCancel}>Cancel</Button>
                 )}
-            </Button>
+                <Button
+                    type="submit"
+                    className="flex-1 h-12 text-base font-medium text-white bg-neutral-900 hover:bg-neutral-800 active:bg-neutral-950 active:scale-[0.99] transition-all duration-150"
+                    disabled={isSubmitting}
+                >
+                    {isSubmitting ? (
+                        <>
+                            <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                            {itemId ? "Updating..." : "Submitting..."}
+                        </>
+                    ) : (
+                        itemId ? "Save Changes" : "Submit Application"
+                    )}
+                </Button>
+            </div>
         </form>
     );
 }
