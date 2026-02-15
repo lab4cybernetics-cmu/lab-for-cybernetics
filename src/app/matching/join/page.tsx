@@ -7,17 +7,18 @@ import Link from "next/link";
 
 // Default options from CSV spec (fallback if Notion doesn't have them yet)
 const DEFAULT_TIME_COMMITMENTS = [
-    "1-2 Conversations",
-    "2+ conversations without email follow-up",
-    "2+ Conversations with email follow-up",
+    "Single meeting for specific questions",
+    "2+ conversations but not on-going email exchanges",
+    "Mix of live conversation and email follow up",
+    "Regular check-ins if possible",
     "as-needed",
 ];
 
 const DEFAULT_PRACTITIONER_STATUSES = [
     "All set",
-    "Set but open to more",
-    "Still exploring options",
-    "Need suggestions",
+    "Have identified a few, sufficient for now",
+    "Have identified but need more",
+    "Not a Scholar",
 ];
 
 export default async function MatchingJoinPage({
@@ -34,14 +35,10 @@ export default async function MatchingJoinPage({
     // Fetch existing select options from Notion
     const selectOptions = await fetchMatchingSelectOptions();
 
-    // Merge with defaults (use Notion options if available, otherwise defaults)
-    const timeCommitments = selectOptions.timeCommitments.length > 0
-        ? selectOptions.timeCommitments
-        : DEFAULT_TIME_COMMITMENTS;
+    // Merge defaults with Notion options (defaults always included, deduplicated)
+    const timeCommitments = [...new Set([...DEFAULT_TIME_COMMITMENTS, ...selectOptions.timeCommitments])];
 
-    const practitionerStatuses = selectOptions.practitionerStatuses.length > 0
-        ? selectOptions.practitionerStatuses
-        : DEFAULT_PRACTITIONER_STATUSES;
+    const practitionerStatuses = [...new Set([...DEFAULT_PRACTITIONER_STATUSES, ...selectOptions.practitionerStatuses])];
 
     return (
         <div className="max-w-2xl mx-auto py-8">
