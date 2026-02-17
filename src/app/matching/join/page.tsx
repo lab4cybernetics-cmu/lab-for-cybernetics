@@ -15,10 +15,10 @@ const DEFAULT_TIME_COMMITMENTS = [
 ];
 
 const DEFAULT_PRACTITIONER_STATUSES = [
+    "Still haven't found",
     "All set",
     "Have identified a few sufficient for now",
     "Have identified but need more",
-    "Not a Scholar",
 ];
 
 export default async function MatchingJoinPage({
