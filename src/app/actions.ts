@@ -22,7 +22,7 @@ export async function submitMatchingApplication(formData: FormData) {
 
     // For Practitioners, default to "not a scholar" since they don't see the question
     const practitionerStatus = userType === "Practitioner"
-        ? "not a scholar"
+        ? "Not a Scholar"
         : (formData.get("practitionerStatus") as string) || "";
 
     const data = {
@@ -43,13 +43,13 @@ export async function submitMatchingApplication(formData: FormData) {
         keywords: keywords,
     };
 
-    const success = await createMatchingItem(data);
+    const result = await createMatchingItem(data);
 
-    if (success) {
+    if (result.success) {
         revalidatePath("/matching");
         return { success: true };
     } else {
-        return { success: false, error: "Failed to submit application. Please try again." };
+        return { success: false, error: result.message || "Failed to submit application. Please try again." };
     }
 }
 
@@ -60,7 +60,7 @@ export async function updateMatchingApplication(id: string, formData: FormData) 
     const userType = formData.get("userType") as string;
 
     const practitionerStatus = userType === "Practitioner"
-        ? "not a scholar"
+        ? "Not a Scholar"
         : (formData.get("practitionerStatus") as string) || "";
 
     const data = {
@@ -81,13 +81,13 @@ export async function updateMatchingApplication(id: string, formData: FormData) 
         keywords: keywords,
     };
 
-    const success = await updateMatchingItem(id, data);
+    const result = await updateMatchingItem(id, data);
 
-    if (success) {
+    if (result.success) {
         revalidatePath("/matching");
         return { success: true };
     } else {
-        return { success: false, error: "Failed to update application. Please try again." };
+        return { success: false, error: result.message || "Failed to update application. Please try again." };
     }
 }
 

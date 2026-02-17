@@ -11,6 +11,28 @@ import { submitMatchingApplication, updateMatchingApplication } from "@/app/acti
 import { Loader2 } from "lucide-react";
 import { MatchingItem } from "@/lib/notion-types";
 
+function CharacterCountedTextarea({ maxLength = 2000, className, onChange, defaultValue, ...props }: React.ComponentProps<typeof Textarea>) {
+    const [count, setCount] = useState(String(defaultValue || "").length);
+
+    return (
+        <div className="relative">
+            <Textarea
+                maxLength={maxLength}
+                className={className}
+                onChange={(e) => {
+                    setCount(e.target.value.length);
+                    onChange?.(e);
+                }}
+                defaultValue={defaultValue}
+                {...props}
+            />
+            <div className="text-xs text-neutral-400 text-right mt-1">
+                {count}/{maxLength}
+            </div>
+        </div>
+    );
+}
+
 interface MatchingFormProps {
     type: "Scholar" | "Practitioner";
     organizationOptions: string[];
@@ -118,6 +140,7 @@ export function MatchingForm({
                     <div className="space-y-2">
                         <Label htmlFor="email">Email *</Label>
                         <Input id="email" name="email" type="email" required defaultValue={initialData?.email} />
+                        <p className="text-xs text-neutral-400">Please double-check for typos.</p>
                     </div>
                 </div>
 
@@ -125,17 +148,19 @@ export function MatchingForm({
                 <div className="space-y-2">
                     <Label htmlFor="website">Website (if applicable):</Label>
                     <Input id="website" name="website" type="url" placeholder="https://" defaultValue={initialData?.website} />
+                    <p className="text-xs text-neutral-400">Please include http:// or https://</p>
                 </div>
 
                 {/* 4. About / Core Domain - same question for both */}
                 <div className="space-y-2">
                     <Label htmlFor="about">What domain is at the core of your research, academic pursuits, or in-world practice? *</Label>
-                    <Textarea
+                    <CharacterCountedTextarea
                         id="about"
                         name="about"
                         required
                         className="min-h-[100px]"
                         defaultValue={initialData?.about}
+                        maxLength={2000}
                     />
                     <p className="text-xs text-neutral-400">
                         Short phrases or keywords are best. You might connect to the United Nations&apos; 17 Sustainable Development Goals, though please add specifics — for example, manufactured materials threatening ocean sustainability; the social policies
@@ -165,12 +190,13 @@ export function MatchingForm({
                             : "Why is this domain important to you? Why or how are you emotionally invested in this particular domain? In other words, what is the nature of your concern for it? *"
                         }
                     </Label>
-                    <Textarea
+                    <CharacterCountedTextarea
                         id="committedTo"
                         name="committedTo"
                         required
                         className="min-h-[80px]"
                         defaultValue={initialData?.committedTo}
+                        maxLength={2000}
                     />
                     <p className="text-xs text-neutral-400">Short phrases are best.</p>
                 </div>
@@ -178,12 +204,13 @@ export function MatchingForm({
                 {/* 7. What to Conserve - same for both */}
                 <div className="space-y-2">
                     <Label htmlFor="whatToConserve">While bringing about the change you want, what do you want to conserve even as change takes place? *</Label>
-                    <Textarea
+                    <CharacterCountedTextarea
                         id="whatToConserve"
                         name="whatToConserve"
                         required
                         className="min-h-[80px]"
                         defaultValue={initialData?.whatToConserve}
+                        maxLength={2000}
                     />
                 </div>
 
@@ -191,7 +218,7 @@ export function MatchingForm({
                 <div className="space-y-2">
                     <Label htmlFor="organization">
                         {type === "Practitioner"
-                            ? "Are you a member of an organization relevant to your domain? If so, could you please name it and offer something you would like to share about it?"
+                            ? "Are you a member of an organization relevant to your domain? If so, could you please name it and offer something you would like to share about it? (optional)"
                             : "What is your university and school/program affiliation? Are you part of any research groups, labs, or organizations relevant to your domain? If so, please share what draws you to their work."
                         }
                     </Label>
@@ -208,12 +235,13 @@ export function MatchingForm({
                 {/* 9. Why Important - same for both */}
                 <div className="space-y-2">
                     <Label htmlFor="whyImportant">What is important to share about yourself, your work, your community, or network? *</Label>
-                    <Textarea
+                    <CharacterCountedTextarea
                         id="whyImportant"
                         name="whyImportant"
                         required
                         className="min-h-[100px]"
                         defaultValue={initialData?.whyImportant}
+                        maxLength={2000}
                     />
                 </div>
 
@@ -225,12 +253,13 @@ export function MatchingForm({
                             : "What makes for a good collaborative relationship? What do you need? *"
                         }
                     </Label>
-                    <Textarea
+                    <CharacterCountedTextarea
                         id="effectiveCollaboration"
                         name="effectiveCollaboration"
                         required
                         className="min-h-[80px]"
                         defaultValue={initialData?.effectiveCollaboration}
+                        maxLength={2000}
                     />
                 </div>
 
@@ -274,11 +303,12 @@ export function MatchingForm({
                 {/* 13. Survey Feedback - same for both */}
                 <div className="space-y-2">
                     <Label htmlFor="surveyFeedback">Do you have any suggestions for this survey, what is not clear, what it&apos;s missing?</Label>
-                    <Textarea
+                    <CharacterCountedTextarea
                         id="surveyFeedback"
                         name="surveyFeedback"
                         className="min-h-[60px]"
                         defaultValue={initialData?.surveyFeedback}
+                        maxLength={2000}
                     />
                 </div>
             </div>

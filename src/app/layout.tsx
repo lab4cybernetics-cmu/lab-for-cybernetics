@@ -27,7 +27,7 @@ export default function RootLayout({
             </a>
             <h2 className="text-base font-normal text-neutral-900">Carnegie Mellon—Architecture</h2>
           </div>
-          <nav className="flex gap-6 text-base font-normal">
+          <nav className="flex flex-wrap gap-4 md:gap-6 text-base font-normal">
             <a href="/matching" className="hover:text-[#1a0dab] hover:underline transition-colors">Matching</a>
             <a href="/projects" className="hover:text-[#1a0dab] hover:underline transition-colors">Projects</a>
             <a href="/people" className="hover:text-[#1a0dab] hover:underline transition-colors">People</a>

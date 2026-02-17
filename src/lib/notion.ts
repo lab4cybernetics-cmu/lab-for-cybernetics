@@ -329,7 +329,7 @@ export async function fetchPageBlocks(pageId: string): Promise<any[]> {
 // Mutations
 // -----------------------------------------------------------------------------
 
-export async function createMatchingItem(data: Partial<MatchingItem>): Promise<boolean> {
+export async function createMatchingItem(data: Partial<MatchingItem>): Promise<{ success: boolean; message?: string }> {
     const dbId = process.env.NOTION_MATCHING_DB_ID;
     if (!dbId) throw new Error("Missing NOTION_MATCHING_DB_ID");
 
@@ -390,14 +390,14 @@ export async function createMatchingItem(data: Partial<MatchingItem>): Promise<b
                 }
             }
         });
-        return true;
-    } catch (e) {
+        return { success: true };
+    } catch (e: any) {
         console.error("Error creating matching item:", e);
-        return false;
+        return { success: false, message: e.message || "Unknown error occurred" };
     }
 }
 
-export async function updateMatchingItem(id: string, data: Partial<MatchingItem>): Promise<boolean> {
+export async function updateMatchingItem(id: string, data: Partial<MatchingItem>): Promise<{ success: boolean; message?: string }> {
     try {
         const properties: any = {};
 
@@ -421,10 +421,10 @@ export async function updateMatchingItem(id: string, data: Partial<MatchingItem>
             page_id: id,
             properties: properties
         });
-        return true;
-    } catch (e) {
+        return { success: true };
+    } catch (e: any) {
         console.error("Error updating matching item:", e);
-        return false;
+        return { success: false, message: e.message || "Unknown error occurred" };
     }
 }
 

@@ -18,6 +18,7 @@ const DEFAULT_PRACTITIONER_STATUSES = [
     "All set",
     "Have identified a few, sufficient for now",
     "Have identified but need more",
+    "Still haven't found",
     "Not a Scholar",
 ];
 
