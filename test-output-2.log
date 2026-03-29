@@ -1,0 +1,437 @@
+Found p: {
+  "rich_text": [
+    {
+      "type": "text",
+      "text": {
+        "content": "This document offers a ",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "This document offers a ",
+      "href": null
+    },
+    {
+      "type": "text",
+      "text": {
+        "content": "Summary Description",
+        "link": {
+          "url": "https://docs.google.com/document/d/1mjElMopPb0AUIuRiYCJkDXjEeC_W6oFrAwGUsvPA8lk/edit?tab=t.0#heading=h.vss8u4b7gh1w"
+        }
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Summary Description",
+      "href": "https://docs.google.com/document/d/1mjElMopPb0AUIuRiYCJkDXjEeC_W6oFrAwGUsvPA8lk/edit?tab=t.0#heading=h.vss8u4b7gh1w"
+    },
+    {
+      "type": "text",
+      "text": {
+        "content": " of The Laboratory for Cybernetics opening in Spring 2025 and links to ",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": " of The Laboratory for Cybernetics opening in Spring 2025 and links to ",
+      "href": null
+    },
+    {
+      "type": "text",
+      "text": {
+        "content": "Defining Documents",
+        "link": {
+          "url": "https://docs.google.com/document/d/1mjElMopPb0AUIuRiYCJkDXjEeC_W6oFrAwGUsvPA8lk/edit?tab=t.0#heading=h.l3lkd8daiik8"
+        }
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Defining Documents",
+      "href": "https://docs.google.com/document/d/1mjElMopPb0AUIuRiYCJkDXjEeC_W6oFrAwGUsvPA8lk/edit?tab=t.0#heading=h.l3lkd8daiik8"
+    },
+    {
+      "type": "text",
+      "text": {
+        "content": " that offer more detail, including specifics of a related course, “",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": " that offer more detail, including specifics of a related course, “",
+      "href": null
+    },
+    {
+      "type": "text",
+      "text": {
+        "content": "Engaging Wicked Challenges.",
+        "link": {
+          "url": "https://docs.google.com/document/d/1nLXu0SYth-m-zdGl4Cx-4CcV3EXO4-ensim9ko0xBto/edit?tab=t.0"
+        }
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Engaging Wicked Challenges.",
+      "href": "https://docs.google.com/document/d/1nLXu0SYth-m-zdGl4Cx-4CcV3EXO4-ensim9ko0xBto/edit?tab=t.0"
+    },
+    {
+      "type": "text",
+      "text": {
+        "content": "” See also the ",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "” See also the ",
+      "href": null
+    },
+    {
+      "type": "text",
+      "text": {
+        "content": "Carnegie Mellon—Architecture landing page",
+        "link": {
+          "url": "https://www.architecture.cmu.edu/laboratory-cybernetics"
+        }
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Carnegie Mellon—Architecture landing page",
+      "href": "https://www.architecture.cmu.edu/laboratory-cybernetics"
+    },
+    {
+      "type": "text",
+      "text": {
+        "content": ".",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": ".",
+      "href": null
+    }
+  ],
+  "icon": null,
+  "color": "default"
+}
+Found p: {
+  "rich_text": [
+    {
+      "type": "text",
+      "text": {
+        "content": "To establish an appropriate mechanism for utilizing the L4C, starting in 2025 a course will be offered each Spring semester called Laboratory for Cybernetics: ",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "To establish an appropriate mechanism for utilizing the L4C, starting in 2025 a course will be offered each Spring semester called Laboratory for Cybernetics: ",
+      "href": null
+    },
+    {
+      "type": "text",
+      "text": {
+        "content": "Engaging Wicked Challenges ",
+        "link": {
+          "url": "https://docs.google.com/document/d/1nLXu0SYth-m-zdGl4Cx-4CcV3EXO4-ensim9ko0xBto/edit?tab=t.0"
+        }
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Engaging Wicked Challenges ",
+      "href": "https://docs.google.com/document/d/1nLXu0SYth-m-zdGl4Cx-4CcV3EXO4-ensim9ko0xBto/edit?tab=t.0"
+    },
+    {
+      "type": "text",
+      "text": {
+        "content": "(from ",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "(from ",
+      "href": null
+    },
+    {
+      "type": "text",
+      "text": {
+        "content": "CMU Architecture course catalog",
+        "link": {
+          "url": "http://coursecatalog.web.cmu.edu/schools-colleges/collegeoffinearts/schoolofarchitecture/courses/"
+        }
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "CMU Architecture course catalog",
+      "href": "http://coursecatalog.web.cmu.edu/schools-colleges/collegeoffinearts/schoolofarchitecture/courses/"
+    },
+    {
+      "type": "text",
+      "text": {
+        "content": "). This course is cross-listed in Architecture and Design, and is available to graduate students and to 3rd- and 4th-year undergraduates by permission.",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "). This course is cross-listed in Architecture and Design, and is available to graduate students and to 3rd- and 4th-year undergraduates by permission.",
+      "href": null
+    }
+  ],
+  "icon": null,
+  "color": "default"
+}
+Found p: {
+  "rich_text": [
+    {
+      "type": "text",
+      "text": {
+        "content": "Defining a new course entitled Engaging Wicked Challenges [Course Syllabus] and cross-listed in CMU Architecture and CMU School of Design that leverages the resources of the Laboratory for Cybernetics (L4C)—this document also summarizes the next two:",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Defining a new course entitled Engaging Wicked Challenges [Course Syllabus] and cross-listed in CMU Architecture and CMU School of Design that leverages the resources of the Laboratory for Cybernetics (L4C)—this document also summarizes the next two:",
+      "href": null
+    }
+  ],
+  "icon": null,
+  "color": "default"
+}
+Found p: {
+  "rich_text": [
+    {
+      "type": "text",
+      "text": {
+        "content": "Defining a prize for Best Design Brief",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Defining a prize for Best Design Brief",
+      "href": null
+    },
+    {
+      "type": "text",
+      "text": {
+        "content": "→",
+        "link": null
+      },
+      "annotations": {
+        "bold": true,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "→",
+      "href": null
+    },
+    {
+      "type": "text",
+      "text": {
+        "content": "—a culmination of the Engaging Wicked Challenges course, though open to any CMU student registered for the current academic year, utilizing models and methods from Cybernetics accessed through L4C",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "—a culmination of the Engaging Wicked Challenges course, though open to any CMU student registered for the current academic year, utilizing models and methods from Cybernetics accessed through L4C",
+      "href": null
+    }
+  ],
+  "icon": null,
+  "color": "default"
+}
+Found p: {
+  "rich_text": [
+    {
+      "type": "text",
+      "text": {
+        "content": "The ambition for these resources is broad. We hope to tap expertise from individuals as well as across Cybernetics and Systems organizations globally in order to make important materials easily accessible across age and education, schools and organizations, geographies and cultures. The resources serve CMU students who participate in ",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "The ambition for these resources is broad. We hope to tap expertise from individuals as well as across Cybernetics and Systems organizations globally in order to make important materials easily accessible across age and education, schools and organizations, geographies and cultures. The resources serve CMU students who participate in ",
+      "href": null
+    },
+    {
+      "type": "text",
+      "text": {
+        "content": "L4C activities",
+        "link": {
+          "url": "https://docs.google.com/document/d/1dPldcFhmX2buZiV5vfVlwLw-IkIP6t9ftgVGpovblcA/edit?tab=t.0"
+        }
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "L4C activities",
+      "href": "https://docs.google.com/document/d/1dPldcFhmX2buZiV5vfVlwLw-IkIP6t9ftgVGpovblcA/edit?tab=t.0"
+    },
+    {
+      "type": "text",
+      "text": {
+        "content": ", including the graduate course ",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": ", including the graduate course ",
+      "href": null
+    },
+    {
+      "type": "text",
+      "text": {
+        "content": "Engaging Wicked Challenges",
+        "link": {
+          "url": "https://docs.google.com/document/d/1nLXu0SYth-m-zdGl4Cx-4CcV3EXO4-ensim9ko0xBto/edit?tab=t.0"
+        }
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Engaging Wicked Challenges",
+      "href": "https://docs.google.com/document/d/1nLXu0SYth-m-zdGl4Cx-4CcV3EXO4-ensim9ko0xBto/edit?tab=t.0"
+    },
+    {
+      "type": "text",
+      "text": {
+        "content": " and available publicly. Decisions concerning entries and general editorial decisions will be made by a committee of advisors comprising individuals internal and external to CMU.",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": " and available publicly. Decisions concerning entries and general editorial decisions will be made by a committee of advisors comprising individuals internal and external to CMU.",
+      "href": null
+    }
+  ],
+  "icon": null,
+  "color": "default"
+}

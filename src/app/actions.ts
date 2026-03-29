@@ -12,6 +12,13 @@ const transporter = nodemailer.createTransport({
     },
 });
 
+/**
+ * Next.js Server Action to submit a new entry to the Matching database.
+ * Invoked by the main application form on the frontend.
+ * 
+ * @param {FormData} formData The raw form data sent from the browser.
+ * @returns {Promise<{ success: boolean; error?: string }>} True if successful, otherwise contains an error message.
+ */
 export async function submitMatchingApplication(formData: FormData) {
     // ... existing code ...
 
@@ -53,6 +60,14 @@ export async function submitMatchingApplication(formData: FormData) {
     }
 }
 
+/**
+ * Next.js Server Action to update an existing entry in the Matching database.
+ * Used when an applicant edits their own details after email verification.
+ * 
+ * @param {string} id The Notion page ID belonging to the user.
+ * @param {FormData} formData The raw form data sent from the browser.
+ * @returns {Promise<{ success: boolean; error?: string }>} True if successful, otherwise contains an error message.
+ */
 export async function updateMatchingApplication(id: string, formData: FormData) {
     const rawKeywords = formData.get("keywords") as string;
     const keywords = rawKeywords ? rawKeywords.split(",").map(k => k.trim()).filter(k => k.length > 0) : [];
@@ -91,6 +106,14 @@ export async function updateMatchingApplication(id: string, formData: FormData) 
     }
 }
 
+/**
+ * Generates and sends a 6-digit verification code to the user's email.
+ * This effectively logs the user in if they want to edit their submitted application.
+ * Utilizes Nodemailer and a lab Gmail account, while storing the active code in the Notion row itself.
+ * 
+ * @param {string} id The Notion page ID representing the user's submission.
+ * @returns {Promise<{ success: boolean; error?: string }>} Status of the email dispatch and code generation.
+ */
 export async function sendVerificationCode(id: string) {
     console.log(`[sendVerificationCode] Starting for ID: ${id}`);
 
@@ -162,6 +185,14 @@ export async function sendVerificationCode(id: string) {
     }
 }
 
+/**
+ * Next.js Server Action that checks if the submitted code matches the code stored in Notion.
+ * Automatically checks for code expiration and returns validation errors.
+ *
+ * @param {string} id The Notion page ID to verify against.
+ * @param {string} code The 6-digit code entered by the user.
+ * @returns {Promise<{ success: boolean; error?: string }>} True if the code matches and is not expired.
+ */
 export async function verifyCode(id: string, code: string) {
     const data = await getVerificationData(id);
     if (!data) return { success: false, error: "Entry not found" };

@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lab4C Website
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app), for the Laboratory for Cybernetics (Lab4C).
+
+## 📚 Documentation
+
+For a comprehensive guide on how the website functions, how to change content, and the Notion CMS architecture, please read the [Site Architecture & Documentation](docs/SITE_ARCHITECTURE.md).
 
 ## Getting Started
 

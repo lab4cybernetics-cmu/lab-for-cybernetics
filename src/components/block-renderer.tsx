@@ -12,13 +12,30 @@ export function BlockRenderer({ block }: BlockRendererProps) {
     if (!value) return null;
 
     switch (type) {
-        case "paragraph":
+        case "paragraph": {
+            const textContent = value.rich_text.map((t: any) => t.plain_text).join("");
+
+            // Suppress body paragraphs that follow Defining Documents buttons
+            const suppressedParagraphStarts = [
+                "Defining a new course entitled Engaging Wicked Challenges",
+                "Defining L4C’s resources",
+                "Defining L4C's resources",
+                "Defining a prize for Best Design Brief",
+                "NOTE: The window for submissions is open between April 1 and April 30",
+                "Defining Cybernetics as a rationale for the prize",
+                "Defining 'wicked challenges'",
+                "Defining ‘wicked challenges’",
+                "Designing a public exhibit of materials",
+            ];
+            if (suppressedParagraphStarts.some(s => textContent.trim().startsWith(s))) {
+                return null;
+            }
             return (
-                <p className="mb-4 text-lg text-neutral-600 leading-relaxed">
+                <p className="mb-6 mt-0">
                     {value.rich_text.map((t: any, i: number) => (
                         <span key={i} className={cn(t.annotations.bold && "font-bold", t.annotations.italic && "italic", t.annotations.underline && "underline")}>
                             {t.href ? (
-                                <a href={t.href} target="_blank" rel="noopener noreferrer" className="text-[#1a0dab] hover:underline">
+                                <a href={t.href} target="_blank" rel="noopener noreferrer" className="text-black underline decoration-1 hover:text-brand-blue">
                                     {t.plain_text}
                                 </a>
                             ) : (
@@ -28,26 +45,35 @@ export function BlockRenderer({ block }: BlockRendererProps) {
                     ))}
                 </p>
             );
+        }
         case "heading_1":
             return (
-                <h1 className="text-3xl font-medium mt-8 mb-4">
+                <h1 className="text-sys-subheading font-special-condensed uppercase text-brand-grey tracking-normal leading-none mt-4 mb-[var(--sys-subheading-gap)]">
                     {value.rich_text.map((t: any) => t.plain_text).join("")}
                 </h1>
             );
         case "heading_2":
             return (
-                <h2 className="text-2xl font-medium mt-8 mb-4">
+                <h2 className="text-sys-subheading font-special-condensed uppercase text-brand-grey tracking-normal leading-none mt-4 mb-[var(--sys-subheading-gap)]">
                     {value.rich_text.map((t: any) => t.plain_text).join("")}
                 </h2>
             );
         case "heading_3":
+        case "heading_4": {
+            // heading_4 blocks are handled by DefiningDocuments component in page.tsx
+            // heading_3 as blue button if it has a link, otherwise null
+            const textContent = value.rich_text.map((t: any) => t.plain_text).join("");
+            const targetUrl = value.rich_text.find((t: any) => t.href)?.href;
+            if (!targetUrl) return null;
             return (
-                <h3 className="text-xl font-medium mt-6 mb-3">
-                    {value.rich_text.map((t: any) => t.plain_text).join("")}
-                </h3>
+                <a href={targetUrl} target="_blank" rel="noopener noreferrer" className="flex justify-between items-center w-full md:w-[calc(50%-12px)] bg-[#95cee9] px-[20px] py-[14px] mb-[12px] text-black tracking-normal leading-none text-sys-normal hover:bg-[#8ac1da] rounded-[6px] hover:rounded-none transition-all duration-300">
+                    <span className="font-medium">{textContent}</span>
+                    <span className="font-sans font-medium">→</span>
+                </a>
             );
+        }
         case "divider":
-            return <hr className="my-8 border-neutral-200" />;
+            return <hr className="my-[var(--sys-subheading-gap)] border-neutral-300" />;
         default:
             console.log("Unsupported block type:", type);
             return null;

@@ -108,6 +108,12 @@ function getFileUrl(page: any, propName: string): string {
 // Fetchers
 // -----------------------------------------------------------------------------
 
+/**
+ * Fetches all matching applications from the Notion 'Matching' database.
+ * Uses the custom notion environment variable and handles Wiki-style data sources.
+ *
+ * @returns {Promise<MatchingItem[]>} An array of typed application records.
+ */
 export async function fetchMatchingItems(): Promise<MatchingItem[]> {
     const dbId = process.env.NOTION_MATCHING_DB_ID;
     if (!dbId) return [];
@@ -156,6 +162,13 @@ export interface MatchingSelectOptions {
     practitionerStatuses: string[];
 }
 
+/**
+ * Extracts all unique option values from existing matching submissions.
+ * This dynamically populates the dropdowns in the frontend forms so you 
+ * only need to add an option in Notion for it to appear on the site.
+ *
+ * @returns {Promise<MatchingSelectOptions>} An object containing arrays of valid options.
+ */
 export async function fetchMatchingSelectOptions(): Promise<MatchingSelectOptions> {
     const dbId = process.env.NOTION_MATCHING_DB_ID;
     if (!dbId) {
@@ -223,6 +236,12 @@ export async function fetchMatchingSelectOptions(): Promise<MatchingSelectOption
     }
 }
 
+/**
+ * Fetches the publicly visible projects from the Notion 'Projects' database.
+ * Extracts cover images, titles, and slugs to render the project portfolio.
+ *
+ * @returns {Promise<ProjectItem[]>} An array of projects mapped from Notion.
+ */
 export async function fetchProjects(): Promise<ProjectItem[]> {
     const dbId = process.env.NOTION_PROJECTS_DB_ID;
     if (!dbId) return [];
@@ -254,6 +273,12 @@ export async function fetchProjects(): Promise<ProjectItem[]> {
     }));
 }
 
+/**
+ * Fetches lab members, affiliates, and people entries from Notion.
+ * Extracts headshot URLs, bios, and roles.
+ *
+ * @returns {Promise<PeopleItem[]>} An array of people records.
+ */
 export async function fetchPeople(): Promise<PeopleItem[]> {
     const dbId = process.env.NOTION_PEOPLE_DB_ID;
     if (!dbId) return [];
@@ -285,6 +310,12 @@ export async function fetchPeople(): Promise<PeopleItem[]> {
     }));
 }
 
+/**
+ * Fetches chronological news entries.
+ * Often filtered by components (like on the home page) or displayed exhaustively.
+ *
+ * @returns {Promise<NewsItem[]>} Chronologically or database-ordered news.
+ */
 export async function fetchNews(): Promise<NewsItem[]> {
     const dbId = process.env.NOTION_NEWS_DB_ID;
     if (!dbId) return [];
@@ -314,6 +345,13 @@ export async function fetchNews(): Promise<NewsItem[]> {
     }));
 }
 
+/**
+ * Retrieves the raw blocks (paragraphs, images, headers) of a specific Notion page.
+ * Used heavily by the home page to render CMS-driven text content rather than database properties.
+ *
+ * @param {string} pageId The Notion page ID to fetch children for.
+ * @returns {Promise<any[]>} An array of Notion block objects.
+ */
 export async function fetchPageBlocks(pageId: string): Promise<any[]> {
     if (!pageId) return [];
 
@@ -329,6 +367,13 @@ export async function fetchPageBlocks(pageId: string): Promise<any[]> {
 // Mutations
 // -----------------------------------------------------------------------------
 
+/**
+ * Pushes a new submission directly into the Notion matching database.
+ * Maps application form data to Notion's complex property payload format.
+ *
+ * @param {Partial<MatchingItem>} data The submitted form payload.
+ * @returns {{ success: boolean; message?: string }} Result status.
+ */
 export async function createMatchingItem(data: Partial<MatchingItem>): Promise<{ success: boolean; message?: string }> {
     const dbId = process.env.NOTION_MATCHING_DB_ID;
     if (!dbId) throw new Error("Missing NOTION_MATCHING_DB_ID");
@@ -397,6 +442,14 @@ export async function createMatchingItem(data: Partial<MatchingItem>): Promise<{
     }
 }
 
+/**
+ * Updates an EXISTING applicant row in the matching database.
+ * Usually invoked after a user has passed an email verification gate.
+ *
+ * @param {string} id The specific Notion page ID for the record.
+ * @param {Partial<MatchingItem>} data Only the fields you wish to mutate.
+ * @returns {{ success: boolean; message?: string }} Result status.
+ */
 export async function updateMatchingItem(id: string, data: Partial<MatchingItem>): Promise<{ success: boolean; message?: string }> {
     try {
         const properties: any = {};

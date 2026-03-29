@@ -9,11 +9,27 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
-}
 
+  /* Brand Colors */
+  --color-brand-blue: #1a0dab;
+  --color-brand-dark: #323639;
+  --color-brand-grey: #9ba0a5;
+  --color-brand-tan: #f6f4eb;
+
+  /* Typography System */
+  --font-special-condensed: "Special Gothic Condensed", "Special Gothic Condensed One", sans-serif;
+  --text-sys-normal: 18px;
+  --text-sys-top-left: 16px;
+  --text-sys-nav: 18px;
+  --text-sys-subheading: 36px;
+  --text-sys-heading: 48px;
+
+  /* Layout System */
+  --sys-padding: 32px;
+  --sys-subheading-gap: 24px; /* Space between a subheading and its adjacent divider */
+}
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
