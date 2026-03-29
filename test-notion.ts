@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { Client } from '@notionhq/client';
 
 const notion = new Client({ auth: "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" });
