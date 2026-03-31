@@ -98,14 +98,7 @@ export default function RootLayout({
           </div>
         </div>
 
-        {/* Grey Title Bar (Full Width, aligning exactly with content grid) */}
-        <div className="w-full px-[var(--sys-padding)] mt-[var(--sys-padding)] mb-[var(--sys-padding)]">
-          <div className="w-full bg-brand-dark py-9 px-[var(--sys-padding)] text-white text-center md:text-left">
-            <h2 className="text-sys-heading uppercase tracking-normal font-special-condensed leading-none">
-              GUIDE: LABORATORY<em className="lowercase text-brand-grey font-special-condensed leading-none px-1">for</em>  CYBERNETICS
-            </h2>
-          </div>
-        </div>
+        {/* Pages render their own TitleBars now */}
 
         <div className="w-full px-[var(--sys-padding)]">
           <main className="pb-20 text-sys-normal tracking-normal leading-[1.12]">

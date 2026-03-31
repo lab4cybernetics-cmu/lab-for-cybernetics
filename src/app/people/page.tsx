@@ -1,4 +1,4 @@
-
+import { TitleBar } from "@/components/title-bar";
 import { fetchPeople } from "@/lib/notion";
 import { PeopleList } from "@/components/people/people-list";
 
@@ -9,12 +9,10 @@ export default async function PeoplePage() {
 
     return (
         <div className="space-y-8 pb-20">
-            <div>
-                <h1 className="text-3xl font-medium tracking-tight mb-2">People</h1>
-                <p className="text-neutral-500 max-w-2xl">
-                    The team behind the Laboratory <em>for</em> Cybernetics.
-                </p>
-            </div>
+            <TitleBar 
+                title="PEOPLE" 
+                description={<>The team behind the Laboratory <em>for</em> Cybernetics.</>} 
+            />
 
             <PeopleList items={items} />
         </div>

@@ -18,15 +18,16 @@
 
   /* Typography System */
   --font-special-condensed: "Special Gothic Condensed", "Special Gothic Condensed One", sans-serif;
-  --text-sys-normal: 18px;
+  --text-sys-normal: 16px;
   --text-sys-top-left: 16px;
-  --text-sys-nav: 18px;
+  --text-sys-nav: 16px;
   --text-sys-subheading: 36px;
-  --text-sys-heading: 48px;
+  --text-sys-heading: 36px;
 
   /* Layout System */
   --sys-padding: 32px;
-  --sys-subheading-gap: 24px; /* Space between a subheading and its adjacent divider */
+  --sys-subheading-gap: 24px;
+  /* Space between a subheading and its adjacent divider */
 }
 
 body {

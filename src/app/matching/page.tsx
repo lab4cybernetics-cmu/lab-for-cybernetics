@@ -1,4 +1,4 @@
-
+import { TitleBar } from "@/components/title-bar";
 import { fetchMatchingItems, fetchMatchingSelectOptions } from "@/lib/notion";
 import { MatchingSystem } from "@/components/matching/matching-system";
 import { Button } from "@/components/ui/button";
@@ -11,15 +11,11 @@ export default async function MatchingPage() {
 
     return (
         <div className="space-y-8 pb-20">
+            <TitleBar 
+                title="MATCHING SYSTEM" 
+                description={<div className="max-w-4xl">The Matching System is a curated directory designed to bridge the gap between cybernetics scholarship and practice. It facilitates meaningful connections, enabling scholars to find practitioners for collaboration and practitioners to access theoretical frameworks.</div>}
+            />
             <div className="flex flex-col gap-8 border-b border-neutral-200 pb-12">
-                <div>
-                    <h1 className="text-3xl font-medium tracking-tight mb-4">Matching System</h1>
-                    <p className="text-neutral-600 max-w-3xl leading-relaxed text-lg">
-                        The Matching System is a curated directory designed to bridge the gap between cybernetics
-                        scholarship and practice. It facilitates meaningful connections, enabling scholars to find
-                        practitioners for collaboration and practitioners to access theoretical frameworks.
-                    </p>
-                </div>
 
                 <div className="bg-neutral-50 p-6 rounded-sm border border-neutral-100">
                     <h2 className="text-base font-medium text-neutral-900 mb-2">Join the Network</h2>

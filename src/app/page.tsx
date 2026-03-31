@@ -1,4 +1,4 @@
-
+import { TitleBar } from "@/components/title-bar";
 import { fetchPageBlocks, fetchNews } from "@/lib/notion";
 import { BlockRenderer } from "@/components/block-renderer";
 import { NewsList } from "@/components/news/news-list";
@@ -69,7 +69,9 @@ export default async function Home() {
   }
 
   return (
-    <div className="py-[var(--sys-padding)]">
+    <>
+      <TitleBar title="GUIDE: LABORATORY" subtitle="CYBERNETICS" showFor={true} />
+      <div className="py-[var(--sys-padding)]">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-[var(--sys-padding)]">
 
         {/* ── Before Defining Documents ── */}
@@ -129,5 +131,6 @@ export default async function Home() {
 
       </div>
     </div>
+  </>
   );
 }

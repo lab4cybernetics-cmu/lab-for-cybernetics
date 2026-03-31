@@ -1,4 +1,4 @@
-
+import { TitleBar } from "@/components/title-bar";
 import { fetchNews } from "@/lib/notion";
 import { NewsList } from "@/components/news/news-list";
 
@@ -9,12 +9,10 @@ export default async function NewsPage() {
 
     return (
         <div className="space-y-8 pb-20">
-            <div>
-                <h1 className="text-3xl font-medium tracking-tight mb-2">News</h1>
-                <p className="text-neutral-500 max-w-2xl">
-                    Announcements, events, and updates from the lab.
-                </p>
-            </div>
+            <TitleBar 
+                title="NEWS" 
+                description="Announcements, events, and updates from the lab." 
+            />
 
             <NewsList items={items} />
         </div>

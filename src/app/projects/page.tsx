@@ -1,4 +1,4 @@
-
+import { TitleBar } from "@/components/title-bar";
 import { fetchProjects } from "@/lib/notion";
 import { ProjectList } from "@/components/projects/project-list";
 
@@ -9,12 +9,10 @@ export default async function ProjectsPage() {
 
     return (
         <div className="space-y-8 pb-20">
-            <div>
-                <h1 className="text-3xl font-medium tracking-tight mb-2">Projects</h1>
-                <p className="text-neutral-500 max-w-2xl">
-                    Ongoing investigations, design courses, and cybernetic interventions.
-                </p>
-            </div>
+            <TitleBar 
+                title="PROJECTS" 
+                description="Ongoing investigations, design courses, and cybernetic interventions." 
+            />
 
             <ProjectList items={items} />
         </div>
