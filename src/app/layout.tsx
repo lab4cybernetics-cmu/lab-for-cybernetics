@@ -41,42 +41,42 @@ export default function RootLayout({
             </div>
 
             {/* Navigation Bar */}
-            <nav className="flex flex-wrap justify-start md:justify-end md:text-right gap-[10px] text-sys-nav font-normal pb-0.5 items-end">
+            <nav className="flex flex-wrap justify-start md:justify-end md:text-right gap-[20px] text-sys-nav font-normal pb-0.5 items-end">
               <a href="/matching" className="group flex items-center hover:text-[#90cde8] transition-all duration-300">
                 <span data-text="Matching" className="after:content-[attr(data-text)] after:block after:font-medium after:invisible after:h-0 after:overflow-hidden group-hover:font-medium group-hover:underline decoration-1 underline-offset-2 transition-all duration-300">
                   Matching
                 </span>
-                <ArrowRight className="w-[0.9em] h-[0.9em] ml-2 opacity-0 group-hover:opacity-100 transition-all duration-300" strokeWidth={2.5} />
+                <ArrowRight className="w-[0.9em] h-[0.9em] ml-1 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:-rotate-45" strokeWidth={2.5} />
               </a>
               <a href="/projects" className="group flex items-center hover:text-[#90cde8] transition-all duration-300">
                 <span data-text="Projects" className="after:content-[attr(data-text)] after:block after:font-medium after:invisible after:h-0 after:overflow-hidden group-hover:font-medium group-hover:underline decoration-1 underline-offset-2 transition-all duration-300">
                   Projects
                 </span>
-                <ArrowRight className="w-[0.9em] h-[0.9em] ml-2 opacity-0 group-hover:opacity-100 transition-all duration-300" strokeWidth={2.5} />
+                <ArrowRight className="w-[0.9em] h-[0.9em] ml-1 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:-rotate-45" strokeWidth={2.5} />
               </a>
               <a href="/people" className="group flex items-center hover:text-[#90cde8] transition-all duration-300">
                 <span data-text="People" className="after:content-[attr(data-text)] after:block after:font-medium after:invisible after:h-0 after:overflow-hidden group-hover:font-medium group-hover:underline decoration-1 underline-offset-2 transition-all duration-300">
                   People
                 </span>
-                <ArrowRight className="w-[0.9em] h-[0.9em] ml-2 opacity-0 group-hover:opacity-100 transition-all duration-300" strokeWidth={2.5} />
+                <ArrowRight className="w-[0.9em] h-[0.9em] ml-1 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:-rotate-45" strokeWidth={2.5} />
               </a>
               <a href="/news" className="group flex items-center hover:text-[#90cde8] transition-all duration-300">
                 <span data-text="News" className="after:content-[attr(data-text)] after:block after:font-medium after:invisible after:h-0 after:overflow-hidden group-hover:font-medium group-hover:underline decoration-1 underline-offset-2 transition-all duration-300">
                   News
                 </span>
-                <ArrowRight className="w-[0.9em] h-[0.9em] ml-2 opacity-0 group-hover:opacity-100 transition-all duration-300" strokeWidth={2.5} />
+                <ArrowRight className="w-[0.9em] h-[0.9em] ml-1 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:-rotate-45" strokeWidth={2.5} />
               </a>
               <a href="/course-info" className="group flex items-center hover:text-[#90cde8] transition-all duration-300">
                 <span data-text="Course Info" className="after:content-[attr(data-text)] after:block after:font-medium after:invisible after:h-0 after:overflow-hidden group-hover:font-medium group-hover:underline decoration-1 underline-offset-2 transition-all duration-300">
                   Course Info
                 </span>
-                <ArrowRight className="w-[0.9em] h-[0.9em] ml-2 opacity-0 group-hover:opacity-100 transition-all duration-300" strokeWidth={2.5} />
+                <ArrowRight className="w-[0.9em] h-[0.9em] ml-1 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:-rotate-45" strokeWidth={2.5} />
               </a>
               <a href="/lab-prize" className="group flex items-center hover:text-[#90cde8] transition-all duration-300">
                 <span data-text="Lab Prize" className="after:content-[attr(data-text)] after:block after:font-medium after:invisible after:h-0 after:overflow-hidden group-hover:font-medium group-hover:underline decoration-1 underline-offset-2 transition-all duration-300">
                   Lab Prize
                 </span>
-                <ArrowRight className="w-[0.9em] h-[0.9em] ml-2 opacity-0 group-hover:opacity-100 transition-all duration-300" strokeWidth={2.5} />
+                <ArrowRight className="w-[0.9em] h-[0.9em] ml-1 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:-rotate-45" strokeWidth={2.5} />
               </a>
             </nav>
           </header>
