@@ -5,8 +5,8 @@ import { MatchingSelectOptions } from "@/lib/notion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog";
-import { Mail, Globe, Calendar, Clock } from "lucide-react";
-import { useState } from "react";
+import { Mail, Globe, Calendar, Clock, Link as LinkIcon, Check } from "lucide-react";
+import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import { VerificationModal } from "./verification-modal";
 import { MatchingForm } from "./matching-form";
@@ -19,6 +19,24 @@ interface MatchingCardProps {
 export function MatchingCard({ item, options }: MatchingCardProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [isEditing, setIsEditing] = useState(false);
+    const [copied, setCopied] = useState(false);
+
+    const elementId = item.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            if (window.location.hash === `#${elementId}`) {
+                setIsOpen(true);
+                // Allow time for rendering before scrolling
+                setTimeout(() => {
+                    const element = document.getElementById(elementId);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }, 100);
+            }
+        }
+    }, [elementId]);
 
     // Reset editing state when dialog closes
     const handleOpenChange = (open: boolean) => {
@@ -26,13 +44,31 @@ export function MatchingCard({ item, options }: MatchingCardProps) {
         if (!open) {
             // Delay reset slightly to avoid UI flash, or just reset immediately
             setTimeout(() => setIsEditing(false), 300);
+            
+            // Clean up URL hash if we close the dialog that was opened via hash
+            if (typeof window !== 'undefined' && window.location.hash === `#${elementId}`) {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+        } else {
+            // Optionally set the hash when opening manually
+            if (typeof window !== 'undefined' && window.location.hash !== `#${elementId}`) {
+                history.replaceState(null, '', window.location.pathname + window.location.search + `#${elementId}`);
+            }
         }
+    };
+
+    const handleCopyLink = () => {
+        if (typeof window === 'undefined') return;
+        const url = `${window.location.origin}${window.location.pathname}#${elementId}`;
+        navigator.clipboard.writeText(url);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
     };
 
     return (
         <Dialog open={isOpen} onOpenChange={handleOpenChange}>
             <DialogTrigger asChild>
-                <Card className="h-full flex flex-col justify-between hover:border-neutral-400 transition-colors cursor-pointer text-left">
+                <Card id={elementId} className="h-full flex flex-col justify-between hover:border-neutral-400 transition-colors cursor-pointer text-left scroll-mt-24">
                     <CardHeader>
                         <div className="flex justify-between items-start gap-2">
                             <CardTitle className="text-lg leading-tight">{item.name}</CardTitle>
@@ -110,6 +146,9 @@ export function MatchingCard({ item, options }: MatchingCardProps) {
                                             <Globe size={24} />
                                         </a>
                                     )}
+                                    <button onClick={handleCopyLink} className="text-neutral-400 hover:text-neutral-900 transition-colors" title="Copy profile link">
+                                        {copied ? <Check size={24} className="text-green-600" /> : <LinkIcon size={24} />}
+                                    </button>
 
                                     <VerificationModal
                                         itemId={item.id}
