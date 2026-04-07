@@ -2,6 +2,7 @@ import { TitleBar } from "@/components/title-bar";
 import { fetchMatchingItems, fetchMatchingSelectOptions } from "@/lib/notion";
 import { MatchingSystem } from "@/components/matching/matching-system";
 import { Button } from "@/components/ui/button";
+import { AskAiModal } from "@/components/matching/ask-ai-modal";
 
 export const revalidate = 60; // Revalidate every minute
 
@@ -35,6 +36,7 @@ export default async function MatchingPage() {
                                 Join as Practitioner
                             </Button>
                         </a>
+                        <AskAiModal items={items} />
                     </div>
                 </div>
             </div>
