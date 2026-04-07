@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter_Tight } from "next/font/google";
+import { Inter_Tight, Special_Gothic_Condensed_One } from "next/font/google";
 import { ArrowRight } from "lucide-react";
 import "./globals.css";
 import { CoverImage } from "@/components/cover-image";
@@ -7,6 +7,12 @@ import { CoverImage } from "@/components/cover-image";
 const inter = Inter_Tight({
   subsets: ["latin"],
   variable: "--font-inter",
+});
+
+const specialGothicCondensed = Special_Gothic_Condensed_One({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-special-condensed",
 });
 
 export const metadata: Metadata = {
@@ -21,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased text-sys-normal`}>
+      <body className={`${inter.variable} ${specialGothicCondensed.variable} font-sans antialiased text-sys-normal`}>
         <div className="w-full px-[var(--sys-padding)]">
           {/* Header */}
           <header className="pt-[var(--sys-padding)] pb-[32px] flex flex-col md:flex-row justify-between items-start md:items-end gap-[var(--sys-padding)]">
