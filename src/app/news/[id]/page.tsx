@@ -28,7 +28,7 @@ export default async function NewsDetailPage({ params }: PageProps) {
         <div className="max-w-3xl mx-auto py-12 space-y-8">
             <div className="space-y-4">
                 <Link href="/news">
-                    <Button variant="ghost" className="pl-0 hover:pl-0 hover:bg-transparent text-neutral-500 hover:text-black">
+                    <Button variant="ghost" className="pl-0 hover:pl-0 hover:bg-transparent text-neutral-500 hover:text-brand-dark">
                         <ArrowLeft className="mr-2 h-4 w-4" />
                         Back to News
                     </Button>

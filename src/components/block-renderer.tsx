@@ -36,7 +36,7 @@ export function BlockRenderer({ block }: BlockRendererProps) {
                     {value.rich_text.map((t: any, i: number) => (
                         <span key={i} className={cn(t.annotations.bold && "font-bold", t.annotations.italic && "italic", t.annotations.underline && "underline")}>
                             {t.href ? (
-                                <a href={t.href} target="_blank" rel="noopener noreferrer" className="text-black underline decoration-1 hover:text-brand-blue">
+                                <a href={t.href} target="_blank" rel="noopener noreferrer" className="text-brand-dark underline decoration-1 hover:text-brand-blue">
                                     {t.plain_text}
                                 </a>
                             ) : (
@@ -64,8 +64,8 @@ export function BlockRenderer({ block }: BlockRendererProps) {
             const targetUrl = value.rich_text.find((t: any) => t.href)?.href;
             if (!targetUrl) return null;
             return (
-                <a href={targetUrl} target="_blank" rel="noopener noreferrer" className="group flex justify-between items-center w-full md:w-[calc(50%-12px)] bg-[#95cee9] px-[20px] py-[14px] mb-[12px] text-black tracking-normal leading-none text-sys-normal hover:bg-[#8ac1da] rounded-[6px] hover:rounded-none transition-all duration-300">
-                    <span className="font-medium">{textContent}</span>
+                <a href={targetUrl} target="_blank" rel="noopener noreferrer" className="group flex justify-between items-center w-full md:w-[calc(50%-12px)] bg-[#95cee9] px-[20px] py-[14px] mb-[12px] text-brand-dark tracking-normal leading-none font-special-condensed uppercase text-[20px] hover:bg-[#8ac1da] rounded-[6px] hover:rounded-none transition-all duration-300">
+                    <span className="pt-0.5">{textContent}</span>
                     <ArrowRight className="ml-4 h-[1.2em] w-[1.2em] shrink-0 transition-transform duration-300 group-hover:-rotate-45" strokeWidth={2.5} />
                 </a>
             );
@@ -84,7 +84,7 @@ export function BlockRenderer({ block }: BlockRendererProps) {
                     {value.rich_text.map((t: any, i: number) => (
                         <span key={i} className={cn(t.annotations.bold && "font-bold", t.annotations.italic && "italic", t.annotations.underline && "underline")}>
                             {t.href ? (
-                                <a href={t.href} target="_blank" rel="noopener noreferrer" className="text-black underline decoration-1 hover:text-brand-blue">
+                                <a href={t.href} target="_blank" rel="noopener noreferrer" className="text-brand-dark underline decoration-1 hover:text-brand-blue">
                                     {t.plain_text}
                                 </a>
                             ) : (
@@ -101,7 +101,7 @@ export function BlockRenderer({ block }: BlockRendererProps) {
                     {value.rich_text.map((t: any, i: number) => (
                         <span key={i} className={cn(t.annotations.bold && "font-bold", t.annotations.italic && "italic", t.annotations.underline && "underline")}>
                             {t.href ? (
-                                <a href={t.href} target="_blank" rel="noopener noreferrer" className="text-black underline decoration-1 hover:text-brand-blue">
+                                <a href={t.href} target="_blank" rel="noopener noreferrer" className="text-brand-dark underline decoration-1 hover:text-brand-blue">
                                     {t.plain_text}
                                 </a>
                             ) : (

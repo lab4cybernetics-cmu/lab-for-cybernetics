@@ -11,8 +11,13 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ item }: ProjectCardProps) {
+    const isRebraiding = item.name.toLowerCase().trim() === "re-braiding";
+    const displayName = isRebraiding ? "Re-Braiding Cybernetics & AI" : item.name;
+    const href = isRebraiding ? "https://tinyurl.com/Cyber-AI-Rebraid" : `/projects/${item.id}`;
+    const target = isRebraiding ? "_blank" : undefined;
+
     return (
-        <Link href={`/projects/${item.id}`} className="group block h-full">
+        <Link href={href} target={target} className="group block h-full">
             <Card className="h-full flex flex-col hover:border-neutral-400 transition-colors overflow-hidden">
                 {item.coverImage && (
                     <div className="relative w-full h-48 bg-neutral-100 border-b border-neutral-200">
@@ -28,7 +33,7 @@ export function ProjectCard({ item }: ProjectCardProps) {
                 <CardHeader>
                     <div className="flex justify-between items-start gap-2">
                         <CardTitle className="text-lg leading-tight group-hover:underline decoration-neutral-400 underline-offset-4 decoration-1">
-                            {item.name}
+                            {displayName}
                         </CardTitle>
                         <Badge variant={item.status === "Completed" ? "outline" : "default"} className="whitespace-nowrap">
                             {item.status}

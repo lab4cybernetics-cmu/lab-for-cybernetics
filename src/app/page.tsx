@@ -117,7 +117,7 @@ export default async function Home() {
                 <div className="flex justify-between items-end">
                   <h2 className="text-2xl font-medium">Recent News</h2>
                   <Link href="/news">
-                    <Button variant="link" className="text-neutral-500 hover:text-black p-0 h-auto font-normal">
+                    <Button variant="link" className="text-neutral-500 hover:text-brand-dark p-0 h-auto font-normal">
                       View all <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
