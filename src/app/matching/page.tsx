@@ -11,7 +11,7 @@ export default async function MatchingPage() {
     const options = await fetchMatchingSelectOptions();
 
     return (
-        <div className="space-y-8 pb-20">
+        <div className="pb-20">
             <TitleBar 
                 title="MATCHING SYSTEM" 
                 description={<div className="max-w-4xl">The Matching System is a curated directory designed to bridge the gap between cybernetics scholarship and practice. It facilitates meaningful connections, enabling scholars to find practitioners for collaboration and practitioners to access theoretical frameworks.</div>}

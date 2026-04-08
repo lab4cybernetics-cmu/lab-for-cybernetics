@@ -74,7 +74,7 @@ export function MatchingCard({ item, options }: MatchingCardProps) {
                             <CardTitle className="text-lg leading-tight">{item.name}</CardTitle>
                             {item.userType && (
                                 <Badge
-                                    className={`text-[10px] uppercase tracking-wider whitespace-nowrap border-0 shadow-none ${item.userType.toLowerCase().includes("scholar")
+                                    className={`text-[10px] uppercase tracking-wider whitespace-nowrap border-0 shadow-none px-3 py-1.5 ${item.userType.toLowerCase().includes("scholar")
                                         ? "bg-green-100 text-green-800 hover:bg-green-200"
                                         : item.userType.toLowerCase().includes("practitioner")
                                             ? "bg-orange-100 text-orange-800 hover:bg-orange-200"
@@ -103,7 +103,7 @@ export function MatchingCard({ item, options }: MatchingCardProps) {
 
                         <div className="flex flex-wrap gap-2 pt-2">
                             {item.keywords.map((keyword, i) => (
-                                <Badge key={i} variant="secondary" className="text-[10px]">
+                                <Badge key={i} variant="secondary" className="text-[10px] px-3 py-1.5">
                                     {keyword}
                                 </Badge>
                             ))}
@@ -161,7 +161,7 @@ export function MatchingCard({ item, options }: MatchingCardProps) {
                             <div className="flex flex-wrap gap-4 text-sm text-neutral-500 mt-4">
                                 {item.userType && (
                                     <Badge
-                                        className={`uppercase tracking-wider border-0 shadow-none ${item.userType.toLowerCase().includes("scholar")
+                                        className={`uppercase tracking-wider border-0 shadow-none px-3 py-1.5 ${item.userType.toLowerCase().includes("scholar")
                                             ? "bg-green-100 text-green-800 hover:bg-green-200"
                                             : item.userType.toLowerCase().includes("practitioner")
                                                 ? "bg-orange-100 text-orange-800 hover:bg-orange-200"
@@ -218,7 +218,7 @@ export function MatchingCard({ item, options }: MatchingCardProps) {
                                         <h4 className="font-semibold text-neutral-900 mb-2 text-base">Keywords</h4>
                                         <div className="flex flex-wrap gap-2">
                                             {item.keywords.map((k, i) => (
-                                                <Badge key={i} variant="secondary">{k}</Badge>
+                                                <Badge key={i} variant="secondary" className="px-3 py-1.5">{k}</Badge>
                                             ))}
                                         </div>
                                     </div>

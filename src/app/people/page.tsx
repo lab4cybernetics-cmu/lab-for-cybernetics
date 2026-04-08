@@ -8,7 +8,7 @@ export default async function PeoplePage() {
     const items = await fetchPeople();
 
     return (
-        <div className="space-y-8 pb-20">
+        <div className="pb-20">
             <TitleBar 
                 title="PEOPLE" 
                 description={<>The team behind the Laboratory <em>for</em> Cybernetics.</>} 

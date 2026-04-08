@@ -20,17 +20,26 @@
   --font-special-condensed: "Special Gothic Condensed", "Special Gothic Condensed One", sans-serif;
   --text-sys-normal: 16px;
   --text-sys-top-left: 16px;
-  --text-sys-nav: 16px;
+  --text-sys-nav: 20px;
   --text-sys-subheading: 36px;
   --text-sys-heading: 36px;
 
   /* Layout System */
-  --sys-padding: 32px;
+  --sys-padding: 64px;
   --sys-subheading-gap: 24px;
   /* Space between a subheading and its adjacent divider */
+  --sys-body-width: 1200px;
+  /* Max width of the main body text column */
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+  overflow-x: hidden;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --sys-padding: 32px;
+  }
 }

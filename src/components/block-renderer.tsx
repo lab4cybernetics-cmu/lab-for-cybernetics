@@ -49,13 +49,13 @@ export function BlockRenderer({ block }: BlockRendererProps) {
         }
         case "heading_1":
             return (
-                <h1 className="text-sys-subheading font-special-condensed uppercase text-brand-grey tracking-normal leading-none mt-4 mb-[var(--sys-subheading-gap)]">
+                <h1 className="text-sys-subheading font-special-condensed uppercase text-brand-grey tracking-normal leading-none mt-[var(--sys-subheading-gap)] mb-[var(--sys-subheading-gap)]">
                     {value.rich_text.map((t: any) => t.plain_text).join("")}
                 </h1>
             );
         case "heading_2":
             return (
-                <h2 className="text-sys-subheading font-special-condensed uppercase text-brand-grey tracking-normal leading-none mt-4 mb-[var(--sys-subheading-gap)]">
+                <h2 className="text-sys-subheading font-special-condensed uppercase text-brand-grey tracking-normal leading-none mt-[var(--sys-subheading-gap)] mb-[var(--sys-subheading-gap)]">
                     {value.rich_text.map((t: any) => t.plain_text).join("")}
                 </h2>
             );
@@ -73,7 +73,7 @@ export function BlockRenderer({ block }: BlockRendererProps) {
         case "heading_4": {
             const textContent = value.rich_text.map((t: any) => t.plain_text).join("");
             return (
-                <h4 className="text-sys-subheading font-special-condensed uppercase text-brand-grey tracking-normal leading-none mt-4 mb-[var(--sys-subheading-gap)]">
+                <h4 className="text-sys-subheading font-special-condensed uppercase text-brand-grey tracking-normal leading-none mt-[var(--sys-subheading-gap)] mb-[var(--sys-subheading-gap)]">
                     {textContent}
                 </h4>
             );

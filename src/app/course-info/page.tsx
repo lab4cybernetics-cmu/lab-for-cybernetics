@@ -198,8 +198,8 @@ export default async function CourseInfoPage() {
                 description={descriptionContent}
             />
 
-            <div className="py-[var(--sys-padding)]">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-[var(--sys-padding)]">
+            <div className="pb-[var(--sys-padding)]">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-x-[var(--sys-padding)] gap-y-0">
                     {/* Defining Documents blue button — full width */}
                     {definingDocs.length > 0 && (
                         <div className="col-span-1 md:col-span-3">

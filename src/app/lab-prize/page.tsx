@@ -5,7 +5,7 @@ import { ArrowLeft } from "lucide-react";
 
 export default function LabPrizePage() {
     return (
-        <div className="min-h-[50vh] flex flex-col items-center justify-center space-y-6 text-center">
+        <div className="min-h-[50vh] flex flex-col items-center justify-center text-center">
             <div className="w-full self-start text-left"><TitleBar title="LAB PRIZE" description="Coming Soon" /></div>
             <div className="pt-4">
                 <Link href="/">

@@ -71,8 +71,8 @@ export default async function Home() {
   return (
     <>
       <TitleBar title="GUIDE: LABORATORY" subtitle="CYBERNETICS" showFor={true} />
-      <div className="py-[var(--sys-padding)]">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-[var(--sys-padding)]">
+      <div className="pb-[var(--sys-padding)]">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-x-[var(--sys-padding)] gap-y-0">
 
         {/* ── Before Defining Documents ── */}
         <SectionWithLinkTooltip docs={definingDocs}>
@@ -93,7 +93,9 @@ export default async function Home() {
         {/* ── Defining Documents: full 3-col width ── */}
         {definingDocsHeading && (
           <div className="col-span-1 md:col-span-3">
-            <BlockRenderer block={definingDocsHeading} />
+            <div className="-mt-[var(--sys-subheading-gap)]">
+              <BlockRenderer block={definingDocsHeading} />
+            </div>
             <DefiningDocuments docs={definingDocs} />
           </div>
         )}

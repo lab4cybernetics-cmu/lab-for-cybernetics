@@ -8,7 +8,7 @@ export default async function NewsPage() {
     const items = await fetchNews();
 
     return (
-        <div className="space-y-8 pb-20">
+        <div className="pb-20">
             <TitleBar 
                 title="NEWS" 
                 description="Announcements, events, and updates from the lab." 

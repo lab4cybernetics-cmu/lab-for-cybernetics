@@ -8,7 +8,7 @@ export default async function ProjectsPage() {
     const items = await fetchProjects();
 
     return (
-        <div className="space-y-8 pb-20">
+        <div className="pb-20">
             <TitleBar 
                 title="PROJECTS" 
                 description="Ongoing investigations, design courses, and cybernetic interventions." 

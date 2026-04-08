@@ -30,7 +30,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${specialGothicCondensed.variable} font-sans antialiased text-sys-normal`}>
         <div className="w-full px-[var(--sys-padding)]">
           {/* Header */}
-          <header className="pt-[var(--sys-padding)] pb-[32px] flex flex-col md:flex-row justify-between items-start md:items-end gap-[var(--sys-padding)]">
+          <header className="pt-[var(--sys-padding)] pb-[var(--sys-padding)] flex flex-col md:flex-row justify-between items-start md:items-end gap-[var(--sys-padding)]">
             <div className="flex flex-col md:flex-row items-start md:items-end gap-[16px]">
               <div className="flex flex-col items-start leading-tight">
                 <a href="/" className="group tracking-tight">
@@ -47,8 +47,7 @@ export default function RootLayout({
               </div>
             </div>
 
-            {/* Navigation Bar */}
-            <nav className="flex flex-wrap w-full md:w-auto justify-start md:justify-end md:text-right gap-x-[16px] gap-y-[8px] md:gap-[24px] text-[14px] md:text-sys-nav font-normal pb-0.5 items-end">
+            <nav className="flex flex-wrap w-full md:w-auto justify-start md:justify-end md:text-right gap-x-[16px] gap-y-[8px] md:gap-[24px] text-[16px] md:text-sys-nav font-normal items-end">
               <a href="/news" className="group flex items-center hover:text-[#90cde8] transition-all duration-300">
                 <span data-text="News" className="after:content-[attr(data-text)] after:block after:font-medium after:invisible after:h-0 after:overflow-hidden group-hover:font-medium group-hover:underline decoration-1 underline-offset-2 transition-all duration-300">
                   News
@@ -96,7 +95,7 @@ export default function RootLayout({
         {/* Pages render their own TitleBars now */}
 
         <div className="w-full px-[var(--sys-padding)]">
-          <main className="pb-20 text-sys-normal tracking-normal leading-[1.12]">
+          <main className="pb-20 text-sys-normal tracking-normal leading-[1.12] max-w-[var(--sys-body-width)]">
             {children}
           </main>
         </div>
