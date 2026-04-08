@@ -18,6 +18,9 @@ const specialGothicCondensed = Special_Gothic_Condensed_One({
 export const metadata: Metadata = {
   title: "Laboratory for Cybernetics",
   description: "Carnegie Mellon — Architecture",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({

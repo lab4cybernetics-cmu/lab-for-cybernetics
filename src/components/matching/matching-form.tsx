@@ -313,6 +313,12 @@ export function MatchingForm({
                 </div>
             </div>
 
+            {!itemId && (
+                <div className="text-sm text-neutral-500 bg-neutral-50 border border-neutral-200 p-4 rounded-sm text-center">
+                    Note: You can edit your entry at any time by clicking the edit icon on your profile in the directory. Profile edits are secured via an email-based One-Time Passcode (OTP).
+                </div>
+            )}
+
             <div className="flex gap-4">
                 {onCancel && (
                     <Button type="button" variant="outline" className="flex-1" onClick={onCancel}>Cancel</Button>
