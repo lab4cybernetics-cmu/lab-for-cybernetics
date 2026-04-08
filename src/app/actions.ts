@@ -4,13 +4,7 @@ import { createMatchingItem, getVerificationData, storeVerificationCode, increme
 import { revalidatePath } from "next/cache";
 import nodemailer from "nodemailer";
 
-const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD,
-    },
-});
+
 
 /**
  * Next.js Server Action to submit a new entry to the Matching database.
@@ -168,6 +162,14 @@ export async function sendVerificationCode(id: string) {
 
     try {
         console.log(`[sendVerificationCode] Attempting to send email via Gmail to: ${email}`);
+
+        const transporter = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+                user: process.env.GMAIL_USER,
+                pass: process.env.GMAIL_APP_PASSWORD,
+            },
+        });
 
         await transporter.sendMail({
             from: `"Lab for Cybernetics" <${process.env.GMAIL_USER}>`,
