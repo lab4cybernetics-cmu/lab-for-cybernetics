@@ -2,9 +2,9 @@ import { createOpenAI } from '@ai-sdk/openai';
 import { generateObject } from 'ai';
 import { z } from 'zod';
 
-const openrouter = createOpenAI({
-    baseURL: 'https://openrouter.ai/api/v1',
-    apiKey: process.env.OPENROUTER_API_KEY,
+const cmuGateway = createOpenAI({
+    baseURL: 'https://ai-gateway.andrew.cmu.edu',
+    apiKey: process.env.CMU_GATEWAY_API_KEY,
 });
 
 export async function POST(req: Request) {
@@ -12,7 +12,7 @@ export async function POST(req: Request) {
         const { userProfile } = await req.json();
 
         const result = await generateObject({
-            model: openrouter.chat('mistralai/mistral-small-2603'),
+            model: cmuGateway.chat('claude-sonnet-4-20250514-v1:0'),
             schema: z.object({
                 suggestions: z.array(z.string()).length(5),
             }),

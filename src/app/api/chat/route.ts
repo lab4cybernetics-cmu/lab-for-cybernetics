@@ -2,12 +2,29 @@ import { createOpenAI } from '@ai-sdk/openai';
 import { streamText, convertToModelMessages, tool, stepCountIs, generateObject } from 'ai';
 import { z } from 'zod';
 
-const openrouter = createOpenAI({
-    baseURL: 'https://openrouter.ai/api/v1',
-    apiKey: process.env.OPENROUTER_API_KEY,
+const cmuGateway = createOpenAI({
+    baseURL: 'https://ai-gateway.andrew.cmu.edu',
+    apiKey: process.env.CMU_GATEWAY_API_KEY,
 });
 
 export const maxDuration = 60;
+
+function inferExplicitPriorityPool(messages: any[]): 'practitioner' | 'scholar' | null {
+    const recentText = (messages || [])
+        .slice(-8)
+        .map((m: any) => (typeof m?.content === 'string' ? m.content : ''))
+        .join('\n')
+        .toLowerCase();
+
+    const asksForPractitioners =
+        /\bpractitioner(s)?\b/.test(recentText) || /实践者|从业者|业界|产业/.test(recentText);
+    const asksForScholars =
+        /\bscholar(s)?\b|\bacademic(s)?\b/.test(recentText) || /学者|研究者|学术/.test(recentText);
+
+    if (asksForPractitioners && !asksForScholars) return 'practitioner';
+    if (asksForScholars && !asksForPractitioners) return 'scholar';
+    return null;
+}
 
 export async function POST(req: Request) {
     console.log("[API /api/chat] Received request");
@@ -24,7 +41,7 @@ export async function POST(req: Request) {
 
         // Decide which pool to prioritize via sub-inference
         const { object: decision } = await generateObject({
-            model: openrouter.chat('mistralai/mistral-small-2603'),
+            model: cmuGateway.chat('claude-sonnet-4-20250514-v1:0'),
             schema: z.object({
                 intent: z.enum(['chat', 'match']),
                 priorityPool: z.enum(['practitioner', 'scholar']),
@@ -42,18 +59,29 @@ Outcome:
             prompt: `Conversation History:\n${JSON.stringify(messages.slice(-5), null, 2)}`
         });
 
-        console.log(`[decide_role] intent=${decision.intent} priority=${decision.priorityPool} reason=${decision.reasoning}`);
+        // Enforce default logic deterministically (LLMs sometimes contradict instructions in free-text reasoning).
+        const explicitPool = inferExplicitPriorityPool(messages);
+        const userType = (userProfile?.userType || '').toLowerCase();
+        const defaultPool: 'practitioner' | 'scholar' =
+            userType.includes('scholar') ? 'practitioner'
+                : userType.includes('practitioner') ? 'scholar'
+                    : decision.priorityPool;
+
+        const enforcedPriorityPool = explicitPool ?? defaultPool;
+        const enforcedDecision = { ...decision, priorityPool: enforcedPriorityPool };
+
+        console.log(`[decide_role] intent=${enforcedDecision.intent} priority=${enforcedDecision.priorityPool} reason=${enforcedDecision.reasoning}`);
 
         const systemPrompt = `You are an AI Matchmaker for the "Lab for Cybernetics".
 Your goal: help the authenticated user find the best collaborators within our community.
 
 COMMUNICATION GUIDELINES:
 - If current intent is "chat" (as determined by sub-inference), respond naturally WITHOUT tools. If they asked for a match but their request was too vague (e.g. "for my thesis" but no topic), politely ASK them to describe their project or thesis topic before you search.
-- ONLY trigger matching (calling ${decision.priorityPool === 'practitioner' ? 'find_practitioners' : 'find_scholars'}) when the intent is "match".
+- ONLY trigger matching (calling ${enforcedDecision.priorityPool === 'practitioner' ? 'find_practitioners' : 'find_scholars'}) when the intent is "match".
 
 MATCHING FLOW:
 - Recommend UP TO 3 collaborators (3 is the target, but less is acceptable).
-- PRIORITY ORDER: Call "find_${decision.priorityPool === 'practitioner' ? 'practitioners' : 'scholars'}" FIRST.
+- PRIORITY ORDER: Call "find_${enforcedDecision.priorityPool === 'practitioner' ? 'practitioners' : 'scholars'}" FIRST.
 - Call the secondary pool tool ONLY IF the first tool returned fewer than 3 matches.
 - CRITICAL STOP CONDITION: You are only allowed to call each tool ONCE per turn. If you have searched both pools and the combined result is fewer than 3, DO NOT search again. Accept the outcome, output the matches you DID find, and kindly inform the user that there are no more suitable candidates in our current database.
 FORMATTING AND REASONING:
@@ -68,7 +96,7 @@ Authenticated user profile:
 ${JSON.stringify(userProfile, null, 2)}`;
 
         const result = streamText({
-            model: openrouter.chat('mistralai/mistral-small-2603'),
+            model: cmuGateway.chat('claude-sonnet-4-20250514-v1:0'),
             system: systemPrompt,
             messages: await convertToModelMessages(messages),
             stopWhen: stepCountIs(5),
@@ -83,7 +111,7 @@ ${JSON.stringify(userProfile, null, 2)}`;
             },
             tools: {
                 find_practitioners: tool({
-                    description: decision.priorityPool === 'practitioner' 
+                    description: enforcedDecision.priorityPool === 'practitioner' 
                         ? 'Search practitioners FIRST (Primary pool for this user).' 
                         : 'Search practitioners ONLY to fill gaps if scholars are insufficient.',
                     inputSchema: z.object({
@@ -96,7 +124,7 @@ ${JSON.stringify(userProfile, null, 2)}`;
                         
                         try {
                             const { object } = await generateObject({
-                                model: openrouter.chat('mistralai/mistral-small-2603'),
+                                model: cmuGateway.chat('claude-sonnet-4-20250514-v1:0'),
                                 schema: z.object({
                                     candidates_analysis: z.array(z.object({
                                         id: z.string(),
@@ -128,7 +156,7 @@ Ignore user profile ID: ${userProfile?.id}.`,
                     },
                 }),
                 find_scholars: tool({
-                    description: decision.priorityPool === 'scholar' 
+                    description: enforcedDecision.priorityPool === 'scholar' 
                         ? 'Search scholars FIRST (Primary pool for this user).' 
                         : 'Search scholars ONLY to fill gaps if practitioners are insufficient.',
                     inputSchema: z.object({
@@ -141,7 +169,7 @@ Ignore user profile ID: ${userProfile?.id}.`,
                         
                         try {
                             const { object } = await generateObject({
-                                model: openrouter.chat('mistralai/mistral-small-2603'),
+                                model: cmuGateway.chat('claude-sonnet-4-20250514-v1:0'),
                                 schema: z.object({
                                     candidates_analysis: z.array(z.object({
                                         id: z.string(),
