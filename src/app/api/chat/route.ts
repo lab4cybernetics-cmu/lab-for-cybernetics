@@ -95,6 +95,11 @@ Before rendering ANY candidate returned by the tools, you MUST double-check thei
 Authenticated user profile:
 ${JSON.stringify(userProfile, null, 2)}`;
 
+        // Hard cap tool searching at 3 total results across pools.
+        // The model can still *attempt* a secondary tool call even when already full;
+        // we prevent additional searching by tracking remaining slots in code.
+        let remainingSlots = 3;
+
         const result = streamText({
             model: cmuGateway.chat('claude-sonnet-4-20250514-v1:0'),
             system: systemPrompt,
@@ -120,7 +125,13 @@ ${JSON.stringify(userProfile, null, 2)}`;
                         needed: z.number().int().min(1).max(3).optional()
                     }),
                     execute: async ({ query, negative_constraints = [], needed = 3 }) => {
-                        console.log(`[tool:find_practitioners] Sub-inference for query="${query}", negatives=[${negative_constraints.join(', ')}], needed=${needed}`);
+                        if (remainingSlots <= 0) {
+                            console.log(`[tool:find_practitioners] Skipped (already filled 3/3).`);
+                            return { practitioners: [] };
+                        }
+
+                        const effectiveNeeded = Math.min(Math.max(1, needed ?? 3), remainingSlots);
+                        console.log(`[tool:find_practitioners] Sub-inference for query="${query}", negatives=[${negative_constraints.join(', ')}], needed=${effectiveNeeded}`);
                         
                         try {
                             const { object } = await generateObject({
@@ -144,12 +155,15 @@ Ignore user profile ID: ${userProfile?.id}.`,
 
                             const validMatches = object.candidates_analysis
                                 .filter(m => !m.violates_negative_constraint && m.is_valid && practitioners.some((p: any) => p.id === m.id))
-                                .slice(0, needed);
+                                .slice(0, effectiveNeeded);
 
-                            return { practitioners: validMatches.map(m => ({
+                            const out = validMatches.map(m => ({
                                 ...practitioners.find((p: any) => p.id === m.id),
                                 pre_generated_reason: m.matchReason
-                            }))};
+                            }));
+
+                            remainingSlots = Math.max(0, remainingSlots - out.length);
+                            return { practitioners: out };
                         } catch (e) {
                             return { practitioners: [] };
                         }
@@ -165,7 +179,13 @@ Ignore user profile ID: ${userProfile?.id}.`,
                         needed: z.number().int().min(1).max(3).optional()
                     }),
                     execute: async ({ query, negative_constraints = [], needed = 3 }) => {
-                        console.log(`[tool:find_scholars] Sub-inference for query="${query}", negatives=[${negative_constraints.join(', ')}], needed=${needed}`);
+                        if (remainingSlots <= 0) {
+                            console.log(`[tool:find_scholars] Skipped (already filled 3/3).`);
+                            return { scholars: [] };
+                        }
+
+                        const effectiveNeeded = Math.min(Math.max(1, needed ?? 3), remainingSlots);
+                        console.log(`[tool:find_scholars] Sub-inference for query="${query}", negatives=[${negative_constraints.join(', ')}], needed=${effectiveNeeded}`);
                         
                         try {
                             const { object } = await generateObject({
@@ -189,12 +209,15 @@ Ignore user profile ID: ${userProfile?.id}.`,
 
                             const validMatches = object.candidates_analysis
                                 .filter(m => !m.violates_negative_constraint && m.is_valid && scholars.some((p: any) => p.id === m.id))
-                                .slice(0, needed);
+                                .slice(0, effectiveNeeded);
 
-                            return { scholars: validMatches.map(m => ({
+                            const out = validMatches.map(m => ({
                                 ...scholars.find((p: any) => p.id === m.id),
                                 pre_generated_reason: m.matchReason
-                            }))};
+                            }));
+
+                            remainingSlots = Math.max(0, remainingSlots - out.length);
+                            return { scholars: out };
                         } catch (e) {
                             return { scholars: [] };
                         }

@@ -441,6 +441,9 @@ export function AskAiModal({ items }: AskAiModalProps) {
                                             </span>
                                         )}
                                     </p>
+                                    <p className="text-xs text-neutral-400 mt-1">
+                                        Default: Scholars are matched with Practitioners first (and vice versa). Say “find scholars” / “find practitioners” to override.
+                                    </p>
                                     {verifiedUser?.keywords && verifiedUser.keywords.length > 0 && (
                                         <div className="flex flex-wrap gap-1 mt-2">
                                             {verifiedUser.keywords.map(kw => (
