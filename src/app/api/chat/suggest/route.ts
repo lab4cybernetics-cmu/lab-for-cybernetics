@@ -12,7 +12,7 @@ export async function POST(req: Request) {
         const { userProfile } = await req.json();
 
         const result = await generateObject({
-            model: cmuGateway.chat('claude-sonnet-4-20250514-v1:0'),
+            model: cmuGateway.chat('claude-haiku-4-5-20251001-v1:0'),
             schema: z.object({
                 suggestions: z.array(z.string()).length(5),
             }),

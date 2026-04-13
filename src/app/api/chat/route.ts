@@ -41,7 +41,7 @@ export async function POST(req: Request) {
 
         // Decide which pool to prioritize via sub-inference
         const { object: decision } = await generateObject({
-            model: cmuGateway.chat('claude-sonnet-4-20250514-v1:0'),
+            model: cmuGateway.chat('claude-haiku-4-5-20251001-v1:0'),
             schema: z.object({
                 intent: z.enum(['chat', 'match']),
                 priorityPool: z.enum(['practitioner', 'scholar']),
@@ -101,7 +101,7 @@ ${JSON.stringify(userProfile, null, 2)}`;
         let remainingSlots = 3;
 
         const result = streamText({
-            model: cmuGateway.chat('claude-sonnet-4-20250514-v1:0'),
+            model: cmuGateway.chat('claude-haiku-4-5-20251001-v1:0'),
             system: systemPrompt,
             messages: await convertToModelMessages(messages),
             stopWhen: stepCountIs(5),
@@ -135,7 +135,7 @@ ${JSON.stringify(userProfile, null, 2)}`;
                         
                         try {
                             const { object } = await generateObject({
-                                model: cmuGateway.chat('claude-sonnet-4-20250514-v1:0'),
+                                model: cmuGateway.chat('claude-haiku-4-5-20251001-v1:0'),
                                 schema: z.object({
                                     candidates_analysis: z.array(z.object({
                                         id: z.string(),
@@ -189,7 +189,7 @@ Ignore user profile ID: ${userProfile?.id}.`,
                         
                         try {
                             const { object } = await generateObject({
-                                model: cmuGateway.chat('claude-sonnet-4-20250514-v1:0'),
+                                model: cmuGateway.chat('claude-haiku-4-5-20251001-v1:0'),
                                 schema: z.object({
                                     candidates_analysis: z.array(z.object({
                                         id: z.string(),
