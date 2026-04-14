@@ -14,7 +14,12 @@ export default async function MatchingPage() {
         <div className="pb-20">
             <TitleBar 
                 title="MATCHING SYSTEM" 
-                description={<div className="max-w-4xl">The Matching System is a curated directory designed to bridge the gap between cybernetics scholarship and practice. It facilitates meaningful connections, enabling scholars to find practitioners for collaboration and practitioners to access theoretical frameworks.</div>}
+                description={<div className="max-w-4xl">
+                    The Matching System is a curated directory designed to bridge the gap between cybernetics scholarship and practice. It facilitates meaningful connections, enabling scholars to find practitioners for collaboration and practitioners to access theoretical frameworks.
+                    <span className="block mt-2 text-neutral-600">
+                        Default matching rule: we prioritize cross-role connections (Scholars → Practitioners first, Practitioners → Scholars first) unless you explicitly ask otherwise.
+                    </span>
+                </div>}
             />
             <div className="flex flex-col gap-8 border-b border-neutral-200 pb-12">
 
