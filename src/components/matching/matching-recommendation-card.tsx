@@ -2,6 +2,8 @@ import { MatchingItem } from "@/lib/notion-types";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Mail } from "lucide-react";
+import { getMatchingProfileTheme } from "@/lib/matching-user-type-theme";
+import { cn } from "@/lib/utils";
 
 interface MatchingRecommendationCardProps {
     item: MatchingItem;
@@ -12,18 +14,21 @@ interface MatchingRecommendationCardProps {
 const normalizeKw = (kw: string) => kw.replace(/^#+/, "").trim().toLowerCase();
 
 export function MatchingRecommendationCard({ item, reason, userKeywords = [] }: MatchingRecommendationCardProps) {
-    const isScholar = item.userType?.toLowerCase().includes("scholar");
-    const isPractitioner = item.userType?.toLowerCase().includes("practitioner");
-
-    const colors = isScholar
-        ? { border: "border-green-100 hover:border-green-300", header: "bg-green-50/50 border-b border-green-100 text-green-800" }
-        : isPractitioner
-            ? { border: "border-orange-100 hover:border-orange-300", header: "bg-orange-50/50 border-b border-orange-100 text-orange-800" }
-            : { border: "border-blue-100 hover:border-blue-300", header: "bg-blue-50/50 border-b border-blue-100 text-blue-800" };
+    const theme = getMatchingProfileTheme(item.userType);
 
     return (
-        <Card className={`my-4 border ${colors.border} transition-colors shadow-sm bg-white overflow-hidden text-left`}>
-            <div className={`px-4 py-2 flex justify-between items-center text-xs font-semibold ${colors.header}`}>
+        <Card
+            className={cn(
+                "my-4 border transition-colors shadow-sm bg-white overflow-hidden text-left",
+                theme.cardBorder
+            )}
+        >
+            <div
+                className={cn(
+                    "px-4 py-2 flex justify-between items-center text-xs font-semibold",
+                    theme.headerBar
+                )}
+            >
                 <span>✨ AI Recommended Match</span>
                 <span className="font-normal">{item.userType}</span>
             </div>

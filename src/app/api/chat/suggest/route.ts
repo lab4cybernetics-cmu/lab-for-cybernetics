@@ -19,6 +19,7 @@ export async function POST(req: Request) {
             prompt: `You are helping a member of the Lab for Cybernetics find collaborators.
 
 Analyze this person's profile and generate exactly 5 short, specific collaboration topics they are likely seeking.
+- Output only neutral topic phrases (no first-person pronouns, no praise or filler like "Great area!").
 - Synthesize and infer from their keywords, "about" text, organization, and user type — do NOT just copy keywords verbatim
 - Each suggestion should be a concrete topic or area (5–10 words max), e.g. "AI governance and policy research", "Urban resilience through digital infrastructure"
 - Think about what kind of collaborator they would find useful given their background
