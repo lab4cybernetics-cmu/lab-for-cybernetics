@@ -195,7 +195,7 @@ interface AskAiModalProps {
 export function AskAiModal({ items }: AskAiModalProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [step, setStep] = useState<"search" | "confirm" | "code" | "chat">("search");
-    const devMode = true;
+    const devMode = false;
 
     // Search & Select State
     const [searchQuery, setSearchQuery] = useState("");
@@ -678,8 +678,8 @@ export function AskAiModal({ items }: AskAiModalProps) {
                                         <span className={cn(
                                             "text-[10px] uppercase tracking-wider font-semibold px-1.5 py-0.5 rounded-full",
                                             verifiedUser.userType.toLowerCase().includes("scholar") ? "bg-green-100 text-green-800" :
-                                            verifiedUser.userType.toLowerCase().includes("practitioner") ? "bg-orange-100 text-orange-800" :
-                                            "bg-neutral-100 text-neutral-600"
+                                                verifiedUser.userType.toLowerCase().includes("practitioner") ? "bg-orange-100 text-orange-800" :
+                                                    "bg-neutral-100 text-neutral-600"
                                         )}>
                                             {verifiedUser.userType}
                                         </span>
