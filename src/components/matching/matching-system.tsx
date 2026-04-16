@@ -24,16 +24,22 @@ export function MatchingSystem({ items, options }: MatchingSystemProps) {
 
     // Filter items
     const filteredItems = useMemo(() => {
-        return items.filter((item) => {
-            const matchesSearch =
-                item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                item.about.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                item.keywords.some((k) => k.toLowerCase().includes(searchQuery.toLowerCase()));
+        return items
+            .filter((item) => {
+                const matchesSearch =
+                    item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    item.about.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    item.keywords.some((k) => k.toLowerCase().includes(searchQuery.toLowerCase()));
 
-            const matchesType = selectedType ? item.userType === selectedType : true;
+                const matchesType = selectedType ? item.userType === selectedType : true;
 
-            return matchesSearch && matchesType;
-        });
+                return matchesSearch && matchesType;
+            })
+            .sort((a, b) => {
+                const dateA = new Date(a.submissionDate || 0).getTime();
+                const dateB = new Date(b.submissionDate || 0).getTime();
+                return dateB - dateA;
+            });
     }, [items, searchQuery, selectedType]);
 
     return (
