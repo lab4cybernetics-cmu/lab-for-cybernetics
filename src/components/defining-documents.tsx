@@ -11,9 +11,10 @@ export interface DefiningDoc {
 
 interface DefiningDocumentsProps {
   docs: DefiningDoc[];
+  variant?: "grid" | "auto";
 }
 
-export function DefiningDocuments({ docs }: DefiningDocumentsProps) {
+export function DefiningDocuments({ docs, variant = "grid" }: DefiningDocumentsProps) {
   const [activeDoc, setActiveDoc] = useState<DefiningDoc | null>(null);
   const [descTopOffset, setDescTopOffset] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -28,10 +29,10 @@ export function DefiningDocuments({ docs }: DefiningDocumentsProps) {
   }
 
   return (
-    <div className="grid grid-cols-3 gap-[var(--sys-padding)]">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-[var(--sys-padding)]">
 
       {/* Buttons: container spans col 1+2 */}
-      <div className="col-span-2 flex flex-col">
+      <div className="col-span-1 md:col-span-2 flex flex-col">
         {docs.map((doc) => {
           const isActive = activeDoc?.title === doc.title;
           return (
@@ -43,11 +44,12 @@ export function DefiningDocuments({ docs }: DefiningDocumentsProps) {
                 onMouseEnter={(e) => handleMouseEnter(doc, e.currentTarget)}
                 onMouseLeave={() => setActiveDoc(null)}
                 style={{
-                  width: isActive ? "100%" : "calc(50% - calc(var(--sys-padding) / 2))",
+                  "--desktop-width": variant === "auto" ? "fit-content" : "calc(50% - calc(var(--sys-padding) / 2))",
+                  width: isActive && variant !== "auto" ? "100%" : undefined,
                   borderRadius: isActive ? "0px" : "6px",
                   transition: "width 400ms ease, border-radius 400ms ease, background-color 400ms ease",
-                }}
-                className="group flex justify-between items-center bg-[#95cee9] px-[20px] py-[14px] text-brand-dark tracking-normal leading-none font-special-condensed uppercase text-[20px] hover:bg-[#8ac1da] overflow-hidden"
+                } as React.CSSProperties}
+                className={`group flex justify-between items-center bg-[#95cee9] px-[20px] py-[14px] text-brand-dark tracking-normal leading-none font-special-condensed uppercase text-[20px] hover:bg-[#8ac1da] overflow-hidden w-full md:w-[var(--desktop-width)]`}
               >
                 <span className="whitespace-nowrap pt-0.5">{doc.title}</span>
                 <ArrowRight className="ml-4 h-[1.2em] w-[1.2em] shrink-0 transition-transform duration-400 group-hover:-rotate-45" strokeWidth={2.5} />
@@ -58,7 +60,7 @@ export function DefiningDocuments({ docs }: DefiningDocumentsProps) {
       </div>
 
       {/* 3rd column: description pinned to hovered button's top */}
-      <div ref={containerRef} className="col-span-1 relative">
+      <div ref={containerRef} className="col-span-1 relative hidden md:block">
         <div
           style={{
             position: "absolute",

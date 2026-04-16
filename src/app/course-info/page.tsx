@@ -123,7 +123,11 @@ export default async function CourseInfoPage() {
                                 .map((t: any) => t.plain_text)
                                 .join("");
                         }
-                        definingDocs.push({ title: text, href, description });
+                        let displayTitle = text;
+                        if (displayTitle.toUpperCase().includes("ENGAGING WICKED CHALLENGES")) {
+                            displayTitle = "Learn more about the course";
+                        }
+                        definingDocs.push({ title: displayTitle, href, description });
                         continue;
                     } else {
                         // heading_4 without link = end of defining docs section, regular subheading
@@ -203,7 +207,7 @@ export default async function CourseInfoPage() {
                     {/* Defining Documents blue button — full width */}
                     {definingDocs.length > 0 && (
                         <div className="col-span-1 md:col-span-3">
-                            <DefiningDocuments docs={definingDocs} />
+                            <DefiningDocuments docs={definingDocs} variant="auto" />
                         </div>
                     )}
 

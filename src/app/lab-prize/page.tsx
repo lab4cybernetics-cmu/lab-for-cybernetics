@@ -55,8 +55,51 @@ function extractLinkedItems(richText: any[]): { label: string; href: string; bol
 
 export default async function LabPrizePage() {
     const pageId = process.env.NOTION_LAB_PRIZE_PAGE_ID;
-    const rawBlocks = pageId ? await fetchPageBlocks(pageId) : [];
+    const homePageId = process.env.NOTION_HOME_PAGE_ID;
+
+    // Fetch both Lab Prize specific blocks and Home page blocks (for pulling the Defining Doc)
+    const [rawBlocks, homeRawBlocks] = await Promise.all([
+        pageId ? fetchPageBlocks(pageId) : [],
+        homePageId ? fetchPageBlocks(homePageId) : []
+    ]);
     const blocks = rawBlocks as any[];
+
+    let manualPrizeDoc: DefiningDoc | null = null;
+    let foundHomeDefiningDocs = false;
+    for (let i = 0; i < homeRawBlocks.length; i++) {
+        const block = homeRawBlocks[i] as any;
+        if (!foundHomeDefiningDocs) {
+            if (block.type === "heading_2") {
+                const text = block.heading_2.rich_text?.map((t: any) => t.plain_text).join("") || "";
+                if (text.toUpperCase().includes("DEFINING DOCUMENTS")) {
+                    foundHomeDefiningDocs = true;
+                }
+            }
+        } else {
+            if (block.type === "heading_4") {
+                const text = block.heading_4.rich_text?.map((t: any) => t.plain_text).join("") || "";
+                if (text.toUpperCase().includes("PRIZE")) { // Specifically target the "cybernetics prize"
+                    let description = "";
+                    for (let j = i + 1; j < homeRawBlocks.length; j++) {
+                        if (homeRawBlocks[j].type !== "paragraph") break;
+                        const pText = homeRawBlocks[j].paragraph.rich_text?.map((t: any) => t.plain_text).join("") || "";
+                        if (!pText.startsWith("NOTE:")) {
+                            description = pText;
+                            break;
+                        }
+                    }
+                    manualPrizeDoc = {
+                        title: "Learn more about the prize",
+                        href: "https://tinyurl.com/L4C-Prize",
+                        description
+                    };
+                    break;
+                }
+            } else if (block.type === "heading_2") {
+                break; // Left the defining documents section
+            }
+        }
+    }
 
     // Split: everything before first divider → title bar content
     // Everything after first divider → body content
@@ -113,9 +156,10 @@ export default async function LabPrizePage() {
                 }
 
                 if (inDefiningDocsSection) {
-                    // This heading_4 has a link → it's a defining doc button
-                    const href = block.heading_4.rich_text.find((t: any) => t.href)?.href;
-                    if (href) {
+                    let href = block.heading_4.rich_text.find((t: any) => t.href)?.href;
+                    let isPrizeDoc = text.toLowerCase().includes("prize");
+
+                    if (href || isPrizeDoc) {
                         // Look ahead for the description paragraph
                         let description = "";
                         if (i + 1 < blocks.length && blocks[i + 1].type === "paragraph") {
@@ -123,7 +167,16 @@ export default async function LabPrizePage() {
                                 .map((t: any) => t.plain_text)
                                 .join("");
                         }
-                        definingDocs.push({ title: text, href, description });
+
+                        let displayTitle = text;
+                        let finalHref = href;
+
+                        if (isPrizeDoc) {
+                            displayTitle = "Learn more about the prize";
+                            finalHref = "https://tinyurl.com/L4C-Prize";
+                        }
+
+                        definingDocs.push({ title: displayTitle, href: finalHref || "#", description });
                         continue;
                     } else {
                         // heading_4 without link = end of defining docs section, regular subheading
@@ -145,6 +198,10 @@ export default async function LabPrizePage() {
                 contentBlocks.push(block);
             }
         }
+    }
+
+    if (manualPrizeDoc) {
+        definingDocs.push(manualPrizeDoc);
     }
 
     // Build description JSX for the title bar
@@ -203,7 +260,7 @@ export default async function LabPrizePage() {
                     {/* Defining Documents blue button — full width */}
                     {definingDocs.length > 0 && (
                         <div className="col-span-1 md:col-span-3">
-                            <DefiningDocuments docs={definingDocs} />
+                            <DefiningDocuments docs={definingDocs} variant="auto" />
                         </div>
                     )}
 
