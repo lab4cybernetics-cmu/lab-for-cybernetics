@@ -72,12 +72,22 @@ For sections that have many items (People, News, Projects), use **Databases**. T
 
 ## 🔗 4. The Matching System (Existing)
 You already have this.
-*   **Database Name:** `Practitioner-Scholar Matching` (or similar)
-*   **Properties:** (We will confirm these with the inspection script)
+*   **Database Name:** `Matching`
+*   **Properties:** (Confirmed)
     *   `Name`
-    *   `Domains`
-    *   `Type`
-    *   `Collaboration Mode`
+    *   `Domain` (Rich Text) - Mapped from the "What domain is at the core..." form question.
+    *   `Keywords` (Multi-select) - Keywords added by users. Automatically cleaned (hashtags removed, case normalized) by the frontend form and backend integration.
+    *   `User Type` (Select) - e.g., Scholar, Practitioner.
+    *   `Collaboration Mode` (Select)
+    *   `Survey Feedback` (Rich Text) - *Internal Use Only*. Stored in Notion but explicitly omitted from the public matching cards.
+
+### Tag Maintenance
+The frontend automatically sanitizes tags (stripping `#` and resolving duplicates) during form submission and fetching.
+If manual cleanup of historical data in Notion is ever required, you can run the provided maintenance script:
+```bash
+node scripts/clean-tags.js
+```
+This script will scan the Matching database, remove leading `#` symbols, split multi-tags (e.g., `#AIgovernance #AIsafety`), and update Notion automatically.
 
 
 ## Summary of IDs needed

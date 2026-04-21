@@ -67,41 +67,38 @@ A full website for Lab for Cybernetics using Notion as the CMS and database, wit
 ## Matching System (Detailed Requirements)
 
 ### The Problem
-**Current state:**
+**Previous state:**
 - Matching system lives in Notion
 - People fill a form → entries appear in Notion gallery view
 - Viewers get view-only access, which means they **can't filter or search**
 - Domain field is free-text, so we have "HCI", "Human-Computer Interaction", "human computer interaction" all separate
+- Keyword tags were messy (users typing leading hashtags, inconsistent spacing, duplicate entries).
 
-**What Paul wants:**
-1. Type-ahead autocomplete for domains (type "system" → see "systems thinking", "system design" from existing entries)
-2. Matching suggestions based on domain overlap + collaboration mode
-3. System simple enough that future RAs can maintain it
+### What We Built
 
-### What We're Building
-
-#### 1. Form with Autocomplete
+#### 1. Form with Intelligent Autocomplete
 - User fills out: name, email, user type (practitioner/scholar), domains, collaboration mode, bio
-- When typing in domain field, shows existing domains from database as suggestions
-- Submits to Notion via API
+- **Smart Tags:** When entering tags, the system intelligently parses commas and hashtags (converting strings like `#AI #Cybernetics` into clean `AI`, `Cybernetics` tags), normalizes cases, and strips hyphens to prevent duplicate variants.
+- Submits seamlessly to Notion via API while enforcing data cleanliness.
 
 #### 2. Browse/Search Interface
-- Shows all entries in a searchable view
-- Can filter by domain, collaboration mode, user type
-- Actually works (unlike Notion view-only)
+- Shows all entries in a highly polished, responsive grid.
+- **Card UI:** Cards feature constrained line-clamping (e.g., Domain text limited to 15 lines), a balanced divider line layout, and distinct visual badges. Internal fields (like Survey Feedback) are parsed but explicitly hidden from public view.
+- Real-time filtering by search text and user type.
 
 #### 3. Match Suggestions
-- Simple algorithm: count shared domains + check if collaboration mode matches
-- Show suggested matches when browsing
+- Algorithm ranks shared domains + collaboration mode matching.
+- Prioritizes cross-role matching by default (Scholars → Practitioners first).
 
 ---
 
 ## Open Questions
 
-**Need to figure out:**
-- What's the exact Notion database structure for matching? (field names, types)
-- Are practitioners and scholars in one database or two?
-- What exactly is "collaboration mode"? (remote/in-person? something else?)
+**Resolved:**
+- **Notion Schema:** Mapped `Matching` database perfectly. "What domain is at the core..." safely routes to the `Domain` text column, not `About`.
+- **Tag Cleanliness:** Implemented `scripts/clean-tags.js` to retroactively repair Notion data and robust API middleware to keep it clean going forward.
+
+**Pending:**
 - How should Projects section be structured in Notion?
 - What fields do we need for News, People sections?
 

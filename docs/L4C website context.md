@@ -1,6 +1,6 @@
 # L4C Website - Project Context & Handoff
 **Date:** January 26, 2025
-**Status:** Ready for Initialization
+**Status:** In Active Development
 ---
 ## 🚀 The Mission
 Build a website for the **Lab for Cybernetics** that serves as:
@@ -18,10 +18,8 @@ Build a website for the **Lab for Cybernetics** that serves as:
 *   **Matching System:**
     *   **Architecture:** Custom server-side form (Server Actions).
     *   **Autocomplete:** `Box` -> `Systems...` (fetches distinct domains from Notion).
-    *   **Visualization:** **React Force Graph** or D3 to show connections between people/concepts.
-*   **Auth (Edit Flow):**
-    *   **Magic Links:** User enters email -> gets link -> can edit their entry.
-    *   **Service:** **Resend** (Free tier).
+*   **Auth & Verification:**
+    *   Verification modal protects sensitive contact information on matching profiles (users must enter an email to view full details).
 ---
 ## 📄 The PRD
 ### 1. Website Sections
@@ -38,14 +36,14 @@ Build a website for the **Lab for Cybernetics** that serves as:
 ### 2. Matching System Requirements
 **The Problem:** Notion's view-only mode prevents search/filter. Domain entries are messy ("HCI" vs "Human Comp Interaction").
 **The Solution:**
-1.  **Form:** Type-ahead autocomplete for domains (normalizes data).
-2.  **Browse:** Real search/filter interface (by domain, collaboration mode).
+1.  **Form:** Type-ahead autocomplete for domains (normalizes data, robust tag parsing).
+2.  **Browse:** Real search/filter interface with a custom, highly styled grid UI.
 3.  **Match:** Suggest "You should talk to..." based on shared domains.
 ### 3. Open Questions (To Resolve in Code)
-*   Exact Notion Database IDs.
 *   Standardizing "Collaboration Mode" options.
 ---
-## ✅ Next Steps
-1.  Restart workspace in `l4cybernetics` folder.
-2.  Run initialization: `npx create-next-app@latest . --use-npm --typescript --tailwind --eslint --app`
+## ✅ Completed Initialization Steps
+1.  Restarted workspace in `lab4cybernetics` folder.
+2.  Ran initialization: `npx create-next-app`
 3.  Set up `lib/notion.ts` with TypeScript interfaces.
+4.  Built out block renderer, routing, and core Matching System frontend.

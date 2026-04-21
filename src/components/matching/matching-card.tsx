@@ -44,7 +44,7 @@ export function MatchingCard({ item, options }: MatchingCardProps) {
         if (!open) {
             // Delay reset slightly to avoid UI flash, or just reset immediately
             setTimeout(() => setIsEditing(false), 300);
-            
+
             // Clean up URL hash if we close the dialog that was opened via hash
             if (typeof window !== 'undefined' && window.location.hash === `#${elementId}`) {
                 history.replaceState(null, '', window.location.pathname + window.location.search);
@@ -69,7 +69,7 @@ export function MatchingCard({ item, options }: MatchingCardProps) {
         <Dialog open={isOpen} onOpenChange={handleOpenChange}>
             <DialogTrigger asChild>
                 <Card id={elementId} className="h-full flex flex-col justify-between hover:border-neutral-400 transition-colors cursor-pointer text-left scroll-mt-24">
-                    <CardHeader>
+                    <CardHeader className="pb-0">
                         <div className="flex justify-between items-start gap-2">
                             <CardTitle className="text-lg leading-tight">{item.name}</CardTitle>
                             {item.userType && (
@@ -85,9 +85,12 @@ export function MatchingCard({ item, options }: MatchingCardProps) {
                                 </Badge>
                             )}
                         </div>
-                        <div className="text-sm text-neutral-500 font-medium">{item.organization}</div>
+                        <div className="!mt-3 h-px w-full bg-neutral-200" />
+                        {item.organization && (
+                            <div className="text-sm text-neutral-500 font-medium !mt-3">{item.organization}</div>
+                        )}
                     </CardHeader>
-                    <CardContent className="space-y-4">
+                    <CardContent className="space-y-4 pt-5">
                         {item.about && (
                             <div className="text-sm text-neutral-600 line-clamp-3">
                                 {item.about}
@@ -95,7 +98,7 @@ export function MatchingCard({ item, options }: MatchingCardProps) {
                         )}
 
                         {item.domain && (
-                            <div className="text-sm">
+                            <div className="text-sm line-clamp-[15]">
                                 <span className="font-semibold text-neutral-800">Domain: </span>
                                 <span className="text-neutral-600">{item.domain}</span>
                             </div>
@@ -245,12 +248,7 @@ export function MatchingCard({ item, options }: MatchingCardProps) {
                                         <p className="whitespace-pre-wrap">{item.effectiveCollaboration}</p>
                                     </div>
                                 )}
-                                {item.surveyFeedback && (
-                                    <div>
-                                        <h4 className="font-semibold text-neutral-900 mb-2 text-base">Survey Feedback</h4>
-                                        <p className="whitespace-pre-wrap">{item.surveyFeedback}</p>
-                                    </div>
-                                )}
+
                             </div>
                         </div>
                     </div>

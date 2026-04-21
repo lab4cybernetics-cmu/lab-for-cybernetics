@@ -55,8 +55,52 @@ function extractLinkedItems(richText: any[]): { label: string; href: string; bol
 
 export default async function CourseInfoPage() {
     const pageId = process.env.NOTION_COURSE_INFO_PAGE_ID;
-    const rawBlocks = pageId ? await fetchPageBlocks(pageId) : [];
+    const homePageId = process.env.NOTION_HOME_PAGE_ID;
+
+    // Fetch both Course Info specific blocks and Home page blocks (for pulling the Defining Doc)
+    const [rawBlocks, homeRawBlocks] = await Promise.all([
+        pageId ? fetchPageBlocks(pageId) : [],
+        homePageId ? fetchPageBlocks(homePageId) : []
+    ]);
     const blocks = rawBlocks as any[];
+
+    let manualCourseDoc: DefiningDoc | null = null;
+    let foundHomeDefiningDocs = false;
+    for (let i = 0; i < homeRawBlocks.length; i++) {
+        const block = homeRawBlocks[i] as any;
+        if (!foundHomeDefiningDocs) {
+            if (block.type === "heading_2") {
+                const text = block.heading_2.rich_text?.map((t: any) => t.plain_text).join("") || "";
+                if (text.toUpperCase().includes("DEFINING DOCUMENTS")) {
+                    foundHomeDefiningDocs = true;
+                }
+            }
+        } else {
+            if (block.type === "heading_4") {
+                const text = block.heading_4.rich_text?.map((t: any) => t.plain_text).join("") || "";
+                if (text.toUpperCase().includes("ENGAGING WICKED CHALLENGES")) {
+                    let description = "";
+                    for (let j = i + 1; j < homeRawBlocks.length; j++) {
+                        if (homeRawBlocks[j].type !== "paragraph") break;
+                        const pText = homeRawBlocks[j].paragraph.rich_text?.map((t: any) => t.plain_text).join("") || "";
+                        if (!pText.startsWith("NOTE:")) {
+                            description = pText;
+                            break;
+                        }
+                    }
+                    const href = block.heading_4.rich_text?.find((t: any) => t.href)?.href || "#";
+                    manualCourseDoc = {
+                        title: "Learn more about the course",
+                        href: href,
+                        description
+                    };
+                    break;
+                }
+            } else if (block.type === "heading_2") {
+                break; // Left the defining documents section
+            }
+        }
+    }
 
     // Split: everything before first divider → title bar content
     // Everything after first divider → body content
@@ -69,6 +113,7 @@ export default async function CourseInfoPage() {
     let contentBlocks: any[] = [];
     let foundFirstDivider = false;
     let inDefiningDocsSection = false;
+    let courseDocAdded = false;
 
     for (let i = 0; i < blocks.length; i++) {
         const block = blocks[i];
@@ -113,9 +158,10 @@ export default async function CourseInfoPage() {
                 }
 
                 if (inDefiningDocsSection) {
-                    // This heading_4 has a link → it's a defining doc button
-                    const href = block.heading_4.rich_text.find((t: any) => t.href)?.href;
-                    if (href) {
+                    let href = block.heading_4.rich_text.find((t: any) => t.href)?.href;
+                    let isCourseDoc = text.toUpperCase().includes("ENGAGING WICKED CHALLENGES");
+
+                    if (href || isCourseDoc) {
                         // Look ahead for the description paragraph
                         let description = "";
                         if (i + 1 < blocks.length && blocks[i + 1].type === "paragraph") {
@@ -123,11 +169,21 @@ export default async function CourseInfoPage() {
                                 .map((t: any) => t.plain_text)
                                 .join("");
                         }
+
                         let displayTitle = text;
-                        if (displayTitle.toUpperCase().includes("ENGAGING WICKED CHALLENGES")) {
+                        let finalHref = href;
+
+                        if (isCourseDoc) {
                             displayTitle = "Learn more about the course";
+                            finalHref = manualCourseDoc?.href || href || "#";
+                            // Use description from Home Page if available, else fallback to local
+                            if (manualCourseDoc?.description) {
+                                description = manualCourseDoc.description;
+                            }
+                            courseDocAdded = true;
                         }
-                        definingDocs.push({ title: displayTitle, href, description });
+
+                        definingDocs.push({ title: displayTitle, href: finalHref || "#", description });
                         continue;
                     } else {
                         // heading_4 without link = end of defining docs section, regular subheading
@@ -149,6 +205,10 @@ export default async function CourseInfoPage() {
                 contentBlocks.push(block);
             }
         }
+    }
+
+    if (manualCourseDoc && !courseDocAdded) {
+        definingDocs.push(manualCourseDoc);
     }
 
     // Build description JSX for the title bar

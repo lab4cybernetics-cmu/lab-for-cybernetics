@@ -57,18 +57,52 @@ export function CreatableMultiSelect({
     const containerRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
 
+    function normalizeTagForMatch(tag: string): string {
+        return tag.toLowerCase().replace(/[-\s_]+/g, "");
+    }
+
+    function resolveTags(rawTags: string[], currentSelected: string[]): string[] {
+        const toAdd: string[] = [];
+        for (const raw of rawTags) {
+            const trimmed = raw.trim();
+            if (!trimmed) continue;
+            
+            const normalized = normalizeTagForMatch(trimmed);
+            
+            // Skip if already in the currently selected list or in the toAdd list
+            if (currentSelected.some(v => normalizeTagForMatch(v) === normalized)) continue;
+            if (toAdd.some(v => normalizeTagForMatch(v) === normalized)) continue;
+            
+            // Find if it matches an existing option
+            const matchedOption = options.find(opt => normalizeTagForMatch(opt) === normalized);
+            toAdd.push(matchedOption || trimmed);
+        }
+        return toAdd;
+    }
+
+    // Parse input value into potential multiple tags
+    const parsedInputTags = inputValue
+        .split(/[,#]+/)
+        .map((tag) => tag.trim())
+        .filter((tag) => tag.length > 0);
+
+    // Use the cleaned string without leading # for filtering
+    const cleanSearchStr = inputValue.replace(/^#/, "").trim();
+    const normalizedSearch = normalizeTagForMatch(cleanSearchStr);
+
     // Filter options based on input (exclude already selected)
     const filteredOptions = options.filter(
         (opt) =>
-            opt.toLowerCase().includes(inputValue.toLowerCase()) &&
-            !value.includes(opt)
+            normalizedSearch &&
+            normalizeTagForMatch(opt).includes(normalizedSearch) &&
+            !value.some((v) => normalizeTagForMatch(v) === normalizeTagForMatch(opt))
     );
 
     // Check if the typed value is a new entry
     const isNewEntry =
-        inputValue.trim() !== "" &&
-        !options.some((opt) => opt.toLowerCase() === inputValue.toLowerCase()) &&
-        !value.some((v) => v.toLowerCase() === inputValue.toLowerCase());
+        normalizedSearch !== "" &&
+        !options.some((opt) => normalizeTagForMatch(opt) === normalizedSearch) &&
+        !value.some((v) => normalizeTagForMatch(v) === normalizedSearch);
 
     // Close dropdown when clicking outside
     useEffect(() => {
@@ -82,16 +116,20 @@ export function CreatableMultiSelect({
     }, []);
 
     function handleSelect(selectedValue: string) {
-        if (!value.includes(selectedValue)) {
-            onChange([...value, selectedValue]);
+        const toAdd = resolveTags([selectedValue], value);
+        if (toAdd.length > 0) {
+            onChange([...value, ...toAdd]);
         }
         setInputValue("");
         inputRef.current?.focus();
     }
 
     function handleAddNew() {
-        if (inputValue.trim() && !value.includes(inputValue.trim())) {
-            onChange([...value, inputValue.trim()]);
+        if (parsedInputTags.length > 0) {
+            const toAdd = resolveTags(parsedInputTags, value);
+            if (toAdd.length > 0) {
+                onChange([...value, ...toAdd]);
+            }
             setInputValue("");
             inputRef.current?.focus();
         }
@@ -161,8 +199,44 @@ export function CreatableMultiSelect({
                     type="text"
                     value={inputValue}
                     onChange={(e) => {
-                        setInputValue(e.target.value);
+                        const val = e.target.value;
+                        const lastDelimiterIndex = Math.max(
+                            val.lastIndexOf(","),
+                            val.lastIndexOf("#")
+                        );
+                        
+                        if (lastDelimiterIndex > 0 || (lastDelimiterIndex === 0 && val[0] !== "#")) {
+                            const completedPart = val.substring(0, lastDelimiterIndex);
+                            const delimiter = val[lastDelimiterIndex];
+                            const remainingPart = val.substring(lastDelimiterIndex + 1);
+                            
+                            const tagsToParse = completedPart.split(/[,#]+/);
+                            const toAdd = resolveTags(tagsToParse, value);
+                                
+                            if (toAdd.length > 0) {
+                                onChange([...value, ...toAdd]);
+                            }
+                            
+                            if (delimiter === "#") {
+                                setInputValue("#" + remainingPart);
+                            } else {
+                                setInputValue(remainingPart);
+                            }
+                            setIsOpen(true);
+                            return;
+                        }
+                        
+                        setInputValue(val);
                         setIsOpen(true);
+                    }}
+                    onPaste={(e) => {
+                        e.preventDefault();
+                        const pasted = e.clipboardData.getData("text");
+                        const tagsToParse = pasted.split(/[,#]+/);
+                        const toAdd = resolveTags(tagsToParse, value);
+                        if (toAdd.length > 0) {
+                            onChange([...value, ...toAdd]);
+                        }
                     }}
                     onFocus={() => setIsOpen(true)}
                     onKeyDown={handleInputKeyDown}
@@ -193,7 +267,7 @@ export function CreatableMultiSelect({
                                 className="w-full px-3 py-2 text-left text-sm hover:bg-blue-50 text-blue-600 border-t border-neutral-100 flex items-center gap-2"
                             >
                                 <Plus className="h-3.5 w-3.5" />
-                                Add &quot;{inputValue.trim()}&quot;
+                                Add {parsedInputTags.length > 1 ? `${parsedInputTags.length} tags` : `"${parsedInputTags[0] || inputValue.trim()}"`}
                             </button>
                         )}
                     </div>

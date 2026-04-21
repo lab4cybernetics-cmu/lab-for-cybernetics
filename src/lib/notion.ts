@@ -56,7 +56,7 @@ function getSelect(page: any, propName: string): string {
 function getMultiSelect(page: any, propName: string): string[] {
     const prop = page.properties[propName];
     if (prop && prop.multi_select) {
-        return prop.multi_select.map((item: any) => item.name);
+        return prop.multi_select.map((item: any) => item.name.replace(/^#/, ""));
     }
     return [];
 }
@@ -202,7 +202,7 @@ export async function fetchMatchingSelectOptions(): Promise<MatchingSelectOption
             // Keywords (multi_select)
             if (props["Keywords"]?.multi_select) {
                 for (const item of props["Keywords"].multi_select) {
-                    if (item.name) keywordsSet.add(item.name);
+                    if (item.name) keywordsSet.add(item.name.replace(/^#/, ""));
                 }
             }
 
@@ -428,7 +428,7 @@ export async function createMatchingItem(data: Partial<MatchingItem>): Promise<{
                     select: data.timeCommitment ? { name: data.timeCommitment } : null
                 },
                 "Keywords": {
-                    multi_select: data.keywords?.map(k => ({ name: k })) || []
+                    multi_select: data.keywords?.map(k => ({ name: k.replace(/^#/, "") })) || []
                 },
                 "Submission Date": {
                     date: { start: new Date().toISOString() }
@@ -468,7 +468,7 @@ export async function updateMatchingItem(id: string, data: Partial<MatchingItem>
         if (data.organization) properties["Organization"] = { select: { name: data.organization } };
         if (data.practitionerStatus) properties["Practitioner Status"] = { status: { name: data.practitionerStatus } };
         if (data.timeCommitment) properties["Time Commitment"] = { select: { name: data.timeCommitment } };
-        if (data.keywords) properties["Keywords"] = { multi_select: data.keywords.map(k => ({ name: k })) };
+        if (data.keywords) properties["Keywords"] = { multi_select: data.keywords.map(k => ({ name: k.replace(/^#/, "") })) };
 
         await notion.pages.update({
             page_id: id,

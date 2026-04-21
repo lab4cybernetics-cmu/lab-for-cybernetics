@@ -101,6 +101,19 @@ export default function RootLayout({
           <main className="pb-20 text-sys-normal tracking-normal leading-[1.12] max-w-[var(--sys-body-width)]">
             {children}
           </main>
+
+          <footer className="pt-8 pb-12 mt-12 border-t border-neutral-300 flex flex-col gap-2 text-[13px] text-brand-grey max-w-[var(--sys-body-width)]">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+              <span>Copyright © {new Date().getFullYear()}</span>
+              <span className="hidden sm:inline">|</span>
+              <span>Laboratory for Cybernetics, Carnegie Mellon University</span>
+              <span className="hidden sm:inline">|</span>
+              <a href="/docs.html" target="_blank" rel="noopener noreferrer" className="hover:text-brand-dark transition-colors">Developer Docs</a>
+            </div>
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+              <span>Powered by Next.js & Notion.</span>
+            </div>
+          </footer>
         </div>
       </body>
     </html>

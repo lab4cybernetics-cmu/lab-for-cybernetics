@@ -38,7 +38,7 @@ export default async function NewsDetailPage({ params }: PageProps) {
                         <div className="text-sm font-medium text-neutral-500 mb-2 uppercase tracking-wide">
                             {item.date ? format(new Date(item.date), "MMMM d, yyyy") : ""}
                         </div>
-                        <h1 className="text-3xl font-medium leading-tight">
+                        <h1 className="text-4xl font-medium leading-tight">
                             {item.title}
                         </h1>
                     </div>

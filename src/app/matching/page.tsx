@@ -21,7 +21,7 @@ export default async function MatchingPage() {
                     </span>
                 </div>}
             />
-            <div className="flex flex-col gap-8 border-b border-neutral-200 pb-12">
+            <div className="flex flex-col gap-8 border-b border-neutral-200 pb-12 mb-12">
 
                 <div className="bg-neutral-50 p-6 rounded-sm border border-neutral-100">
                     <h2 className="text-base font-medium text-neutral-900 mb-2">Join the Network</h2>

@@ -151,15 +151,15 @@ export function MatchingForm({
                     <p className="text-xs text-neutral-400">Please include http:// or https://</p>
                 </div>
 
-                {/* 4. About / Core Domain - same question for both */}
+                {/* 4. Domain / Core Domain - same question for both */}
                 <div className="space-y-2">
-                    <Label htmlFor="about">What domain is at the core of your research, academic pursuits, or in-world practice? *</Label>
+                    <Label htmlFor="domain">What domain is at the core of your research, academic pursuits, or in-world practice? *</Label>
                     <CharacterCountedTextarea
-                        id="about"
-                        name="about"
+                        id="domain"
+                        name="domain"
                         required
                         className="min-h-[100px]"
-                        defaultValue={initialData?.about}
+                        defaultValue={initialData?.domain}
                         maxLength={2000}
                     />
                     <p className="text-xs text-neutral-400">

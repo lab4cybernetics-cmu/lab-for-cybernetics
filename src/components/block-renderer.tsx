@@ -71,15 +71,15 @@ export function BlockRenderer({ block }: BlockRendererProps) {
                 );
             }
             return (
-                <h3 className="text-2xl font-medium leading-tight text-brand-dark mt-8 mb-4">
-                    {textContent}
-                </h3>
+                <div className="group flex justify-between items-center w-full md:w-[calc(50%-12px)] bg-[#95cee9] px-[20px] py-[14px] mb-[12px] text-brand-dark tracking-normal leading-none font-special-condensed uppercase text-[20px] rounded-[6px]">
+                    <span className="pt-0.5">{textContent}</span>
+                </div>
             );
         }
         case "heading_4": {
             const textContent = value.rich_text.map((t: any) => t.plain_text).join("");
             return (
-                <h4 className="text-sys-subheading font-special-condensed uppercase text-brand-grey tracking-normal leading-none mt-[var(--sys-subheading-gap)] mb-[var(--sys-subheading-gap)]">
+                <h4 className="text-lg font-bold font-sans text-brand-dark mt-6 mb-3">
                     {textContent}
                 </h4>
             );

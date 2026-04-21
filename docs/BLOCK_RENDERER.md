@@ -17,22 +17,23 @@ The component receives a `block` prop and switches on its `type` property (e.g.,
 
 ---
 
-## ⚠️ Special Intercept Logic for Buttons ⚠️
+## 🔹 Blue Buttons & Project Titles (`heading_3`)
 
-Because Notion's standard API and the Next.js site do not inherently share a "Button" block concept, the `BlockRenderer` employs a **manual text-intercept technique** to render stylized blue buttons on the homepage for specific documents.
+The `BlockRenderer` repurposes Notion's **Heading 3** blocks to serve as stylized blue UI blocks. This is used for "Defining Documents" buttons and Project Titles in news articles.
 
 ### The Mechanism:
-Inside the `paragraph` block switch branch, the code defines an array called `manualButtons`. It checks if the plain text of a paragraph **starts with specific predefined phrases** (e.g., `"Defining a new course entitled Engaging Wicked Challenges"`). 
+When the renderer encounters a `heading_3` block, it checks if any text within the heading contains a hyperlink (`href`).
+1. **With a Link**: It renders an interactive blue button (`<a>` tag) with an animated right arrow (`→`) that appears on hover.
+2. **Without a Link**: It renders a static blue block (used for displaying project titles in news updates) without the arrow or hover effects.
 
-If a match is found:
-1. It extracts the underlying hyperlink (`href`) assigned to that text in Notion.
-2. Instead of returning a standard `<p>` tag, it **hijacks the render** and returns a fully styled `<a>` tag designed to look like a blue bounding box with a right arrow (`→`).
-3. The original lengthy trigger text from Notion is swapped out for a shorter, punchy title defined in the code (e.g., swapped for just `"Engaging Wicked Challenges"`).
+---
 
-### How to add a new Button Document:
-If you want to add a *new* defining document link button to the homepage in the future:
-1. **In Notion**: Add a new paragraph block containing a specific unique sentence containing your hyperlink.
-2. **In Code**: Open `src/components/block-renderer.tsx` and add a new object to the `manualButtons` array mapping your unique sentence (`trigger`) to your desired button text (`title`).
+## ⚠️ Special Intercept Logic for Paragraphs ⚠️
 
-### Hidden Text Logic
-There is also a hardcoded intercept that hides any paragraph beginning with exactly: `"NOTE: The window for submissions is open between April 1 and April 30"`. This allows lab maintainers to leave administrative backend notes in Notion without them displaying on the live website.
+The `paragraph` block renderer contains hardcoded logic to **suppress (hide)** specific text strings from rendering on the live website.
+
+### 1. Redundant Text Suppression
+Because certain documents (like "Defining a new course...") are now represented by the stylized `heading_3` buttons, the raw paragraph text that immediately follows them in Notion is often redundant. The `BlockRenderer` intercepts and returns `null` for paragraphs starting with specific phrases (e.g., `"Defining a new course entitled Engaging Wicked Challenges"`).
+
+### 2. Admin Notes
+There is a hardcoded intercept that hides any paragraph beginning exactly with: `"NOTE: The window for submissions is open between April 1 and April 30"`. This allows lab maintainers to leave administrative backend notes in Notion without them displaying to the public.

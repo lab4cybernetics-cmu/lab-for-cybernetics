@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L4C Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Special+Gothic+Condensed+One&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── TOKENS ──────────────────────────────────────────────── */
+    :root {
+      --brand-dark:  #323639;
+      --brand-grey:  #9ba0a5;
+      --brand-blue:  #1a0dab;
+      --brand-tan:   #f6f4eb;
+      --background:  #ffffff;
+      --action-bg:   #95cee9;
+      --action-hover:#8ac1da;
+
+      --sys-padding:        64px;
+      --sys-body-width:     1200px;
+      --sys-subheading-gap: 24px;
+
+      --text-heading:    36px;
+      --text-subheading: 36px;
+      --text-nav:        20px;
+      --text-normal:     16px;
+      --text-top-left:   16px;
+    }
+
+    @media (max-width: 767px) {
+      :root { --sys-padding: 32px; }
+    }
+
+    /* ─── RESET ───────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: var(--text-normal);
+      color: var(--brand-dark);
+      background: var(--background);
+      line-height: 1.6;
+      text-wrap: pretty;
+    }
+
+    /* ─── LAYOUT ──────────────────────────────────────────────── */
+    .page-wrap {
+      max-width: var(--sys-body-width);
+      margin: 0 auto;
+      padding: 0 var(--sys-padding);
+    }
+
+    /* ─── NAV ─────────────────────────────────────────────────── */
+    nav {
+      border-bottom: 1px solid #e0e0e0;
+      padding: 20px 0;
+    }
+    nav .inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-wordmark {
+      font-family: 'Special Gothic Condensed One', sans-serif;
+      font-size: var(--text-nav);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand-dark);
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: var(--text-nav);
+      color: var(--brand-dark);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--brand-blue); }
+    .nav-links a.active { color: var(--brand-blue); }
+
+    /* ─── HERO ────────────────────────────────────────────────── */
+    .hero {
+      padding: 72px 0 48px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .eyebrow {
+      font-size: var(--text-top-left);
+      color: var(--brand-grey);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-family: 'Special Gothic Condensed One', sans-serif;
+      font-size: clamp(48px, 6vw, 80px);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--brand-dark);
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+    .hero-desc {
+      max-width: 600px;
+      color: var(--brand-grey);
+      font-size: 18px;
+    }
+
+    /* ─── SECTION ─────────────────────────────────────────────── */
+    .doc-section {
+      padding: 64px 0 0;
+    }
+    h2 {
+      font-family: 'Special Gothic Condensed One', sans-serif;
+      font-size: var(--text-subheading);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--brand-dark);
+      margin-bottom: var(--sys-subheading-gap);
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #d4d4d4;
+      margin: var(--sys-subheading-gap) 0;
+    }
+
+    /* ─── COLORS ──────────────────────────────────────────────── */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 8px;
+    }
+    .color-card {
+      border: 1px solid #e8e8e8;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .color-swatch {
+      height: 100px;
+    }
+    .color-info {
+      padding: 12px 14px;
+      background: var(--background);
+    }
+    .color-name {
+      font-family: 'Special Gothic Condensed One', sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--brand-dark);
+    }
+    .color-hex {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 13px;
+      color: var(--brand-grey);
+      margin-top: 2px;
+    }
+    .color-usage {
+      font-size: 12px;
+      color: var(--brand-grey);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    /* ─── TYPOGRAPHY ──────────────────────────────────────────── */
+    .type-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .type-row {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      align-items: baseline;
+      gap: 32px;
+      padding: 28px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .type-row:last-child { border-bottom: none; }
+    .type-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .type-token {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 12px;
+      color: var(--brand-blue);
+      background: #f0f4ff;
+      padding: 2px 6px;
+      border-radius: 3px;
+      display: inline-block;
+    }
+    .type-size {
+      font-size: 12px;
+      color: var(--brand-grey);
+      margin-top: 4px;
+    }
+
+    /* specimen styles */
+    .spec-heading     { font-family: 'Special Gothic Condensed One', sans-serif; font-size: 36px; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1; }
+    .spec-subheading  { font-family: 'Special Gothic Condensed One', sans-serif; font-size: 36px; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1; }
+    .spec-nav         { font-size: 20px; color: var(--brand-dark); }
+    .spec-normal      { font-size: 16px; color: var(--brand-dark); }
+    .spec-top-left    { font-size: 16px; color: var(--brand-grey); text-transform: uppercase; letter-spacing: 0.08em; }
+
+    /* font families */
+    .font-families {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    .font-card {
+      background: var(--brand-tan);
+      padding: 32px;
+      border-radius: 4px;
+    }
+    .font-card-label {
+      font-size: 12px;
+      color: var(--brand-grey);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+    .font-specimen-inter {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 32px;
+      color: var(--brand-dark);
+      line-height: 1.2;
+    }
+    .font-specimen-special {
+      font-family: 'Special Gothic Condensed One', sans-serif;
+      font-size: 48px;
+      text-transform: uppercase;
+      color: var(--brand-dark);
+      line-height: 1;
+    }
+    .font-card-name {
+      font-size: 13px;
+      color: var(--brand-grey);
+      margin-top: 12px;
+    }
+
+    /* ─── SPACING ─────────────────────────────────────────────── */
+    .spacing-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+    .spacing-table th {
+      text-align: left;
+      font-family: 'Special Gothic Condensed One', sans-serif;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--brand-grey);
+      padding: 10px 16px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .spacing-table td {
+      padding: 16px 16px;
+      border-bottom: 1px solid #f0f0f0;
+      vertical-align: middle;
+    }
+    .spacing-table tr:last-child td { border-bottom: none; }
+    .token-pill {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 13px;
+      color: var(--brand-blue);
+      background: #f0f4ff;
+      padding: 3px 8px;
+      border-radius: 3px;
+    }
+    .spacing-bar-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .spacing-bar {
+      height: 12px;
+      background: var(--brand-dark);
+      border-radius: 2px;
+      display: inline-block;
+    }
+    .spacing-val {
+      font-size: 13px;
+      color: var(--brand-grey);
+    }
+
+    /* ─── COMPONENTS ──────────────────────────────────────────── */
+    .component-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .component-demo {
+      background: var(--brand-tan);
+      padding: 40px 32px;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: flex-start;
+    }
+    .component-label {
+      font-size: 12px;
+      color: var(--brand-grey);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+
+    /* Action block */
+    .action-block {
+      background: var(--action-bg);
+      border-radius: 6px;
+      padding: 14px 20px;
+      cursor: pointer;
+      transition: background 0.15s, border-radius 0.15s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .action-block:hover {
+      background: var(--action-hover);
+      border-radius: 0px;
+    }
+    .action-block span {
+      font-family: 'Special Gothic Condensed One', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--brand-dark);
+      font-size: 18px;
+    }
+
+    /* Link styles */
+    .brand-link {
+      color: var(--brand-blue);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-size: var(--text-normal);
+    }
+
+    /* Divider demo */
+    .divider-demo {
+      width: 100%;
+    }
+    .divider-demo p {
+      color: var(--brand-grey);
+      font-size: 14px;
+      margin: 12px 0;
+    }
+
+    /* Component spec panel */
+    .spec-panel {
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 4px;
+      padding: 20px 24px;
+    }
+    .spec-panel-title {
+      font-family: 'Special Gothic Condensed One', sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--brand-grey);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .spec-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      padding: 6px 0;
+      border-bottom: 1px solid #f8f8f8;
+    }
+    .spec-row:last-child { border-bottom: none; }
+    .spec-key { color: var(--brand-grey); }
+    .spec-value { font-family: 'Inter Tight', sans-serif; color: var(--brand-dark); }
+
+    /* ─── FOOTER ──────────────────────────────────────────────── */
+    footer {
+      margin-top: 96px;
+      padding: 40px 0;
+      border-top: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer .f-left {
+      font-family: 'Special Gothic Condensed One', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 18px;
+      color: var(--brand-dark);
+    }
+    footer .f-right {
+      font-size: 13px;
+      color: var(--brand-grey);
+    }
+
+    @media (max-width: 767px) {
+      .font-families { grid-template-columns: 1fr; }
+      .component-grid { grid-template-columns: 1fr; }
+      .type-row { grid-template-columns: 1fr; gap: 12px; }
+      nav .inner { flex-direction: column; gap: 16px; align-items: flex-start; }
+      footer { flex-direction: column; gap: 16px; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="page-wrap">
+    <div class="inner">
+      <a class="nav-wordmark" href="#">Lab for Cybernetics</a>
+      <ul class="nav-links">
+        <li><a href="#">Research</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#" class="active">Design System</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-wrap">
+  <div class="hero">
+    <p class="eyebrow">Documentation · v1.0 · April 2026</p>
+    <h1>Design System</h1>
+    <p class="hero-desc">
+      The visual language and component library powering the Lab for Cybernetics website. All tokens are encoded in <code>globals.css</code> via Tailwind CSS v4's <code>@theme inline</code> directive.
+    </p>
+  </div>
+</div>
+
+<!-- ─── COLORS ─────────────────────────────────────────────────────────────── -->
+<div class="page-wrap">
+  <section class="doc-section" id="colors">
+    <h2>Color Palette</h2>
+    <hr />
+    <div class="color-grid">
+      <div class="color-card">
+        <div class="color-swatch" style="background:#323639;"></div>
+        <div class="color-info">
+          <div class="color-name">Brand Dark</div>
+          <div class="color-hex">#323639</div>
+          <div class="color-usage">Primary text, dividers, prominent elements</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#9ba0a5;"></div>
+        <div class="color-info">
+          <div class="color-name">Brand Grey</div>
+          <div class="color-hex">#9ba0a5</div>
+          <div class="color-usage">Subheadings, timestamps, secondary text</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#1a0dab;"></div>
+        <div class="color-info">
+          <div class="color-name">Brand Blue</div>
+          <div class="color-hex">#1a0dab</div>
+          <div class="color-usage">Active links, buttons, hover states</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#f6f4eb; border-bottom:1px solid #e8e8e8;"></div>
+        <div class="color-info">
+          <div class="color-name">Brand Tan</div>
+          <div class="color-hex">#f6f4eb</div>
+          <div class="color-usage">Secondary sections, callout backgrounds</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#ffffff; border-bottom:1px solid #e8e8e8;"></div>
+        <div class="color-info">
+          <div class="color-name">Background</div>
+          <div class="color-hex">#ffffff</div>
+          <div class="color-usage">Primary page background</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#95cee9;"></div>
+        <div class="color-info">
+          <div class="color-name">Action Blue</div>
+          <div class="color-hex">#95cee9</div>
+          <div class="color-usage">Blue action blocks, project title components</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TYPOGRAPHY ──────────────────────────────────────────────────────── -->
+  <section class="doc-section" id="typography">
+    <h2>Typography</h2>
+    <hr />
+
+    <div class="font-families">
+      <div class="font-card">
+        <div class="font-card-label">Body / Sans</div>
+        <div class="font-specimen-inter">Aa Bb Cc<br/>0123456789</div>
+        <div class="font-card-name">Inter Tight · Regular 400 / Medium 500</div>
+      </div>
+      <div class="font-card">
+        <div class="font-card-label">Headings / Special Condensed</div>
+        <div class="font-specimen-special">L4C<br/>System</div>
+        <div class="font-card-name">Special Gothic Condensed One · 400</div>
+      </div>
+    </div>
+
+    <div class="type-stack">
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="type-token">text-sys-heading</span>
+          <span class="type-size">36px · Special Gothic Condensed One</span>
+        </div>
+        <div class="spec-heading">Page Title</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="type-token">text-sys-subheading</span>
+          <span class="type-size">36px · Special Gothic Condensed One</span>
+        </div>
+        <div class="spec-subheading">Section Title</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="type-token">text-sys-nav</span>
+          <span class="type-size">20px · Inter</span>
+        </div>
+        <div class="spec-nav">Navigation Link</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="type-token">text-sys-normal</span>
+          <span class="type-size">16px · Inter</span>
+        </div>
+        <div class="spec-normal">Standard body paragraph text for reading content across the site.</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <span class="type-token">text-sys-top-left</span>
+          <span class="type-size">16px · Inter · grey</span>
+        </div>
+        <div class="spec-top-left">Breadcrumb · Date · Utility Label</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SPACING ─────────────────────────────────────────────────────────── -->
+  <section class="doc-section" id="spacing">
+    <h2>Layout &amp; Spacing</h2>
+    <hr />
+    <table class="spacing-table">
+      <thead>
+        <tr>
+          <th>Token</th>
+          <th>Desktop</th>
+          <th>Mobile (&lt;767px)</th>
+          <th>Visual</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="token-pill">--sys-padding</span></td>
+          <td>64px</td>
+          <td>32px</td>
+          <td>
+            <div class="spacing-bar-wrap">
+              <div class="spacing-bar" style="width:64px;"></div>
+              <span class="spacing-val">64px</span>
+            </div>
+          </td>
+          <td>Global page padding from browser edge</td>
+        </tr>
+        <tr>
+          <td><span class="token-pill">--sys-body-width</span></td>
+          <td>1200px</td>
+          <td>1200px</td>
+          <td>
+            <div class="spacing-bar-wrap">
+              <div class="spacing-bar" style="width:96px; background: var(--brand-grey);"></div>
+              <span class="spacing-val">1200px max</span>
+            </div>
+          </td>
+          <td>Max-width for main reading columns</td>
+        </tr>
+        <tr>
+          <td><span class="token-pill">--sys-subheading-gap</span></td>
+          <td>24px</td>
+          <td>24px</td>
+          <td>
+            <div class="spacing-bar-wrap">
+              <div class="spacing-bar" style="width:24px;"></div>
+              <span class="spacing-val">24px</span>
+            </div>
+          </td>
+          <td>Vertical rhythm between subheading and rule</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ─── COMPONENTS ───────────────────────────────────────────────────────── -->
+  <section class="doc-section" id="components">
+    <h2>Component Patterns</h2>
+    <hr />
+
+    <div class="component-grid">
+
+      <!-- Action Block -->
+      <div>
+        <div class="component-label">Blue Action Block · <code>heading_3</code></div>
+        <div class="component-demo">
+          <a class="action-block" href="#">
+            <span>Project Title</span>
+          </a>
+          <a class="action-block" href="#">
+            <span>Defining Document →</span>
+          </a>
+        </div>
+        <div class="spec-panel" style="margin-top:16px;">
+          <div class="spec-panel-title">Specifications</div>
+          <div class="spec-row"><span class="spec-key">Background</span><span class="spec-value">#95cee9</span></div>
+          <div class="spec-row"><span class="spec-key">Hover Background</span><span class="spec-value">#8ac1da</span></div>
+          <div class="spec-row"><span class="spec-key">Border Radius</span><span class="spec-value">6px → 0px on hover</span></div>
+          <div class="spec-row"><span class="spec-key">Text</span><span class="spec-value">brand-dark, uppercase, Special Gothic</span></div>
+          <div class="spec-row"><span class="spec-key">Padding</span><span class="spec-value">14px 20px</span></div>
+        </div>
+      </div>
+
+      <!-- Dividers + Links -->
+      <div>
+        <div class="component-label">Dividers &amp; Links</div>
+        <div class="component-demo">
+          <div class="divider-demo">
+            <p style="font-family:'Special Gothic Condensed One', sans-serif; font-size:20px; text-transform:uppercase; letter-spacing:0.08em;">Section Heading</p>
+            <hr style="border:none; border-top:1px solid #d4d4d4; margin: 24px 0;" />
+            <p>Body text follows the divider with <code>--sys-subheading-gap</code> (24px) above and below the rule.</p>
+          </div>
+          <div>
+            <a class="brand-link" href="#">Active link state</a>
+            <span style="color:var(--brand-grey); font-size:14px; margin-left:12px;">color: brand-blue · underline</span>
+          </div>
+        </div>
+        <div class="spec-panel" style="margin-top:16px;">
+          <div class="spec-panel-title">Specifications</div>
+          <div class="spec-row"><span class="spec-key">Divider color (page)</span><span class="spec-value">neutral-300</span></div>
+          <div class="spec-row"><span class="spec-key">Divider color (cards)</span><span class="spec-value">neutral-200</span></div>
+          <div class="spec-row"><span class="spec-key">Divider margin</span><span class="spec-value">my-[var(--sys-subheading-gap)]</span></div>
+          <div class="spec-row"><span class="spec-key">Link color</span><span class="spec-value">#1a0dab (brand-blue)</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="f-left">Lab for Cybernetics</div>
+    <div class="f-right">Design System · globals.css · Tailwind CSS v4</div>
+  </footer>
+</div>
+
+</body>
+</html>
