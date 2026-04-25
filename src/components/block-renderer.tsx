@@ -4,9 +4,10 @@ import { ArrowRight } from "lucide-react";
 
 interface BlockRendererProps {
     block: any;
+    compact?: boolean;
 }
 
-export function BlockRenderer({ block }: BlockRendererProps) {
+export function BlockRenderer({ block, compact = false }: BlockRendererProps) {
     const type = block.type;
     const value = block[type];
 
@@ -32,7 +33,7 @@ export function BlockRenderer({ block }: BlockRendererProps) {
                 return null;
             }
             return (
-                <p className="mb-6 mt-0">
+                <p className={cn(compact ? "mb-1" : "mb-6", "mt-0")}>
                     {value.rich_text.map((t: any, i: number) => (
                         <span key={i} className={cn(t.annotations.bold && "font-bold", t.annotations.italic && "italic", t.annotations.underline && "underline")}>
                             {t.href ? (
@@ -86,7 +87,7 @@ export function BlockRenderer({ block }: BlockRendererProps) {
         }
         case "numbered_list_item": {
             return (
-                <li className="mb-3 ml-6 list-decimal">
+                <li className={cn(compact ? "mb-1" : "mb-3", "ml-6 list-decimal")}>
                     {value.rich_text.map((t: any, i: number) => (
                         <span key={i} className={cn(t.annotations.bold && "font-bold", t.annotations.italic && "italic", t.annotations.underline && "underline")}>
                             {t.href ? (
@@ -103,7 +104,7 @@ export function BlockRenderer({ block }: BlockRendererProps) {
         }
         case "bulleted_list_item": {
             return (
-                <li className="mb-3 ml-6 list-disc">
+                <li className={cn(compact ? "mb-1" : "mb-3", "ml-6 list-disc")}>
                     {value.rich_text.map((t: any, i: number) => (
                         <span key={i} className={cn(t.annotations.bold && "font-bold", t.annotations.italic && "italic", t.annotations.underline && "underline")}>
                             {t.href ? (
@@ -119,7 +120,7 @@ export function BlockRenderer({ block }: BlockRendererProps) {
             );
         }
         case "divider":
-            return <hr className="my-[var(--sys-subheading-gap)] border-neutral-300" />;
+            return <hr className={cn(compact ? "my-2" : "my-[var(--sys-subheading-gap)]", "border-neutral-300")} />;
         default:
             console.log("Unsupported block type:", type);
             return null;

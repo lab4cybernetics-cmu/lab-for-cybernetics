@@ -37,3 +37,20 @@ Because certain documents (like "Defining a new course...") are now represented 
 
 ### 2. Admin Notes
 There is a hardcoded intercept that hides any paragraph beginning exactly with: `"NOTE: The window for submissions is open between April 1 and April 30"`. This allows lab maintainers to leave administrative backend notes in Notion without them displaying to the public.
+
+---
+
+## `compact` Prop
+
+The `BlockRenderer` accepts an optional `compact` boolean prop (defaults to `false`).
+
+```tsx
+<BlockRenderer block={block} compact={true} />
+```
+
+When `compact={true}`, the component renders with tighter vertical spacing:
+- **Paragraphs**: `mb-1` instead of `mb-6`
+- **List items**: `mb-1` instead of `mb-3`
+- **Dividers**: `my-2` instead of `my-[var(--sys-subheading-gap)]`
+
+This is currently used in the **site-wide footer** (`layout.tsx`) to keep multi-line footer content visually tight.

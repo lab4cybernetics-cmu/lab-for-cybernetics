@@ -34,6 +34,11 @@ export default async function Home() {
       ?.map((t: any) => t.plain_text)
       .join("") ?? "";
 
+    // Stop collecting if we hit the footer heading
+    if (block.type === "heading_4" && text.toLowerCase().trim() === "footer") {
+      break;
+    }
+
     if (
       splitState === "before" &&
       block.type === "heading_2" &&

@@ -3,6 +3,8 @@ import { Inter_Tight, Special_Gothic_Condensed_One } from "next/font/google";
 import { ArrowRight } from "lucide-react";
 import "./globals.css";
 import { CoverImage } from "@/components/cover-image";
+import { fetchPageBlocks } from "@/lib/notion";
+import { BlockRenderer } from "@/components/block-renderer";
 
 const inter = Inter_Tight({
   subsets: ["latin"],
@@ -23,11 +25,32 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const homePageId = process.env.NOTION_HOME_PAGE_ID;
+  const blocks = homePageId ? await fetchPageBlocks(homePageId) : [];
+
+  // Find footer content (Heading 4 named "footer" and subsequent blocks)
+  let footerBlocks: any[] = [];
+  let foundFooter = false;
+  for (const block of blocks) {
+    const text = (block as any)[block.type]?.rich_text
+      ?.map((t: any) => t.plain_text)
+      .join("") ?? "";
+
+    if (block.type === "heading_4" && text.toLowerCase().trim() === "footer") {
+      foundFooter = true;
+      continue;
+    }
+
+    if (foundFooter) {
+      if (block.type.startsWith("heading_")) break;
+      footerBlocks.push(block);
+    }
+  }
   return (
     <html lang="en">
       <body className={`${inter.variable} ${specialGothicCondensed.variable} font-sans antialiased text-sys-normal`}>
@@ -103,16 +126,26 @@ export default function RootLayout({
           </main>
 
           <footer className="pt-8 pb-12 mt-12 border-t border-neutral-300 flex flex-col gap-2 text-[13px] text-brand-grey max-w-[var(--sys-body-width)]">
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-              <span>Copyright © {new Date().getFullYear()}</span>
-              <span className="hidden sm:inline">|</span>
-              <span>Laboratory for Cybernetics, Carnegie Mellon University</span>
-              <span className="hidden sm:inline">|</span>
-              <a href="/docs.html" target="_blank" rel="noopener noreferrer" className="hover:text-brand-dark transition-colors">Developer Docs</a>
-            </div>
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-              <span>Powered by Next.js & Notion.</span>
-            </div>
+            {footerBlocks.length > 0 ? (
+              <div className="dynamic-footer-content">
+                {footerBlocks.map((block) => (
+                  <BlockRenderer key={block.id} block={block} compact={true} />
+                ))}
+              </div>
+            ) : (
+              <>
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                  <span>Copyright © {new Date().getFullYear()}</span>
+                  <span className="hidden sm:inline">|</span>
+                  <span>Laboratory for Cybernetics, Carnegie Mellon University</span>
+                  <span className="hidden sm:inline">|</span>
+                  <a href="/docs.html" target="_blank" rel="noopener noreferrer" className="hover:text-brand-dark transition-colors">Developer Docs</a>
+                </div>
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                  <span>Powered by Next.js & Notion.</span>
+                </div>
+              </>
+            )}
           </footer>
         </div>
       </body>

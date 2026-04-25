@@ -18,6 +18,10 @@ For pages that just have text and images, use a normal Notion Page.
     *   Mission Statement (Text)
     *   Intro Paragraphs (Text)
     *   (Optional) Hero Image (Cover image of the page)
+    *   **Footer Section** (see below)
+
+> **How to update the site footer:**  
+> At the bottom of the Home Content page, add a **Heading 4** block with the text `footer` (lowercase). Any paragraphs or text you place *directly below* this heading will be rendered as the global website footer across all pages. The heading itself is not displayed. If this section is missing, the site will fall back to a hardcoded default footer.
 
 ### **B. Lab Prize**
 *   **Page Name:** `Lab Prize`
