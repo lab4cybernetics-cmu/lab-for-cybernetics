@@ -32,7 +32,7 @@ async function getQueryId(databaseId: string) {
 function getTitle(page: any, propName: string): string {
     const prop = page.properties[propName];
     if (prop && prop.title && prop.title.length > 0) {
-        return prop.title[0].plain_text;
+        return prop.title.map((t: any) => t.plain_text).join("");
     }
     return "";
 }

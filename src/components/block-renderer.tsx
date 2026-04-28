@@ -34,19 +34,29 @@ export function BlockRenderer({ block, compact = false }: BlockRendererProps) {
             }
             return (
                 <p className={cn(compact ? "mb-1" : "mb-6", "mt-0")}>
-                    {value.rich_text.map((t: any, i: number) => (
-                        <span key={i} className={cn(t.annotations.bold && "font-bold", t.annotations.italic && "italic", t.annotations.underline && "underline")}>
-                            {t.href ? (
-                                <a href={t.href} target="_blank" rel="noopener noreferrer" className="text-brand-dark underline decoration-1 hover:text-brand-blue">
-                                    {t.plain_text}
-                                </a>
-                            ) : (
-                                t.plain_text
-                            )}
-                        </span>
-                    ))}
+                    {value.rich_text.map((t: any, i: number) => {
+                        const lines = t.plain_text.split("\n");
+                        const inner = lines.map((line: string, li: number) => (
+                            <span key={li}>
+                                {li > 0 && <br />}
+                                {t.href ? (
+                                    <a href={t.href} target="_blank" rel="noopener noreferrer" className="text-brand-dark underline decoration-1 hover:text-brand-blue">
+                                        {line}
+                                    </a>
+                                ) : (
+                                    line
+                                )}
+                            </span>
+                        ));
+                        return (
+                            <span key={i} className={cn(t.annotations.bold && "font-bold", t.annotations.italic && "italic", t.annotations.underline && "underline")}>
+                                {inner}
+                            </span>
+                        );
+                    })}
                 </p>
             );
+
         }
         case "heading_1":
             return (
