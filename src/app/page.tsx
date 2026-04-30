@@ -75,69 +75,69 @@ export default async function Home() {
 
   return (
     <>
-      <TitleBar title="GUIDE: LABORATORY" subtitle="CYBERNETICS" showFor={true} />
+      <TitleBar title="SITE GUIDE: LABORATORY" subtitle={<>CYBERNETICS <span className="lowercase font-special-condensed" style={{ color: "#9BA0A6" }}>(under construction)</span></>} showFor={true} />
       <div className="pb-[var(--sys-padding)]">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-x-[var(--sys-padding)] gap-y-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-[var(--sys-padding)] gap-y-0">
 
-        {/* ── Before Defining Documents ── */}
-        <SectionWithLinkTooltip docs={definingDocs}>
-          <section>
-            {beforeBlocks.map((block) => (
-              <BlockRenderer key={block.id} block={block} />
-            ))}
-            {beforeBlocks.length === 0 && (
-              <div className="space-y-6">
-                <p className="text-lg text-neutral-600">
-                  The Laboratory <em>for</em> Cybernetics (Lab4C) at CMU Architecture.
-                </p>
-              </div>
-            )}
-          </section>
-        </SectionWithLinkTooltip>
-
-        {/* ── Defining Documents: full 3-col width ── */}
-        {definingDocsHeading && (
-          <div className="col-span-1 md:col-span-3">
-            <div className="-mt-[var(--sys-subheading-gap)]">
-              <BlockRenderer block={definingDocsHeading} />
-            </div>
-            <DefiningDocuments docs={definingDocs} />
-          </div>
-        )}
-
-        {/* ── After Defining Documents ── */}
-        {afterBlocks.length > 0 && (
+          {/* ── Before Defining Documents ── */}
           <SectionWithLinkTooltip docs={definingDocs}>
-            <section className="mt-8">
-              {afterBlocks.map((block) => (
+            <section>
+              {beforeBlocks.map((block) => (
                 <BlockRenderer key={block.id} block={block} />
               ))}
+              {beforeBlocks.length === 0 && (
+                <div className="space-y-6">
+                  <p className="text-lg text-neutral-600">
+                    The Laboratory <em>for</em> Cybernetics (Lab4C) at CMU Architecture.
+                  </p>
+                </div>
+              )}
             </section>
           </SectionWithLinkTooltip>
-        )}
 
-        {/* ── Recent News ── */}
-        {recentNews.length > 0 && (
-          <>
-            <div className="col-span-1 md:col-span-2">
-              <section className="space-y-8 border-t border-neutral-200 pt-12 mt-12">
-                <div className="flex justify-between items-end">
-                  <h2 className="text-2xl font-medium">Recent News</h2>
-                  <Link href="/news">
-                    <Button variant="link" className="text-neutral-500 hover:text-brand-dark p-0 h-auto font-normal">
-                      View all <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </div>
-                <NewsList items={recentNews} />
-              </section>
+          {/* ── Defining Documents: full 3-col width ── */}
+          {definingDocsHeading && (
+            <div className="col-span-1 md:col-span-3">
+              <div className="-mt-[var(--sys-subheading-gap)]">
+                <BlockRenderer block={definingDocsHeading} />
+              </div>
+              <DefiningDocuments docs={definingDocs} />
             </div>
-            <div className="col-span-1 hidden md:block" />
-          </>
-        )}
+          )}
 
+          {/* ── After Defining Documents ── */}
+          {afterBlocks.length > 0 && (
+            <SectionWithLinkTooltip docs={definingDocs}>
+              <section className="mt-8">
+                {afterBlocks.map((block) => (
+                  <BlockRenderer key={block.id} block={block} />
+                ))}
+              </section>
+            </SectionWithLinkTooltip>
+          )}
+
+          {/* ── Recent News ── */}
+          {recentNews.length > 0 && (
+            <>
+              <div className="col-span-1 md:col-span-2">
+                <section className="space-y-8 border-t border-neutral-200 pt-12 mt-12">
+                  <div className="flex justify-between items-end">
+                    <h2 className="text-2xl font-medium">Recent News</h2>
+                    <Link href="/news">
+                      <Button variant="link" className="text-neutral-500 hover:text-brand-dark p-0 h-auto font-normal">
+                        View all <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </div>
+                  <NewsList items={recentNews} />
+                </section>
+              </div>
+              <div className="col-span-1 hidden md:block" />
+            </>
+          )}
+
+        </div>
       </div>
-    </div>
-  </>
+    </>
   );
 }

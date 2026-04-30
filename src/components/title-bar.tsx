@@ -3,7 +3,7 @@ import React from "react";
 interface TitleBarProps {
   title: string;
   description?: React.ReactNode;
-  subtitle?: string;
+  subtitle?: React.ReactNode;
   showFor?: boolean;
 }
 
