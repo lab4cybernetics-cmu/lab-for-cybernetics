@@ -151,25 +151,28 @@ ${JSON.stringify(userProfile, null, 2)}`;
                             const { object } = await generateObject({
                                 model: cmuGateway.chat('claude-haiku-4-5-20251001-v1:0'),
                                 schema: z.object({
-                                    candidates_analysis: z.array(z.object({
+                                    top_matches: z.array(z.object({
                                         id: z.string(),
-                                        step_by_step_check: z.string().describe(`Analyze: 1. Do they strictly obey the NEGATIVE CONSTRAINTS: [${negative_constraints.join(', ') || 'None'}]? 2. Do they match the topic: ${query}?`),
-                                        violates_negative_constraint: z.boolean().describe("MUST BE TRUE if they have ANY affiliation or trait that the negative constraints forbid."),
-                                        is_valid: z.boolean().describe("MUST BE FALSE if violates_negative_constraint is true. True ONLY IF they are highly relevant AND completely obey all negative constraints."),
+                                        constraint_check: z.string().describe(`Confirm this person strictly obeys the negative constraints: [${negative_constraints.join(', ') || 'None'}].`),
                                         matchReason: z.string().describe('One factual sentence on fit; no first-person (I/me/my); no praise or filler.')
                                     }))
                                 }),
-                                system: `You are an evaluator. Find up to ${needed} practitioners.
+                                system: `You are a strict evaluator. Your task is to find highly relevant practitioners.
 Topic: "${query}"
 Negative Constraints to EXCLUDE: ${negative_constraints.join(', ') || 'None'}
-CRITICAL: Pay extreme attention to the Negative Constraints. If a candidate violates a negative constraint (e.g., they are affiliated with a university the user wants to exclude), you MUST set violates_negative_constraint to true and is_valid to false.
+
+CRITICAL INSTRUCTIONS:
+1. ONLY return candidates that strongly match the topic AND strictly obey ALL Negative Constraints.
+2. If only 1 or 2 candidates are truly relevant, return ONLY those.
+3. If NO candidates are a strong match, return an EMPTY array []. DO NOT force or hallucinate a weak match.
+4. Maximum allowed matches: ${effectiveNeeded}.
 Ignore user profile ID: ${userProfile?.id}.
 matchReason: factual and concise only; no first-person pronouns; no praise or cheerleading.`,
                                 prompt: `Candidates:\n${JSON.stringify(practitioners.map((p: any) => ({ id: p.id, name: p.name, keywords: p.keywords, bio: p.bio?.substring(0, 200) })), null, 2)}`
                             });
 
-                            const validMatches = object.candidates_analysis
-                                .filter(m => !m.violates_negative_constraint && m.is_valid && practitioners.some((p: any) => p.id === m.id))
+                            const validMatches = object.top_matches
+                                .filter(m => practitioners.some((p: any) => p.id === m.id))
                                 .slice(0, effectiveNeeded);
 
                             const out = validMatches.map(m => ({
@@ -206,25 +209,28 @@ matchReason: factual and concise only; no first-person pronouns; no praise or ch
                             const { object } = await generateObject({
                                 model: cmuGateway.chat('claude-haiku-4-5-20251001-v1:0'),
                                 schema: z.object({
-                                    candidates_analysis: z.array(z.object({
+                                    top_matches: z.array(z.object({
                                         id: z.string(),
-                                        step_by_step_check: z.string().describe(`Analyze: 1. Do they strictly obey the NEGATIVE CONSTRAINTS: [${negative_constraints.join(', ') || 'None'}]? 2. Do they match the topic: ${query}?`),
-                                        violates_negative_constraint: z.boolean().describe("MUST BE TRUE if they have ANY affiliation or trait that the negative constraints forbid."),
-                                        is_valid: z.boolean().describe("MUST BE FALSE if violates_negative_constraint is true. True ONLY IF they are highly relevant AND completely obey all negative constraints."),
+                                        constraint_check: z.string().describe(`Confirm this person strictly obeys the negative constraints: [${negative_constraints.join(', ') || 'None'}].`),
                                         matchReason: z.string().describe('One factual sentence on fit; no first-person (I/me/my); no praise or filler.')
                                     }))
                                 }),
-                                system: `You are an evaluator. Find up to ${needed} scholars.
+                                system: `You are a strict evaluator. Your task is to find highly relevant scholars.
 Topic: "${query}"
 Negative Constraints to EXCLUDE: ${negative_constraints.join(', ') || 'None'}
-CRITICAL: Pay extreme attention to the Negative Constraints. If a candidate violates a negative constraint (e.g., they are affiliated with a university the user wants to exclude), you MUST set violates_negative_constraint to true and is_valid to false.
+
+CRITICAL INSTRUCTIONS:
+1. ONLY return candidates that strongly match the topic AND strictly obey ALL Negative Constraints.
+2. If only 1 or 2 candidates are truly relevant, return ONLY those.
+3. If NO candidates are a strong match, return an EMPTY array []. DO NOT force or hallucinate a weak match.
+4. Maximum allowed matches: ${effectiveNeeded}.
 Ignore user profile ID: ${userProfile?.id}.
 matchReason: factual and concise only; no first-person pronouns; no praise or cheerleading.`,
                                 prompt: `Candidates:\n${JSON.stringify(scholars.map((p: any) => ({ id: p.id, name: p.name, keywords: p.keywords, bio: p.bio?.substring(0, 200) })), null, 2)}`
                             });
 
-                            const validMatches = object.candidates_analysis
-                                .filter(m => !m.violates_negative_constraint && m.is_valid && scholars.some((p: any) => p.id === m.id))
+                            const validMatches = object.top_matches
+                                .filter(m => scholars.some((p: any) => p.id === m.id))
                                 .slice(0, effectiveNeeded);
 
                             const out = validMatches.map(m => ({

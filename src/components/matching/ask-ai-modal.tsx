@@ -218,6 +218,7 @@ export function AskAiModal({ items }: AskAiModalProps) {
     const [suggestions, setSuggestions] = useState<string[]>([]);
     const [suggestionsLoading, setSuggestionsLoading] = useState(false);
     const [submittedClarificationKeys, setSubmittedClarificationKeys] = useState<Set<string>>(() => new Set());
+    const [chatError, setChatError] = useState<string | null>(null);
 
     // In @ai-sdk/react 3.x, useChat no longer returns input, handleInputChange, or handleSubmit.
     const transport = React.useMemo(() => {
@@ -230,7 +231,7 @@ export function AskAiModal({ items }: AskAiModalProps) {
         });
     }, [verifiedUser, items]);
 
-    const { messages, setMessages, sendMessage, status } = useChat({
+    const { messages, setMessages, sendMessage, status, reload } = useChat({
         id: verifiedUser?.id || "guest-chat",
         transport,
         onFinish: (message: any) => {
@@ -238,6 +239,7 @@ export function AskAiModal({ items }: AskAiModalProps) {
         },
         onError: (error: any) => {
             console.error("[useChat] onError:", error);
+            setChatError("Sorry, AI response timed out or an error occurred. Please try again.");
         }
     });
 
@@ -265,6 +267,7 @@ export function AskAiModal({ items }: AskAiModalProps) {
     }, [messages, status]);
 
     const messagesEndRef = useRef<HTMLDivElement>(null);
+    const chatInputRef = useRef<HTMLInputElement>(null);
 
     const isChatLoading = status === 'streaming' || status === 'submitted';
 
@@ -299,6 +302,7 @@ export function AskAiModal({ items }: AskAiModalProps) {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!input || !input.trim() || isChatLoading) return;
+        setChatError(null);
         sendMessage({ role: 'user', parts: [{ type: 'text', text: input }] });
         setInput("");
     };
@@ -330,25 +334,9 @@ export function AskAiModal({ items }: AskAiModalProps) {
         item.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
-    // Reset state on modal close/open
+    // Handle modal open/close without resetting state
     const handleOpenChange = (open: boolean) => {
         setIsOpen(open);
-        if (!open) {
-            // Give time for transition out before resetting
-            setTimeout(() => {
-                setStep("search");
-                setSelectedItem(null);
-                setSearchQuery("");
-                setCode("");
-                setError("");
-                setResendStatus("");
-                setVerifiedUser(null);
-                setMessages([]);
-                setSuggestions([]);
-                setSuggestionsLoading(false);
-                setSubmittedClarificationKeys(new Set());
-            }, 300);
-        }
     };
 
     const handleSelect = (item: MatchingItem) => {
@@ -526,6 +514,7 @@ export function AskAiModal({ items }: AskAiModalProps) {
     }
 
     return (
+        <>
         <Dialog open={isOpen} onOpenChange={handleOpenChange}>
             <DialogTrigger asChild>
                 <Button variant="outline" className="border-blue-600 text-blue-700 hover:bg-blue-50 hover:text-blue-800 bg-transparent">
@@ -685,8 +674,10 @@ export function AskAiModal({ items }: AskAiModalProps) {
                                         </span>
                                     )}
                                 </div>
-                                <p className="text-xs text-neutral-400 mt-1 truncate">
-                                    Finding collaborators in Lab for Cybernetics community...
+                                <p className="text-xs text-neutral-400 mt-1 flex flex-wrap items-center gap-1.5">
+                                    <span className="truncate">Finding collaborators in Lab for Cybernetics community...</span>
+                                    <span className="hidden sm:inline text-neutral-300">•</span>
+                                    <span className="text-neutral-500 italic">AI can make mistakes. Please be patient.</span>
                                 </p>
                             </div>
 
@@ -737,8 +728,8 @@ export function AskAiModal({ items }: AskAiModalProps) {
                                             <button
                                                 key={i}
                                                 onClick={() => {
-                                                    sendMessage({ role: 'user', parts: [{ type: 'text', text: s }] });
-                                                    setSuggestions([]);
+                                                    setInput(s);
+                                                    chatInputRef.current?.focus();
                                                 }}
                                                 className="text-xs px-3 py-1.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-700 border border-neutral-200 transition-colors font-medium text-left"
                                             >
@@ -753,6 +744,22 @@ export function AskAiModal({ items }: AskAiModalProps) {
                                         <div className="bg-neutral-50 border border-neutral-100 rounded-lg p-3 shadow-sm">
                                             <Loader2 className="h-4 w-4 animate-spin text-neutral-400" />
                                         </div>
+                                    </div>
+                                )}
+                                {chatError && (
+                                    <div className="flex flex-col gap-2 items-start bg-red-50 text-red-600 p-3 rounded-lg text-sm mb-2 shadow-sm border border-red-100 max-w-[85%] self-start mt-2">
+                                        <span>{chatError}</span>
+                                        <Button
+                                            variant="outline"
+                                            size="sm"
+                                            className="border-blue-600 text-blue-700 hover:bg-blue-50 hover:text-blue-800 bg-transparent h-8 mt-1"
+                                            onClick={() => {
+                                                setChatError(null);
+                                                reload();
+                                            }}
+                                        >
+                                            Retry
+                                        </Button>
                                     </div>
                                 )}
                                 <div ref={messagesEndRef} />
@@ -779,6 +786,7 @@ export function AskAiModal({ items }: AskAiModalProps) {
                                     className="flex gap-3 border-t border-neutral-100 bg-background pt-3 shadow-[0_-12px_24px_rgba(255,255,255,0.85)]"
                                 >
                                     <Input
+                                        ref={chatInputRef}
                                         value={input || ""}
                                         onChange={handleInputChange}
                                         placeholder="Describe who you're looking for..."
@@ -792,5 +800,15 @@ export function AskAiModal({ items }: AskAiModalProps) {
                 </div>
             </DialogContent>
         </Dialog>
+        {!isOpen && verifiedUser && (
+            <button
+                onClick={() => setIsOpen(true)}
+                className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-blue-600 text-white px-4 py-3 rounded-full shadow-lg hover:bg-blue-700 transition-all hover:scale-105"
+            >
+                <MessageCircleQuestion className="h-5 w-5" />
+                <span className="text-sm font-medium">Resume Chat</span>
+            </button>
+        )}
+        </>
     );
 }
