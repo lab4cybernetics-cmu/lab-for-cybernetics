@@ -231,7 +231,7 @@ export function AskAiModal({ items }: AskAiModalProps) {
         });
     }, [verifiedUser, items]);
 
-    const { messages, setMessages, sendMessage, status, reload } = useChat({
+    const { messages, setMessages, sendMessage, status, regenerate } = useChat({
         id: verifiedUser?.id || "guest-chat",
         transport,
         onFinish: (message: any) => {
@@ -755,7 +755,7 @@ export function AskAiModal({ items }: AskAiModalProps) {
                                             className="border-blue-600 text-blue-700 hover:bg-blue-50 hover:text-blue-800 bg-transparent h-8 mt-1"
                                             onClick={() => {
                                                 setChatError(null);
-                                                reload();
+                                                regenerate();
                                             }}
                                         >
                                             Retry
