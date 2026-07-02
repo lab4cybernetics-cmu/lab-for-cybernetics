@@ -14,7 +14,7 @@ export async function POST(req: Request) {
         const result = await generateObject({
             model: cmuGateway.chat('claude-haiku-4-5-20251001-v1:0'),
             schema: z.object({
-                suggestions: z.array(z.string()).length(5),
+                suggestions: z.array(z.string()),
             }),
             prompt: `You are helping a member of the Lab for Cybernetics find collaborators.
 

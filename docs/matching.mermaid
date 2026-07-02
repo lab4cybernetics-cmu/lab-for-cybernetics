@@ -1,0 +1,121 @@
+graph TD
+    %% ═══════════════════════════════════════
+    %% PHASE 0: Identity Verification (Client)
+    %% ═══════════════════════════════════════
+    Start([User Opens AI Matching]) --> SearchStep["[CLIENT] Search Name\nSelect entry from list"]
+    SearchStep --> ConfirmStep["[CLIENT] Confirm Identity\nReview profile card"]
+    ConfirmStep --> SendCode["[CLIENT] Send Verification Email\n/app/actions: sendVerificationCode"]
+    SendCode --> CodeStep["[CLIENT] Enter 6-digit Code\n/app/actions: verifyCode"]
+    CodeStep -- "Invalid" --> CodeStep
+    CodeStep -- "Verified" --> ChatInit
+
+    %% ═══════════════════════════════════════
+    %% PHASE 1: Chat Initialization (Client)
+    %% ═══════════════════════════════════════
+    ChatInit["[CLIENT] Initialize Chat\nSet verifiedUser + open chat UI"]
+    ChatInit --> SuggestAPI["[SUB-INF] /api/chat/suggest\ngenerateObject → 5 topic chips\n(parallel, shown as clickable suggestions)"]
+    ChatInit --> UserInput
+
+    SuggestAPI --> UserInput["User sends message\n(typed or clicks topic chip)"]
+
+    %% ═══════════════════════════════════════
+    %% PHASE 2: Pre-Inference (Server, per turn)
+    %% ═══════════════════════════════════════
+    UserInput --> PreInf["[SUB-INF] decide_role\ngenerateObject → intent + priorityPool + reasoning\n(claude-haiku, last 5 messages)"]
+
+    PreInf --> ExplicitOverride["[DETERMINISTIC] inferExplicitPriorityPool()\nRegex scan last 8 messages\nOverrides LLM priorityPool if explicit keyword found"]
+
+    ExplicitOverride --> IntentCheck{"intent?"}
+
+    %% ═══════════════════════════════════════
+    %% PHASE 3: Intent Routing (Main Orchestrator)
+    %% ═══════════════════════════════════════
+    IntentCheck -- "chat / greeting" --> ChatMode["[MAIN] Chat Mode\nRespond naturally\nNo tools called"]
+
+    IntentCheck -- "match — vague request" --> ClarifyTool["[TOOL] present_clarification_form\n1–3 questions, 1–3 preset options each\nUI renders InlineClarificationPanel"]
+    ClarifyTool --> UserAnswers["[CLIENT] User selects options\nSubmits as structured text:\n'Clarification answers: ...'"]
+    UserAnswers --> UserInput
+
+    IntentCheck -- "match — specific topic" --> PriorityDecider{"Enforce Priority Pool\n(explicitPool ?? defaultPool)"}
+
+    %% ═══════════════════════════════════════
+    %% PHASE 4: Priority Pool Decision
+    %% ═══════════════════════════════════════
+    PriorityDecider -- "User is Scholar\n→ default: Practitioners first" --> Prio_P["Primary: find_practitioners"]
+    PriorityDecider -- "User is Practitioner\n→ default: Scholars first" --> Prio_S["Primary: find_scholars"]
+    PriorityDecider -- "Explicit keyword override\n(e.g. 'find me scholars')" --> Prio_Override["Follow explicit user request"]
+
+    %% ═══════════════════════════════════════
+    %% PHASE 5: Tool Calls (Sub-Inference)
+    %% ═══════════════════════════════════════
+    Prio_P --> CallTool1
+    Prio_S --> CallTool1
+    Prio_Override --> CallTool1
+
+    CallTool1["[SUB-INF] Tool 1: Primary Pool\ngenerateObject per candidate:\nstep_by_step_check → violates_negative_constraint → is_valid\nquery + negative_constraints passed in"]
+
+    CallTool1 --> ToolProcess1["[DETERMINISTIC] Filter Tool 1 Results\nExclude violates_negative_constraint=true\nExclude is_valid=false\nDecrement remainingSlots"]
+
+    ToolProcess1 --> Tool1Result{"Tool 1 results\n+ remainingSlots?"}
+
+    Tool1Result -- "3 found\n(remainingSlots = 0)" --> SanityCheck
+    Tool1Result -- "< 3 found\n(remainingSlots > 0)" --> CallTool2["[SUB-INF] Tool 2: Secondary Pool\ngenerateObject — fill remaining slots only\nneeded = remainingSlots"]
+
+    CallTool2 --> ToolProcess2["[DETERMINISTIC] Filter Tool 2 Results\nSame CoT evaluation\nDecrement remainingSlots"]
+
+    ToolProcess2 --> SanityCheck
+
+    %% ═══════════════════════════════════════
+    %% PHASE 6: Sanity Check + Output (Main Orchestrator)
+    %% ═══════════════════════════════════════
+    SanityCheck["[MAIN] Orchestrator Sanity Check\nRe-validate each tool result vs user constraints\nSilently discard any constraint-violating candidates\nbefore rendering"]
+
+    SanityCheck --> FinalFilter{"Any valid matches\nremaining?"}
+
+    FinalFilter -- "Zero / empty" --> HonestFail["[MAIN] Honest Output\nExplain no suitable matches found\nSuggest alternatives or next steps"]
+
+    FinalFilter -- "Matches exist" --> Renderer["[MAIN] Multi-Level Renderer\n### Practitioners / ### Scholars headers"]
+
+    Renderer --> UI_Text["[MAIN] Deep Reasoning (outside card)\n2–3 sentence personalized explanation\nno praise, no first-person"]
+    Renderer --> UI_Card["[MAIN] Recommendation Card\n&lt;recommendation id='' reason=''&gt;\nPunchy 1-sentence reason inside"]
+
+    %% ═══════════════════════════════════════
+    %% End
+    %% ═══════════════════════════════════════
+    ChatMode --> End([Response sent to user])
+    HonestFail --> End
+    UI_Text --> End
+    UI_Card --> End
+
+    %% ═══════════════════════════════════════
+    %% LEGEND
+    %% ═══════════════════════════════════════
+    subgraph Legend
+        L0[CLIENT — UI / Verification]
+        L1[PRE-INFERENCE / STRATEGY]
+        L2[SUB-INFERENCE TOOLS / COT]
+        L3[MAIN ORCHESTRATOR / OUTPUT]
+        L4[DETERMINISTIC — Code Logic]
+    end
+
+    %% ─── Class Styles ───────────────────────
+    classDef clientClass   fill:#fef9c3,stroke:#ca8a04,stroke-width:2px,color:#713f12;
+    classDef preInfClass   fill:#f5f3ff,stroke:#7c3aed,stroke-width:2px,color:#7c3aed;
+    classDef subInfClass   fill:#f0f9ff,stroke:#0369a1,stroke-width:2px,color:#0369a1;
+    classDef mainInfClass  fill:#ecfdf5,stroke:#059669,stroke-width:2px,color:#059669;
+    classDef detClass      fill:#f1f5f9,stroke:#475569,stroke-width:2px,color:#334155;
+
+    %% ─── Apply to nodes ─────────────────────
+    class Start,SearchStep,ConfirmStep,SendCode,CodeStep,ChatInit,UserInput,UserAnswers clientClass;
+    class PreInf,SuggestAPI subInfClass;
+    class ExplicitOverride,ToolProcess1,ToolProcess2 detClass;
+    class CallTool1,CallTool2,ClarifyTool subInfClass;
+    class PriorityDecider,Prio_P,Prio_S,Prio_Override preInfClass;
+    class ChatMode,SanityCheck,HonestFail,Renderer,UI_Text,UI_Card mainInfClass;
+
+    %% ─── Legend node styles ─────────────────
+    class L0 clientClass;
+    class L1 preInfClass;
+    class L2 subInfClass;
+    class L3 mainInfClass;
+    class L4 detClass;
