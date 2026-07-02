@@ -13,7 +13,7 @@ The project relies on a minimal, highly legible color palette.
 ### Brand Colors
 | Token Name | Hex Value | Usage |
 | :--- | :--- | :--- |
-| `brand-dark` | `#323639` | Primary text color (`foreground`), dark divider lines, prominent text elements. |
+| `brand-dark` | `#3d4144` | Primary text color (`foreground`), dark divider lines, prominent text elements. |
 | `brand-grey` | `#9ba0a5` | Used for subheadings, timestamps, and secondary muted text. |
 | `brand-blue` | `#1a0dab` | Used for active links, buttons, and hover states. |
 | `brand-tan` | `#f6f4eb` | A soft background color used for secondary sections or callouts. |

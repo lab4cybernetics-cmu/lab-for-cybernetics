@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter_Tight, Special_Gothic_Condensed_One } from "next/font/google";
+import { Inter, Special_Gothic_Condensed_One } from "next/font/google";
 import { ArrowRight } from "lucide-react";
 import "./globals.css";
 import { CoverImage } from "@/components/cover-image";
 import { fetchPageBlocks } from "@/lib/notion";
 import { BlockRenderer } from "@/components/block-renderer";
 
-const inter = Inter_Tight({
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });

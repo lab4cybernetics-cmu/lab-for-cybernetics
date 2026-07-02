@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #323639;
+  --foreground: #3d4144;
 }
 
 @theme inline {
@@ -12,7 +12,7 @@
 
   /* Brand Colors */
   --color-brand-blue: #1a0dab;
-  --color-brand-dark: #323639;
+  --color-brand-dark: #3d4144;
   --color-brand-grey: #9ba0a5;
   --color-brand-tan: #f6f4eb;
 
