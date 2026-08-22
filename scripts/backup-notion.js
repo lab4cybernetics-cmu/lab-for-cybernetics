@@ -73,13 +73,13 @@ async function backupPage(pageId) {
   return { page, blocks };
 }
 
-async function fetchAllDatabaseEntries(databaseId) {
+async function fetchAllDatabaseEntries(dataSourceId) {
   const entries = [];
   let cursor;
 
   do {
-    const res = await notion.databases.query({
-      database_id: databaseId,
+    const res = await notion.dataSources.query({
+      data_source_id: dataSourceId,
       start_cursor: cursor,
       page_size: 100,
     });
@@ -92,7 +92,15 @@ async function fetchAllDatabaseEntries(databaseId) {
 
 async function backupDatabase(databaseId) {
   const database = await notion.databases.retrieve({ database_id: databaseId });
-  const rawEntries = await fetchAllDatabaseEntries(databaseId);
+
+  // Notion's API (2025-09+) splits a database into one or more "data sources".
+  // Most databases have exactly one; query entries via that data source id.
+  const dataSourceId = database.data_sources?.[0]?.id;
+  if (!dataSourceId) {
+    throw new Error(`No data source found for database ${databaseId}`);
+  }
+
+  const rawEntries = await fetchAllDatabaseEntries(dataSourceId);
 
   const entries = [];
   for (const entry of rawEntries) {
