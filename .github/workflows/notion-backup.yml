@@ -1,0 +1,44 @@
+name: Notion Backup
+
+on:
+  schedule:
+    - cron: '0 8 * * *'   # daily at 8am UTC (~4am ET)
+  workflow_dispatch:        # allows manual "Run workflow" button too
+
+permissions:
+  contents: write
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install @notionhq/client --no-save
+
+      - name: Run backup script
+        run: node scripts/backup-notion.js
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          NOTION_HOME_PAGE_ID: ${{ secrets.NOTION_HOME_PAGE_ID }}
+          NOTION_LAB_PRIZE_PAGE_ID: ${{ secrets.NOTION_LAB_PRIZE_PAGE_ID }}
+          NOTION_COURSE_INFO_PAGE_ID: ${{ secrets.NOTION_COURSE_INFO_PAGE_ID }}
+          NOTION_PROJECTS_DB_ID: ${{ secrets.NOTION_PROJECTS_DB_ID }}
+          NOTION_PEOPLE_DB_ID: ${{ secrets.NOTION_PEOPLE_DB_ID }}
+          NOTION_NEWS_DB_ID: ${{ secrets.NOTION_NEWS_DB_ID }}
+          NOTION_MATCHING_DB_ID: ${{ secrets.NOTION_MATCHING_DB_ID }}
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "notion-backup-bot"
+          git config user.email "actions@github.com"
+          git add backup/
+          git diff --staged --quiet || git commit -m "Automated Notion backup $(date -u +%F)"
+          git push
