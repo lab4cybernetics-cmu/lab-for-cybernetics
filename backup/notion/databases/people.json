@@ -1,0 +1,943 @@
+{
+  "database": {
+    "object": "database",
+    "id": "2f5526fb-7d8d-8096-9033-cfe494e68299",
+    "title": [
+      {
+        "type": "text",
+        "text": {
+          "content": "People Database",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": "People Database",
+        "href": null
+      }
+    ],
+    "description": [],
+    "parent": {
+      "type": "page_id",
+      "page_id": "24b526fb-7d8d-801c-8b59-e5c5dcd94411"
+    },
+    "is_inline": false,
+    "in_trash": false,
+    "is_locked": false,
+    "created_time": "2026-01-27T01:12:19.547+00:00",
+    "last_edited_time": "2026-06-11T00:26:09.082+00:00",
+    "data_sources": [
+      {
+        "id": "2f5526fb-7d8d-80b2-81ee-000b509da1c0",
+        "name": "People Database"
+      }
+    ],
+    "icon": null,
+    "cover": null,
+    "url": "https://app.notion.com/p/2f5526fb7d8d80969033cfe494e68299",
+    "public_url": null,
+    "archived": false,
+    "request_id": "240794b9-e228-49eb-8e01-bb3f0eab984a"
+  },
+  "entries": [
+    {
+      "page": {
+        "object": "page",
+        "id": "35b526fb-7d8d-80f7-9095-cf867af21cdb",
+        "created_time": "2026-05-09T17:31:00.000Z",
+        "last_edited_time": "2026-07-02T20:43:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "42709e93-b404-4f36-a157-73833fd104fc"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+        },
+        "cover": null,
+        "icon": null,
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "2f5526fb-7d8d-80b2-81ee-000b509da1c0",
+          "database_id": "2f5526fb-7d8d-8096-9033-cfe494e68299"
+        },
+        "in_trash": false,
+        "is_archived": false,
+        "is_locked": false,
+        "properties": {
+          "Type": {
+            "id": "%3BQa%3C",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Student",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Student",
+                "href": null
+              }
+            ]
+          },
+          "Bio": {
+            "id": "%3C_aT",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Narayan is an interaction designer finishing his Master’s at Carnegie Mellon University, working across hardware, digital interfaces, and tools. His practice is grounded in building, using prototypes not just to test ideas, but to define problems, make decisions, and move toward working systems.\n\nHe has been with the Lab for Cybernetics for close to 2 years and he lead work on the lab’s digital infrastructure across product design, front-end development, and content systems. He designed and built the lab website, structured a Notion-backed CMS, developed documentation for handoff and maintenance, and helped build a practitioner-scholar matching platform. His work focuses on turning complex research, people, and cybernetics concepts into connected digital systems that are easier to navigate, update, and build on.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Narayan is an interaction designer finishing his Master’s at Carnegie Mellon University, working across hardware, digital interfaces, and tools. His practice is grounded in building, using prototypes not just to test ideas, but to define problems, make decisions, and move toward working systems.\n\nHe has been with the Lab for Cybernetics for close to 2 years and he lead work on the lab’s digital infrastructure across product design, front-end development, and content systems. He designed and built the lab website, structured a Notion-backed CMS, developed documentation for handoff and maintenance, and helped build a practitioner-scholar matching platform. His work focuses on turning complex research, people, and cybernetics concepts into connected digital systems that are easier to navigate, update, and build on.",
+                "href": null
+              }
+            ]
+          },
+          "Website": {
+            "id": "GP%60G",
+            "type": "url",
+            "url": "https://narayan.works"
+          },
+          "Email": {
+            "id": "GZiB",
+            "type": "email",
+            "email": "narayan.ashanahalli@gmail.com"
+          },
+          "Role": {
+            "id": "mKt%3C",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Research Assistant",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Research Assistant",
+                "href": null
+              }
+            ]
+          },
+          "Headshot": {
+            "id": "qWFL",
+            "type": "files",
+            "files": [
+              {
+                "name": "2025-Narayan-Ashanahalli.jpg",
+                "type": "file",
+                "file": {
+                  "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4bd526fb-7d8d-8194-a62d-000393ba02cd/de327982-67d4-40b1-859d-0908c8e43857/2025-Narayan-Ashanahalli.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466RR42BRCU%2F20260822%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260822T162327Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEPf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDyyu7OEQw5fliB6i6DS5WMnY5mURnh%2FVIwN5wVEAAmVAIhAMJKcA2yrajR9nvtm4yTdw2Cp4z5HbZcBK%2FO%2FyemVDAhKogECMD%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNjM3NDIzMTgzODA1Igy5cE1Ve%2Bcafb%2BZ6Isq3APVPUix8QHz1BVVJMH%2FSYYc2iXkn6Se2rBYC6YEYYQB0B9YhY1Mx5ICgPa7IFtB7RecFSbDyp1IJ8I7Oekc21FJDrh7M7%2BYWqjBPjVttZBhcMl5UrekehTrAgBlRO4ljjFJQdY7L3ycwT3WyE3olPSYuPK078Uwo0k9mH7RkW7S30f8nTHGRFPmi0Qi8BftBGaVnUG4Y0gFbjZIq6U5FKF9IKKlUwNf0USZXSeACURyb3TeqHt%2F4bwZihOhIIt2XZeSergfYCTW9zVND4hpbskE44MtpvLdBf5m5l%2B%2FZKO5TQdQDBAK9O3F7j84zfv%2BKmogsLRlA95PaA2N7jsI0mDWWsvtT4IEt34%2BzyfFjjvx8NvuRLf%2FhepbGkyQUR41l4HoddCWsmyZvkEfi5VC90z8u1voX4ay2nkuA%2BFvAS1Q2j4ItusfamhYgKdyCHUU4QbH2crNd5Xv7vfoqZgJFd386M7pQMGUjWSzoSyaZJbZU1UqpVzGRdOmB6YXckDmK3lHYpYD9OMZM7fwPbgZAC6cRDhGJCWsYag8LsJCQfUpFPdTWy2p3HXkMzsB8oMUl3NGl64n3Y1i8Q3Iv%2Bmauh8GiTyst42saMr8FYLvDX%2FamaE%2F%2FvZK1xfQO%2FcXZzC69KbUBjqkATbde3Or55xJ8HILVVy%2BEd7Rjv1%2BFi%2FS2tp%2FE2LXaSk81lOWeHoKg7X9v1F8z0d5NhP%2BA%2B1A6AZNBmDUvmt%2F%2FgoHT6wm0ndANBc%2FbEzSZCYA6IJgd04vt3qeEZG0buHUo4RkowOtKpIg5QE7HzbOKtuN5roxXlOGfLm%2BTDxJkZ2MG2YuXyFi1A2R16bXsPEEMrzYyMorL3EG5nbfDCLAhJvBqbtE&X-Amz-Signature=3c7ca5e30264f3717b14073ca532137b04d46361c2c34fcbe351f9c7a4146773&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+                  "expiry_time": "2026-08-22T17:23:26.994Z"
+                }
+              }
+            ]
+          },
+          "Name": {
+            "id": "title",
+            "type": "title",
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Narayan Ashanahalli",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Narayan Ashanahalli",
+                "href": null
+              }
+            ]
+          }
+        },
+        "url": "https://app.notion.com/p/Narayan-Ashanahalli-35b526fb7d8d80f79095cf867af21cdb",
+        "public_url": null,
+        "archived": false
+      },
+      "blocks": []
+    },
+    {
+      "page": {
+        "object": "page",
+        "id": "35b526fb-7d8d-803c-aa02-ff591eb28a18",
+        "created_time": "2026-05-09T17:31:00.000Z",
+        "last_edited_time": "2026-06-03T02:13:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "31413ee8-bbf7-4177-ab62-071aea5e1cf0"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+        },
+        "cover": null,
+        "icon": null,
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "2f5526fb-7d8d-80b2-81ee-000b509da1c0",
+          "database_id": "2f5526fb-7d8d-8096-9033-cfe494e68299"
+        },
+        "in_trash": false,
+        "is_archived": false,
+        "is_locked": false,
+        "properties": {
+          "Type": {
+            "id": "%3BQa%3C",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Student",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Student",
+                "href": null
+              }
+            ]
+          },
+          "Bio": {
+            "id": "%3C_aT",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Website": {
+            "id": "GP%60G",
+            "type": "url",
+            "url": "https://c-hri-sw-u.github.io/"
+          },
+          "Email": {
+            "id": "GZiB",
+            "type": "email",
+            "email": "cwu14932@gmail.com"
+          },
+          "Role": {
+            "id": "mKt%3C",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Research Assistant",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Research Assistant",
+                "href": null
+              }
+            ]
+          },
+          "Headshot": {
+            "id": "qWFL",
+            "type": "files",
+            "files": [
+              {
+                "name": "1-1.jpg",
+                "type": "file",
+                "file": {
+                  "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4bd526fb-7d8d-8194-a62d-000393ba02cd/40e2b73a-fbd5-4a34-8341-01ef451364bb/1-1.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466RR42BRCU%2F20260822%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260822T162327Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEPf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDyyu7OEQw5fliB6i6DS5WMnY5mURnh%2FVIwN5wVEAAmVAIhAMJKcA2yrajR9nvtm4yTdw2Cp4z5HbZcBK%2FO%2FyemVDAhKogECMD%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNjM3NDIzMTgzODA1Igy5cE1Ve%2Bcafb%2BZ6Isq3APVPUix8QHz1BVVJMH%2FSYYc2iXkn6Se2rBYC6YEYYQB0B9YhY1Mx5ICgPa7IFtB7RecFSbDyp1IJ8I7Oekc21FJDrh7M7%2BYWqjBPjVttZBhcMl5UrekehTrAgBlRO4ljjFJQdY7L3ycwT3WyE3olPSYuPK078Uwo0k9mH7RkW7S30f8nTHGRFPmi0Qi8BftBGaVnUG4Y0gFbjZIq6U5FKF9IKKlUwNf0USZXSeACURyb3TeqHt%2F4bwZihOhIIt2XZeSergfYCTW9zVND4hpbskE44MtpvLdBf5m5l%2B%2FZKO5TQdQDBAK9O3F7j84zfv%2BKmogsLRlA95PaA2N7jsI0mDWWsvtT4IEt34%2BzyfFjjvx8NvuRLf%2FhepbGkyQUR41l4HoddCWsmyZvkEfi5VC90z8u1voX4ay2nkuA%2BFvAS1Q2j4ItusfamhYgKdyCHUU4QbH2crNd5Xv7vfoqZgJFd386M7pQMGUjWSzoSyaZJbZU1UqpVzGRdOmB6YXckDmK3lHYpYD9OMZM7fwPbgZAC6cRDhGJCWsYag8LsJCQfUpFPdTWy2p3HXkMzsB8oMUl3NGl64n3Y1i8Q3Iv%2Bmauh8GiTyst42saMr8FYLvDX%2FamaE%2F%2FvZK1xfQO%2FcXZzC69KbUBjqkATbde3Or55xJ8HILVVy%2BEd7Rjv1%2BFi%2FS2tp%2FE2LXaSk81lOWeHoKg7X9v1F8z0d5NhP%2BA%2B1A6AZNBmDUvmt%2F%2FgoHT6wm0ndANBc%2FbEzSZCYA6IJgd04vt3qeEZG0buHUo4RkowOtKpIg5QE7HzbOKtuN5roxXlOGfLm%2BTDxJkZ2MG2YuXyFi1A2R16bXsPEEMrzYyMorL3EG5nbfDCLAhJvBqbtE&X-Amz-Signature=eab9596c889efe25b064faab89362daccb91df996c738644e348cd3bde46c72d&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+                  "expiry_time": "2026-08-22T17:23:26.994Z"
+                }
+              }
+            ]
+          },
+          "Name": {
+            "id": "title",
+            "type": "title",
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Chris Wu",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Chris Wu",
+                "href": null
+              }
+            ]
+          }
+        },
+        "url": "https://app.notion.com/p/Chris-Wu-35b526fb7d8d803caa02ff591eb28a18",
+        "public_url": null,
+        "archived": false
+      },
+      "blocks": []
+    },
+    {
+      "page": {
+        "object": "page",
+        "id": "2fd526fb-7d8d-80cb-ad17-f4a0389f7928",
+        "created_time": "2026-02-04T15:20:00.000Z",
+        "last_edited_time": "2026-02-04T15:22:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+        },
+        "cover": null,
+        "icon": null,
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "2f5526fb-7d8d-80b2-81ee-000b509da1c0",
+          "database_id": "2f5526fb-7d8d-8096-9033-cfe494e68299"
+        },
+        "in_trash": false,
+        "is_archived": false,
+        "is_locked": false,
+        "properties": {
+          "Type": {
+            "id": "%3BQa%3C",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "People",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "People",
+                "href": null
+              }
+            ]
+          },
+          "Bio": {
+            "id": "%3C_aT",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Omar Khan joined Carnegie Mellon University as the Head of the School of Architecture in August 2020. Khan joined CMU from the Department of Architecture at the University at Buffalo (UB), State University of New York. Khan served as UB department chair for seven years, during which time he initiated new graduate programs, developed industry collaborations, and shepherded facility improvements. During his tenure as chair, the department’s reputation grew in response to his pedagogical innovations, especially in design-build experiential learning and research-focused graduate education. His efforts also led to the largest increase of sponsored research ever experienced by the department.\nKhan’s research and creative activities span architecture, installation/performance art, and digital design and fabrication. At UB, he co-directed the Center for Architecture and Situated Technologies (CAST) and was an editor of the Situated Technologies Pamphlet Series. CAST’s research focuses on pervasive computing technologies as they intersect with architecture. Through CAST he worked on the legacy of cybernetics and, more recently, artificial intelligence as they apply to the area of responsive architecture.  He also was a co-director of the Sustainable Manufacturing and Advanced Robotics Technology (SMART) Community of Excellence, where researchers across architecture, engineering, computing, and management collaborate with industry to explore robotic technologies for manufacturing. Through SMART, he worked with Boston Valley Terra Cotta, the largest architectural terra cotta manufacturer in North America, on developing digital workflows in the manufacturing process. Since 2017, as part of his research with the company, he organized the annual Architectural Ceramic Assemblies Workshop (ACAW) that invites architects and artists to develop innovative applications for terracotta.\nKhan received his bachelor of architecture degree from Cornell University and a master in design and computation from Massachusetts Institute of Technology, where he was a member of the Aesthetics and Computation Group at the MIT Media Lab. His national and international exhibits include the Incheon Digital Art Festival (Korea), Urban Screens Melbourne, ZeroOne San Jose, Storefront for Art and Architecture, the National Building Museum, and the Urban Center. He is a fellow of the New York Foundation for the Arts and has received grants from the New York State Council on the Arts and the US Department of Education. He is the co-principal, with Laura Garófalo, of Liminal Projects, an architectural research office, and partner with Jordan Geiger in Gekh, a design consultancy.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Omar Khan joined Carnegie Mellon University as the Head of the School of Architecture in August 2020. Khan joined CMU from the Department of Architecture at the University at Buffalo (UB), State University of New York. Khan served as UB department chair for seven years, during which time he initiated new graduate programs, developed industry collaborations, and shepherded facility improvements. During his tenure as chair, the department’s reputation grew in response to his pedagogical innovations, especially in design-build experiential learning and research-focused graduate education. His efforts also led to the largest increase of sponsored research ever experienced by the department.\nKhan’s research and creative activities span architecture, installation/performance art, and digital design and fabrication. At UB, he co-directed the Center for Architecture and Situated Technologies (CAST) and was an editor of the Situated Technologies Pamphlet Series. CAST’s research focuses on pervasive computing technologies as they intersect with architecture. Through CAST he worked on the legacy of cybernetics and, more recently, artificial intelligence as they apply to the area of responsive architecture.  He also was a co-director of the Sustainable Manufacturing and Advanced Robotics Technology (SMART) Community of Excellence, where researchers across architecture, engineering, computing, and management collaborate with industry to explore robotic technologies for manufacturing. Through SMART, he worked with Boston Valley Terra Cotta, the largest architectural terra cotta manufacturer in North America, on developing digital workflows in the manufacturing process. Since 2017, as part of his research with the company, he organized the annual Architectural Ceramic Assemblies Workshop (ACAW) that invites architects and artists to develop innovative applications for terracotta.\nKhan received his bachelor of architecture degree from Cornell University and a master in design and computation from Massachusetts Institute of Technology, where he was a member of the Aesthetics and Computation Group at the MIT Media Lab. His national and international exhibits include the Incheon Digital Art Festival (Korea), Urban Screens Melbourne, ZeroOne San Jose, Storefront for Art and Architecture, the National Building Museum, and the Urban Center. He is a fellow of the New York Foundation for the Arts and has received grants from the New York State Council on the Arts and the US Department of Education. He is the co-principal, with Laura Garófalo, of Liminal Projects, an architectural research office, and partner with Jordan Geiger in Gekh, a design consultancy.",
+                "href": null
+              }
+            ]
+          },
+          "Website": {
+            "id": "GP%60G",
+            "type": "url",
+            "url": null
+          },
+          "Email": {
+            "id": "GZiB",
+            "type": "email",
+            "email": "okhan1@cmu.edu"
+          },
+          "Role": {
+            "id": "mKt%3C",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Laboratory Faculty Representative",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Laboratory Faculty Representative",
+                "href": null
+              }
+            ]
+          },
+          "Headshot": {
+            "id": "qWFL",
+            "type": "files",
+            "files": [
+              {
+                "name": "omarkhan.jpg",
+                "type": "file",
+                "file": {
+                  "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4bd526fb-7d8d-8194-a62d-000393ba02cd/521384bf-afd2-42d0-a2f7-28553bcecdcd/omarkhan.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466RR42BRCU%2F20260822%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260822T162327Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEPf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDyyu7OEQw5fliB6i6DS5WMnY5mURnh%2FVIwN5wVEAAmVAIhAMJKcA2yrajR9nvtm4yTdw2Cp4z5HbZcBK%2FO%2FyemVDAhKogECMD%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNjM3NDIzMTgzODA1Igy5cE1Ve%2Bcafb%2BZ6Isq3APVPUix8QHz1BVVJMH%2FSYYc2iXkn6Se2rBYC6YEYYQB0B9YhY1Mx5ICgPa7IFtB7RecFSbDyp1IJ8I7Oekc21FJDrh7M7%2BYWqjBPjVttZBhcMl5UrekehTrAgBlRO4ljjFJQdY7L3ycwT3WyE3olPSYuPK078Uwo0k9mH7RkW7S30f8nTHGRFPmi0Qi8BftBGaVnUG4Y0gFbjZIq6U5FKF9IKKlUwNf0USZXSeACURyb3TeqHt%2F4bwZihOhIIt2XZeSergfYCTW9zVND4hpbskE44MtpvLdBf5m5l%2B%2FZKO5TQdQDBAK9O3F7j84zfv%2BKmogsLRlA95PaA2N7jsI0mDWWsvtT4IEt34%2BzyfFjjvx8NvuRLf%2FhepbGkyQUR41l4HoddCWsmyZvkEfi5VC90z8u1voX4ay2nkuA%2BFvAS1Q2j4ItusfamhYgKdyCHUU4QbH2crNd5Xv7vfoqZgJFd386M7pQMGUjWSzoSyaZJbZU1UqpVzGRdOmB6YXckDmK3lHYpYD9OMZM7fwPbgZAC6cRDhGJCWsYag8LsJCQfUpFPdTWy2p3HXkMzsB8oMUl3NGl64n3Y1i8Q3Iv%2Bmauh8GiTyst42saMr8FYLvDX%2FamaE%2F%2FvZK1xfQO%2FcXZzC69KbUBjqkATbde3Or55xJ8HILVVy%2BEd7Rjv1%2BFi%2FS2tp%2FE2LXaSk81lOWeHoKg7X9v1F8z0d5NhP%2BA%2B1A6AZNBmDUvmt%2F%2FgoHT6wm0ndANBc%2FbEzSZCYA6IJgd04vt3qeEZG0buHUo4RkowOtKpIg5QE7HzbOKtuN5roxXlOGfLm%2BTDxJkZ2MG2YuXyFi1A2R16bXsPEEMrzYyMorL3EG5nbfDCLAhJvBqbtE&X-Amz-Signature=20c18f7989f389f118fd19c4fd65935f45b5ee2982f4be21f3b3e67e9187bcd0&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+                  "expiry_time": "2026-08-22T17:23:26.994Z"
+                }
+              }
+            ]
+          },
+          "Name": {
+            "id": "title",
+            "type": "title",
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Omar Khan",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Omar Khan",
+                "href": null
+              }
+            ]
+          }
+        },
+        "url": "https://app.notion.com/p/Omar-Khan-2fd526fb7d8d80cbad17f4a0389f7928",
+        "public_url": null,
+        "archived": false
+      },
+      "blocks": []
+    },
+    {
+      "page": {
+        "object": "page",
+        "id": "2f5526fb-7d8d-80fa-9d0a-ff9367f11443",
+        "created_time": "2026-01-27T03:19:00.000Z",
+        "last_edited_time": "2026-02-04T15:20:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "245d872b-594c-8106-8297-0002b46a489f"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+        },
+        "cover": null,
+        "icon": null,
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "2f5526fb-7d8d-80b2-81ee-000b509da1c0",
+          "database_id": "2f5526fb-7d8d-8096-9033-cfe494e68299"
+        },
+        "in_trash": false,
+        "is_archived": false,
+        "is_locked": false,
+        "properties": {
+          "Type": {
+            "id": "%3BQa%3C",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "People",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "People",
+                "href": null
+              }
+            ]
+          },
+          "Bio": {
+            "id": "%3C_aT",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Paul Pangaro is Director of the ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Paul Pangaro is Director of the ",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "Laboratory for Cybernetics",
+                  "link": {
+                    "url": "https://www.architecture.cmu.edu/laboratory-cybernetics"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Laboratory for Cybernetics",
+                "href": "https://www.architecture.cmu.edu/laboratory-cybernetics"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": " and Adjunct Faculty at Carnegie Mellon Architecture, and President of the ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": " and Adjunct Faculty at Carnegie Mellon Architecture, and President of the ",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "American Society for Cybernetics",
+                  "link": {
+                    "url": "https://asc-cybernetics.org/"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "American Society for Cybernetics",
+                "href": "https://asc-cybernetics.org/"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": ". His career spans startups, teaching, performance and consulting. He has been applying models of conversation to the design of interactions and organizations since his Ph.D. in Cybernetics (Brunel, UK) with Gordon Pask. His research and prototyping are grounded in the twin concepts of \"design ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": ". His career spans startups, teaching, performance and consulting. He has been applying models of conversation to the design of interactions and organizations since his Ph.D. in Cybernetics (Brunel, UK) with Gordon Pask. His research and prototyping are grounded in the twin concepts of \"design ",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "for ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": true,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "for ",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "conversation\" and \"design ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "conversation\" and \"design ",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "as ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": true,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "as ",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "conversation.\" In the context of the American Society for Cybernetics, Pangaro is co-lead of the ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "conversation.\" In the context of the American Society for Cybernetics, Pangaro is co-lead of the ",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "#NewMacy Initiative",
+                  "link": {
+                    "url": "https://newmacy.pubpub.org/"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "#NewMacy Initiative",
+                "href": "https://newmacy.pubpub.org/"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": ", where his personal focus is responding to the ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": ", where his personal focus is responding to the ",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "pandemic of today’s AI algorithms",
+                  "link": {
+                    "url": "https://tinyurl.com/newmacy-AI-pandemic"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "pandemic of today’s AI algorithms",
+                "href": "https://tinyurl.com/newmacy-AI-pandemic"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": ". In the context of education and ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": ". In the context of education and ",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "addressing wicked challenges",
+                  "link": {
+                    "url": "https://tinyurl.com/L4C-wicked"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "addressing wicked challenges",
+                "href": "https://tinyurl.com/L4C-wicked"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": ", Pangaro has brought in-world practitioners into collaborations that are grounded in the concerns and worldview of ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": ", Pangaro has brought in-world practitioners into collaborations that are grounded in the concerns and worldview of ",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "our newest generation of student-scholars",
+                  "link": {
+                    "url": "http://tinyurl.com/CTC-BriefGuide"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "our newest generation of student-scholars",
+                "href": "http://tinyurl.com/CTC-BriefGuide"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": ". In the context of art and media, Pangaro collaborated with TJ McLeish, master fabricator of the ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": ". In the context of art and media, Pangaro collaborated with TJ McLeish, master fabricator of the ",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "COLLOQUY 2018",
+                  "link": {
+                    "url": "https://www.colloquyofmobiles.com/"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "COLLOQUY 2018",
+                "href": "https://www.colloquyofmobiles.com/"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": " project, to reconstruct Gordon Pask’s seminal interactive art piece \"Colloquy of Mobiles,\" which appeared in the groundbreaking exhibition \"Cybernetic Serendipity\" in London in 1968. Their 2018 reconstruction was exhibited at Centre Pompidou in 2020 and is now part of the permanent collection at ZKM.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": " project, to reconstruct Gordon Pask’s seminal interactive art piece \"Colloquy of Mobiles,\" which appeared in the groundbreaking exhibition \"Cybernetic Serendipity\" in London in 1968. Their 2018 reconstruction was exhibited at Centre Pompidou in 2020 and is now part of the permanent collection at ZKM.",
+                "href": null
+              }
+            ]
+          },
+          "Website": {
+            "id": "GP%60G",
+            "type": "url",
+            "url": "https://www.pangaro.com/"
+          },
+          "Email": {
+            "id": "GZiB",
+            "type": "email",
+            "email": "ppangaro@cmu.edu"
+          },
+          "Role": {
+            "id": "mKt%3C",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Director",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Director",
+                "href": null
+              }
+            ]
+          },
+          "Headshot": {
+            "id": "qWFL",
+            "type": "files",
+            "files": [
+              {
+                "name": "Pangaro Headshot Sept 2025 Square - Paul Pangaro.png.jpeg",
+                "type": "file",
+                "file": {
+                  "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4bd526fb-7d8d-8194-a62d-000393ba02cd/8d6900ac-07c7-4e90-89ed-bd377aa0c14f/Pangaro_Headshot_Sept_2025_Square_-_Paul_Pangaro.png.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466RR42BRCU%2F20260822%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260822T162327Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEPf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDyyu7OEQw5fliB6i6DS5WMnY5mURnh%2FVIwN5wVEAAmVAIhAMJKcA2yrajR9nvtm4yTdw2Cp4z5HbZcBK%2FO%2FyemVDAhKogECMD%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNjM3NDIzMTgzODA1Igy5cE1Ve%2Bcafb%2BZ6Isq3APVPUix8QHz1BVVJMH%2FSYYc2iXkn6Se2rBYC6YEYYQB0B9YhY1Mx5ICgPa7IFtB7RecFSbDyp1IJ8I7Oekc21FJDrh7M7%2BYWqjBPjVttZBhcMl5UrekehTrAgBlRO4ljjFJQdY7L3ycwT3WyE3olPSYuPK078Uwo0k9mH7RkW7S30f8nTHGRFPmi0Qi8BftBGaVnUG4Y0gFbjZIq6U5FKF9IKKlUwNf0USZXSeACURyb3TeqHt%2F4bwZihOhIIt2XZeSergfYCTW9zVND4hpbskE44MtpvLdBf5m5l%2B%2FZKO5TQdQDBAK9O3F7j84zfv%2BKmogsLRlA95PaA2N7jsI0mDWWsvtT4IEt34%2BzyfFjjvx8NvuRLf%2FhepbGkyQUR41l4HoddCWsmyZvkEfi5VC90z8u1voX4ay2nkuA%2BFvAS1Q2j4ItusfamhYgKdyCHUU4QbH2crNd5Xv7vfoqZgJFd386M7pQMGUjWSzoSyaZJbZU1UqpVzGRdOmB6YXckDmK3lHYpYD9OMZM7fwPbgZAC6cRDhGJCWsYag8LsJCQfUpFPdTWy2p3HXkMzsB8oMUl3NGl64n3Y1i8Q3Iv%2Bmauh8GiTyst42saMr8FYLvDX%2FamaE%2F%2FvZK1xfQO%2FcXZzC69KbUBjqkATbde3Or55xJ8HILVVy%2BEd7Rjv1%2BFi%2FS2tp%2FE2LXaSk81lOWeHoKg7X9v1F8z0d5NhP%2BA%2B1A6AZNBmDUvmt%2F%2FgoHT6wm0ndANBc%2FbEzSZCYA6IJgd04vt3qeEZG0buHUo4RkowOtKpIg5QE7HzbOKtuN5roxXlOGfLm%2BTDxJkZ2MG2YuXyFi1A2R16bXsPEEMrzYyMorL3EG5nbfDCLAhJvBqbtE&X-Amz-Signature=4a45a112d8dcc25ba3b5b22271983d7521f26251e431b38eaf804a57decfb85f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+                  "expiry_time": "2026-08-22T17:23:26.994Z"
+                }
+              }
+            ]
+          },
+          "Name": {
+            "id": "title",
+            "type": "title",
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Paul Pangaro",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Paul Pangaro",
+                "href": null
+              }
+            ]
+          }
+        },
+        "url": "https://app.notion.com/p/Paul-Pangaro-2f5526fb7d8d80fa9d0aff9367f11443",
+        "public_url": null,
+        "archived": false
+      },
+      "blocks": []
+    }
+  ]
+}

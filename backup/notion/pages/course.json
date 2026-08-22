@@ -1,0 +1,1283 @@
+{
+  "page": {
+    "object": "page",
+    "id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93",
+    "created_time": "2026-01-27T01:07:00.000Z",
+    "last_edited_time": "2026-04-29T01:50:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "245d872b-594c-8106-8297-0002b46a489f"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "245d872b-594c-8106-8297-0002b46a489f"
+    },
+    "cover": null,
+    "icon": null,
+    "parent": {
+      "type": "page_id",
+      "page_id": "24b526fb-7d8d-801c-8b59-e5c5dcd94411"
+    },
+    "in_trash": false,
+    "is_archived": false,
+    "is_locked": false,
+    "properties": {
+      "title": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Course Info",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Course Info",
+            "href": null
+          }
+        ]
+      }
+    },
+    "url": "https://app.notion.com/p/Course-Info-2f5526fb7d8d80f1bb45d3289ae0df93",
+    "public_url": null,
+    "archived": false,
+    "request_id": "a0b7958f-3a4f-43b9-b477-c69034d38035"
+  },
+  "blocks": [
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-8088-8f32-e035c12585e3",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:29:00.000Z",
+      "last_edited_time": "2026-03-31T17:30:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "COURSE SYLLABUS: ENGAGING WICKED CHALLENGES",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "COURSE SYLLABUS: ENGAGING WICKED CHALLENGES",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-80ad-a83e-ca235a8a6fd6",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:29:00.000Z",
+      "last_edited_time": "2026-04-29T01:46:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "245d872b-594c-8106-8297-0002b46a489f"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Fall 2026   |   48-551 / 48-751 Arch   |   51-503 / 51-605 Design\nPaul Pangaro, Instructor   |   ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Fall 2026   |   48-551 / 48-751 Arch   |   51-503 / 51-605 Design\nPaul Pangaro, Instructor   |   ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "ppangaro@cmu.edu",
+              "link": {
+                "url": "mailto:ppangaro@cmu.edu"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "ppangaro@cmu.edu",
+            "href": "mailto:ppangaro@cmu.edu"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " ",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-8093-8880-fead5dd6fc4f",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:29:00.000Z",
+      "last_edited_time": "2026-04-29T01:46:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "245d872b-594c-8106-8297-0002b46a489f"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Tues & Thurs\n11:00am–12:20pm Room TBD\n9 units (undergrad) / 12 units (graduate)\nRelated Documents",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Tues & Thurs\n11:00am–12:20pm Room TBD\n9 units (undergrad) / 12 units (graduate)\nRelated Documents",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-80e5-8837-e1a1bf9b64b0",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:29:00.000Z",
+      "last_edited_time": "2026-03-31T17:42:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "→ ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "→ ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Official CMU Course Listing",
+              "link": {
+                "url": "https://www.architecture.cmu.edu/courses/fall-2025/lab-cybernetics-engaging-wicked-challenges"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Official CMU Course Listing",
+            "href": "https://www.architecture.cmu.edu/courses/fall-2025/lab-cybernetics-engaging-wicked-challenges"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "\n→ ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "\n→ ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Canvas Course (2026)",
+              "link": {
+                "url": "https://canvas.cmu.edu/courses/51389"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Canvas Course (2026)",
+            "href": "https://canvas.cmu.edu/courses/51389"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "\n→ ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "\n→ ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Definition of the Laboratory",
+              "link": {
+                "url": "https://tinyurl.com/Lab4C-2025"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Definition of the Laboratory",
+            "href": "https://tinyurl.com/Lab4C-2025"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "\n→ ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "\n→ ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Cybernetics in a Laboratory Context",
+              "link": {
+                "url": "https://tinyurl.com/Cyber4Lab"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Cybernetics in a Laboratory Context",
+            "href": "https://tinyurl.com/Cyber4Lab"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "\n→ ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "\n→ ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Guide to Lab4C Ecosystem",
+              "link": {
+                "url": "https://tinyurl.com/L4C-Guide"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Guide to Lab4C Ecosystem",
+            "href": "https://tinyurl.com/L4C-Guide"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "→ ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "→ ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Detailed Class Schedule",
+              "link": {
+                "url": "https://tinyurl.com/L4C-Course-Schedule"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Detailed Class Schedule",
+            "href": "https://tinyurl.com/L4C-Course-Schedule"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "\n→ ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "\n→ ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Re-Braiding Cybernetics & AI",
+              "link": {
+                "url": "https://tinyurl.com/AI-CYBER-Books"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Re-Braiding Cybernetics & AI",
+            "href": "https://tinyurl.com/AI-CYBER-Books"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "\n→ ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "\n→ ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Pangaro Cybernetics Prize",
+              "link": {
+                "url": "https://tinyurl.com/L4C-Prize"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Pangaro Cybernetics Prize",
+            "href": "https://tinyurl.com/L4C-Prize"
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-80dd-9b29-de01be618802",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:31:00.000Z",
+      "last_edited_time": "2026-03-31T17:31:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "divider",
+      "divider": {},
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-8087-a49b-f3b072d87d2f",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:30:00.000Z",
+      "last_edited_time": "2026-04-21T01:46:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "COURSE DESCRIPTION",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "COURSE DESCRIPTION",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-8042-a456-d9c796e5f793",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:30:00.000Z",
+      "last_edited_time": "2026-04-29T01:47:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "245d872b-594c-8106-8297-0002b46a489f"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "This course is an entry point into The Laboratory for Cybernetics (Lab4C) in Carnegie Mellon—Architecture for those who see themselves committing to exploring responses to “wicked challenges”—for example but not limited to social justice, climate change, artificial intelligence, three pillars of the CM—ARCHITECTURE Pedagogy—in the context of vast ambiguities and unpredictabilities of our 21st-century world.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "This course is an entry point into The Laboratory for Cybernetics (Lab4C) in Carnegie Mellon—Architecture for those who see themselves committing to exploring responses to “wicked challenges”—for example but not limited to social justice, climate change, artificial intelligence, three pillars of the CM—ARCHITECTURE Pedagogy—in the context of vast ambiguities and unpredictabilities of our 21st-century world.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-801a-8313-f90399794265",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:30:00.000Z",
+      "last_edited_time": "2026-04-29T01:50:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "245d872b-594c-8106-8297-0002b46a489f"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Embracing ambiguity, critical thinking, and experimental creativity, Lab4C supports students and researchers grappling with wicked challenges by offering concepts and materials, models and methods from Cybernetics and Systems. Lab4C also offers connections to potential collaborators through its network of in-world practitioners.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Embracing ambiguity, critical thinking, and experimental creativity, Lab4C supports students and researchers grappling with wicked challenges by offering concepts and materials, models and methods from Cybernetics and Systems. Lab4C also offers connections to potential collaborators through its network of in-world practitioners.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-80b6-a3f8-d34fc33489ba",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:30:00.000Z",
+      "last_edited_time": "2026-04-29T01:47:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "245d872b-594c-8106-8297-0002b46a489f"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The trans-discipline of Cybernetics offers concepts, models, and methods for approaching complex adaptive systems of any makeup from the perspectives of purpose—the purpose attributed to the system and the purpose of those who articulate the system’s purpose. Cybernetics is unique because it demands both humane-based explanations for how systems behave as well as responsibility for our own behavior in how we encounter, delimit, interact with, and explain those systems.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "The trans-discipline of Cybernetics offers concepts, models, and methods for approaching complex adaptive systems of any makeup from the perspectives of purpose—the purpose attributed to the system and the purpose of those who articulate the system’s purpose. Cybernetics is unique because it demands both humane-based explanations for how systems behave as well as responsibility for our own behavior in how we encounter, delimit, interact with, and explain those systems.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-803b-9cef-e226c0851553",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:30:00.000Z",
+      "last_edited_time": "2026-03-31T17:30:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Students will be introduced to applying Cybernetics as a means of exploring their own interests in any of a wide range of wicked challenges. Practices explored in the course will help students to articulate and model both the domain of their interest (subject and scope) as well as their concerns (personal intentions and desired outcomes).",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Students will be introduced to applying Cybernetics as a means of exploring their own interests in any of a wide range of wicked challenges. Practices explored in the course will help students to articulate and model both the domain of their interest (subject and scope) as well as their concerns (personal intentions and desired outcomes).",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-80cd-a0a0-eb1ffb5a2ad9",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:30:00.000Z",
+      "last_edited_time": "2026-03-31T17:31:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "divider",
+      "divider": {},
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-80d0-89ea-c2dfeefe4d04",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:30:00.000Z",
+      "last_edited_time": "2026-04-21T01:46:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "INTENTIONS OF THE COURSE",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "INTENTIONS OF THE COURSE",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-8048-951f-d049788f0886",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:30:00.000Z",
+      "last_edited_time": "2026-03-31T17:30:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Engaging Wicked Challenges is a full-semester course that:",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Engaging Wicked Challenges is a full-semester course that:",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-8041-b43a-fe0a6ad497b9",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:30:00.000Z",
+      "last_edited_time": "2026-04-29T01:47:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "245d872b-594c-8106-8297-0002b46a489f"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Gives students an on-ramp to the Laboratory for Cybernetics in CM–ARCHITECTURE",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Gives students an on-ramp to the Laboratory for Cybernetics in CM–ARCHITECTURE",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-8020-aa04-cbf00845f695",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:30:00.000Z",
+      "last_edited_time": "2026-03-31T17:30:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Introduces grad students and vetted undergrads to the tools of Cybernetics in the form of concepts and materials, models and methods, networking and collaborating",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Introduces grad students and vetted undergrads to the tools of Cybernetics in the form of concepts and materials, models and methods, networking and collaborating",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-80ea-b748-d9febd3d51e9",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:30:00.000Z",
+      "last_edited_time": "2026-04-29T01:47:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "245d872b-594c-8106-8297-0002b46a489f"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Offers students the means to approach wicked challenges grounded in their own interests from the lens of Systems and Cybernetics, and to receive credit for their work. (Note that “wicked” is used in a strict sense from design history, as when there is a lack of consensus, common frame, or shared values.)",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Offers students the means to approach wicked challenges grounded in their own interests from the lens of Systems and Cybernetics, and to receive credit for their work. (Note that “wicked” is used in a strict sense from design history, as when there is a lack of consensus, common frame, or shared values.)",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-80f9-94ae-f58c1ff51222",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:30:00.000Z",
+      "last_edited_time": "2026-03-31T17:30:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Creates a studio atmosphere that offers guidance in applying Cybernetics to creating new possibilities for human intention in a defined domain of action",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Creates a studio atmosphere that offers guidance in applying Cybernetics to creating new possibilities for human intention in a defined domain of action",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-80cd-a6d7-e689eaa0324a",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:30:00.000Z",
+      "last_edited_time": "2026-03-31T17:30:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Enables students to make progress on their own pre-existing projects, including other coursework or thesis, or to develop a new design proposal of their own making",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Enables students to make progress on their own pre-existing projects, including other coursework or thesis, or to develop a new design proposal of their own making",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-803c-9990-e153c92b5ec8",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:30:00.000Z",
+      "last_edited_time": "2026-03-31T17:30:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Encourages (but does not require) the course’s final project to be the development of a design brief, for any type of design (interactive, experiential, environmental, service, product, community, regulatory, conversational, ...) which can be entered into an Prize competition (next item)",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Encourages (but does not require) the course’s final project to be the development of a design brief, for any type of design (interactive, experiential, environmental, service, product, community, regulatory, conversational, ...) which can be entered into an Prize competition (next item)",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-80ee-9b7b-f5542e39cc66",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:30:00.000Z",
+      "last_edited_time": "2026-04-29T01:48:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "245d872b-594c-8106-8297-0002b46a489f"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Facilitates students entering a yearly Cybernetics Prize competition with a $5000 cash award for the winning design proposal. (Note that the award will be given yearly, creating a legacy for maintaining focus on the benefits of Cybernetics in the context of wicked challenges; see this document for the 2025 finalists.)",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Facilitates students entering a yearly Cybernetics Prize competition with a $5000 cash award for the winning design proposal. (Note that the award will be given yearly, creating a legacy for maintaining focus on the benefits of Cybernetics in the context of wicked challenges; see this document for the 2025 finalists.)",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "334526fb-7d8d-80fd-880f-ecc724cefda0",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-03-31T17:30:00.000Z",
+      "last_edited_time": "2026-03-31T17:30:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "numbered_list_item",
+      "numbered_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Offers a platform for each student to make significant progress and develop outcomes from participating in the course, not intended as final results but rather a waypoint in continuing efforts to address wicked challenges.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Offers a platform for each student to make significant progress and develop outcomes from participating in the course, not intended as final results but rather a waypoint in continuing efforts to address wicked challenges.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "34d526fb-7d8d-8032-ad4f-fbfdb0cc45bb",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-80f1-bb45-d3289ae0df93"
+      },
+      "created_time": "2026-04-25T21:13:00.000Z",
+      "last_edited_time": "2026-04-25T21:13:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    }
+  ]
+}

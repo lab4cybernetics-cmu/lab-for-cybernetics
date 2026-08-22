@@ -1,0 +1,3037 @@
+{
+  "database": {
+    "object": "database",
+    "id": "2f5526fb-7d8d-8079-bf8e-c387040c3312",
+    "title": [
+      {
+        "type": "text",
+        "text": {
+          "content": "News",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": "News",
+        "href": null
+      }
+    ],
+    "description": [],
+    "parent": {
+      "type": "page_id",
+      "page_id": "24b526fb-7d8d-801c-8b59-e5c5dcd94411"
+    },
+    "is_inline": false,
+    "in_trash": false,
+    "is_locked": false,
+    "created_time": "2026-01-27T01:12:28.154+00:00",
+    "last_edited_time": "2026-04-28T05:13:44.845+00:00",
+    "data_sources": [
+      {
+        "id": "2f5526fb-7d8d-80e9-b097-000b8d596d67",
+        "name": "News"
+      }
+    ],
+    "icon": null,
+    "cover": null,
+    "url": "https://app.notion.com/p/2f5526fb7d8d8079bf8ec387040c3312",
+    "public_url": null,
+    "archived": false,
+    "request_id": "35211853-9ccb-47ff-a265-168dbce4fad2"
+  },
+  "entries": [
+    {
+      "page": {
+        "object": "page",
+        "id": "350526fb-7d8d-8051-8acc-df07761dc632",
+        "created_time": "2026-04-28T04:54:00.000Z",
+        "last_edited_time": "2026-05-13T18:43:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "245d872b-594c-8106-8297-0002b46a489f"
+        },
+        "cover": null,
+        "icon": null,
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "2f5526fb-7d8d-80e9-b097-000b8d596d67",
+          "database_id": "2f5526fb-7d8d-8079-bf8e-c387040c3312"
+        },
+        "in_trash": false,
+        "is_archived": false,
+        "is_locked": false,
+        "properties": {
+          "Date": {
+            "id": "nKls",
+            "type": "date",
+            "date": {
+              "start": "2026-04-28",
+              "end": null,
+              "time_zone": null
+            }
+          },
+          "Type": {
+            "id": "oWrb",
+            "type": "select",
+            "select": {
+              "id": "26855f22-867b-436a-a7f9-068c0691cee4",
+              "name": "Announcement",
+              "color": "default"
+            }
+          },
+          "Summary": {
+            "id": "w%5E%5Cz",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Title": {
+            "id": "title",
+            "type": "title",
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "2026 ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "2026 ",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "Pangaro",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Pangaro",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": " Cybernetics Prize Winner Announced",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": " Cybernetics Prize Winner Announced",
+                "href": null
+              }
+            ]
+          }
+        },
+        "url": "https://app.notion.com/p/2026-Pangaro-Cybernetics-Prize-Winner-Announced-350526fb7d8d80518accdf07761dc632",
+        "public_url": null,
+        "archived": false
+      },
+      "blocks": [
+        {
+          "object": "block",
+          "id": "350526fb-7d8d-806c-b4a8-d17ed9b9a8e2",
+          "parent": {
+            "type": "page_id",
+            "page_id": "350526fb-7d8d-8051-8acc-df07761dc632"
+          },
+          "created_time": "2026-04-28T05:03:00.000Z",
+          "last_edited_time": "2026-04-28T13:14:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "heading_2",
+          "heading_2": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "The Winner of the 2026 Prize is:",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "The Winner of the 2026 Prize is:",
+                "href": null
+              }
+            ],
+            "is_toggleable": false,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "350526fb-7d8d-80cc-8a60-d0a0e9e12d48",
+          "parent": {
+            "type": "page_id",
+            "page_id": "350526fb-7d8d-8051-8acc-df07761dc632"
+          },
+          "created_time": "2026-04-28T05:03:00.000Z",
+          "last_edited_time": "2026-04-28T13:12:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "A NEW CHOICE FOR HIV TESTING: Proposing a Novel Product System for At-Home HIV Testing",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "A NEW CHOICE FOR HIV TESTING: Proposing a Novel Product System for At-Home HIV Testing",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": ", \nDesigned with a Cybernetics Approach by Danny Linitz, 2nd-year undergrad, School of Design",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": ", \nDesigned with a Cybernetics Approach by Danny Linitz, 2nd-year undergrad, School of Design",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "350526fb-7d8d-800a-b201-dd6eecb228e9",
+          "parent": {
+            "type": "page_id",
+            "page_id": "350526fb-7d8d-8051-8acc-df07761dc632"
+          },
+          "created_time": "2026-04-28T05:03:00.000Z",
+          "last_edited_time": "2026-04-28T13:31:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "heading_2",
+          "heading_2": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Two submissions have received Honorable Mention:",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Two submissions have received Honorable Mention:",
+                "href": null
+              }
+            ],
+            "is_toggleable": false,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "350526fb-7d8d-803d-8c8e-ecbfe51a1611",
+          "parent": {
+            "type": "page_id",
+            "page_id": "350526fb-7d8d-8051-8acc-df07761dc632"
+          },
+          "created_time": "2026-04-28T05:22:00.000Z",
+          "last_edited_time": "2026-04-28T13:38:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "TWO ORDERS OF DESIGN:  FROM RURAL INFRASTRUCTURE TO THE FOUNDATIONS OF CYBERNETICS",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "TWO ORDERS OF DESIGN:  FROM RURAL INFRASTRUCTURE TO THE FOUNDATIONS OF CYBERNETICS",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": " by Micah Nkrumah Ardayfio (2nd-year undergrad, Info Systems)",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": " by Micah Nkrumah Ardayfio (2nd-year undergrad, Info Systems)",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "350526fb-7d8d-8019-8a19-f1b5fa851957",
+          "parent": {
+            "type": "page_id",
+            "page_id": "350526fb-7d8d-8051-8acc-df07761dc632"
+          },
+          "created_time": "2026-04-28T05:03:00.000Z",
+          "last_edited_time": "2026-04-28T13:39:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "SYSTOGRAPH: CONVERSATIONAL KNOWLEDGE GRAPHS FOR HUMAN AGENCY IN COMPLEX SYSTEMS",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "SYSTOGRAPH: CONVERSATIONAL KNOWLEDGE GRAPHS FOR HUMAN AGENCY IN COMPLEX SYSTEMS",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": " by Barakissa Gakou (1st-year MBA, Tepper) & John Willie Giles III",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": " by Barakissa Gakou (1st-year MBA, Tepper) & John Willie Giles III",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "350526fb-7d8d-809b-b8d6-da349609a498",
+          "parent": {
+            "type": "page_id",
+            "page_id": "350526fb-7d8d-8051-8acc-df07761dc632"
+          },
+          "created_time": "2026-04-28T05:23:00.000Z",
+          "last_edited_time": "2026-04-28T13:36:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "heading_3",
+          "heading_3": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Learn More about the Projects",
+                  "link": {
+                    "url": "https://docs.google.com/document/d/1co4PX3-J5cbMVThTsrk_I-kLwR2cWZtcmw5ljFsqKKU/edit?tab=t.0"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Learn More about the Projects",
+                "href": "https://docs.google.com/document/d/1co4PX3-J5cbMVThTsrk_I-kLwR2cWZtcmw5ljFsqKKU/edit?tab=t.0"
+              }
+            ],
+            "is_toggleable": false,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "350526fb-7d8d-810e-abc9-d73e6b7ebcac",
+          "parent": {
+            "type": "page_id",
+            "page_id": "350526fb-7d8d-8051-8acc-df07761dc632"
+          },
+          "created_time": "2026-04-28T04:54:00.000Z",
+          "last_edited_time": "2026-04-28T13:09:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "heading_2",
+          "heading_2": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "2026 JUDGING PANEL",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "2026 JUDGING PANEL",
+                "href": null
+              }
+            ],
+            "is_toggleable": false,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "350526fb-7d8d-81ab-bf19-fa102537a87c",
+          "parent": {
+            "type": "page_id",
+            "page_id": "350526fb-7d8d-8051-8acc-df07761dc632"
+          },
+          "created_time": "2026-04-28T04:54:00.000Z",
+          "last_edited_time": "2026-04-28T04:54:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "divider",
+          "divider": {},
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "350526fb-7d8d-8082-866d-db17019f7e1d",
+          "parent": {
+            "type": "page_id",
+            "page_id": "350526fb-7d8d-8051-8acc-df07761dc632"
+          },
+          "created_time": "2026-04-28T05:10:00.000Z",
+          "last_edited_time": "2026-04-28T05:32:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "The ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "The ",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "Judging Panel",
+                  "link": {
+                    "url": "https://tinyurl.com/Lab4C-Prize-Jury"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Judging Panel",
+                "href": "https://tinyurl.com/Lab4C-Prize-Jury"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": " comprises an international group of scholars and practitioners with backgrounds in design, architecture, anthropology, primatology, technology, art, education, research, and transdisciplinary teamwork, working in a range of organizations and responsibilities.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": " comprises an international group of scholars and practitioners with backgrounds in design, architecture, anthropology, primatology, technology, art, education, research, and transdisciplinary teamwork, working in a range of organizations and responsibilities.",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "350526fb-7d8d-8095-befb-cfb0ea3e8324",
+          "parent": {
+            "type": "page_id",
+            "page_id": "350526fb-7d8d-8051-8acc-df07761dc632"
+          },
+          "created_time": "2026-04-28T05:08:00.000Z",
+          "last_edited_time": "2026-04-28T05:08:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "bulleted_list_item",
+          "bulleted_list_item": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Hugh Dubberly",
+                  "link": {
+                    "url": "https://www.dubberly.com/about"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Hugh Dubberly",
+                "href": "https://www.dubberly.com/about"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": ", Principal, Dubberly Design Office",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": ", Principal, Dubberly Design Office",
+                "href": null
+              }
+            ],
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "350526fb-7d8d-80f1-a66f-f45da47281e3",
+          "parent": {
+            "type": "page_id",
+            "page_id": "350526fb-7d8d-8051-8acc-df07761dc632"
+          },
+          "created_time": "2026-04-28T05:08:00.000Z",
+          "last_edited_time": "2026-04-28T13:27:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "bulleted_list_item",
+          "bulleted_list_item": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Omar Khan",
+                  "link": {
+                    "url": "https://www.architecture.cmu.edu/profiles/omar-khan"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Omar Khan",
+                "href": "https://www.architecture.cmu.edu/profiles/omar-khan"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": ", Prof & Head, CMU School of Architecture (Judging Panel Chair)",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": ", Prof & Head, CMU School of Architecture (Judging Panel Chair)",
+                "href": null
+              }
+            ],
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "350526fb-7d8d-80e3-a9f0-decb69a3a03f",
+          "parent": {
+            "type": "page_id",
+            "page_id": "350526fb-7d8d-8051-8acc-df07761dc632"
+          },
+          "created_time": "2026-04-28T05:08:00.000Z",
+          "last_edited_time": "2026-04-28T05:13:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "bulleted_list_item",
+          "bulleted_list_item": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Kyle Steinfeld",
+                  "link": {
+                    "url": "https://ced.berkeley.edu/people/kyle-steinfeld"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Kyle Steinfeld",
+                "href": "https://ced.berkeley.edu/people/kyle-steinfeld"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": ", Dir. of MDES & Assoc. Prof. of Architecture, UC Berkeley",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": ", Dir. of MDES & Assoc. Prof. of Architecture, UC Berkeley",
+                "href": null
+              }
+            ],
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "350526fb-7d8d-8033-ae7e-d15575dd6d58",
+          "parent": {
+            "type": "page_id",
+            "page_id": "350526fb-7d8d-8051-8acc-df07761dc632"
+          },
+          "created_time": "2026-04-28T05:08:00.000Z",
+          "last_edited_time": "2026-04-28T05:13:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "bulleted_list_item",
+          "bulleted_list_item": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Ling Tan",
+                  "link": {
+                    "url": "https://lingql.com/about/"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Ling Tan",
+                "href": "https://lingql.com/about/"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": ", Co-founder of HAQUE TAN",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": ", Co-founder of HAQUE TAN",
+                "href": null
+              }
+            ],
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "350526fb-7d8d-8019-8c76-fcb12327b6de",
+          "parent": {
+            "type": "page_id",
+            "page_id": "350526fb-7d8d-8051-8acc-df07761dc632"
+          },
+          "created_time": "2026-04-28T05:08:00.000Z",
+          "last_edited_time": "2026-04-28T05:09:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "bulleted_list_item",
+          "bulleted_list_item": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Dina el-Zanfaly",
+                  "link": {
+                    "url": "https://engineering.cmu.edu/mfi/directory/bios/el-zanfaly-dina.html"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Dina el-Zanfaly",
+                "href": "https://engineering.cmu.edu/mfi/directory/bios/el-zanfaly-dina.html"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": ", Assoc. Prof of Design, Carnegie Mellon University",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": ", Assoc. Prof of Design, Carnegie Mellon University",
+                "href": null
+              }
+            ],
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "350526fb-7d8d-81b0-80bd-df386943feca",
+          "parent": {
+            "type": "page_id",
+            "page_id": "350526fb-7d8d-8051-8acc-df07761dc632"
+          },
+          "created_time": "2026-04-28T04:54:00.000Z",
+          "last_edited_time": "2026-04-28T04:54:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "divider",
+          "divider": {},
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "350526fb-7d8d-8009-9b29-f057f4784948",
+          "parent": {
+            "type": "page_id",
+            "page_id": "350526fb-7d8d-8051-8acc-df07761dc632"
+          },
+          "created_time": "2026-04-28T05:09:00.000Z",
+          "last_edited_time": "2026-04-28T05:09:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "heading_2",
+          "heading_2": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "2026 SUBMISSIONS PROFILES",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "2026 SUBMISSIONS PROFILES",
+                "href": null
+              }
+            ],
+            "is_toggleable": false,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "350526fb-7d8d-8047-ae10-d4c75b8c1447",
+          "parent": {
+            "type": "page_id",
+            "page_id": "350526fb-7d8d-8051-8acc-df07761dc632"
+          },
+          "created_time": "2026-04-28T05:10:00.000Z",
+          "last_edited_time": "2026-04-28T13:38:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "In this 2nd year of the awarding of the Cybernetics Prize from CMU’s ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "In this 2nd year of the awarding of the Cybernetics Prize from CMU’s ",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "Laboratory ",
+                  "link": {
+                    "url": "https://tinyurl.com/L4C-Prize"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Laboratory ",
+                "href": "https://tinyurl.com/L4C-Prize"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "for",
+                  "link": {
+                    "url": "https://tinyurl.com/L4C-Prize"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": true,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "for",
+                "href": "https://tinyurl.com/L4C-Prize"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": " Cybernetics",
+                  "link": {
+                    "url": "https://tinyurl.com/L4C-Prize"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": " Cybernetics",
+                "href": "https://tinyurl.com/L4C-Prize"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": ", 8 entries were vetted for eligibility and completeness, with 7 solo submissions + 1 two-member team. Two submissions from ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": ", 8 entries were vetted for eligibility and completeness, with 7 solo submissions + 1 two-member team. Two submissions from ",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "Architecture",
+                  "link": {
+                    "url": "https://www.architecture.cmu.edu/"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Architecture",
+                "href": "https://www.architecture.cmu.edu/"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": ", 4 from ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": ", 4 from ",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "Design",
+                  "link": {
+                    "url": "https://www.design.cmu.edu/"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Design",
+                "href": "https://www.design.cmu.edu/"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": ", 1 from Information Systems (",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": ", 1 from Information Systems (",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "Heinz College of Information System & Public Policy",
+                  "link": {
+                    "url": "https://www.heinz.cmu.edu/"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Heinz College of Information System & Public Policy",
+                "href": "https://www.heinz.cmu.edu/"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "), and 1 from ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "), and 1 from ",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "Business (Tepper School)",
+                  "link": {
+                    "url": "https://www.cmu.edu/tepper/index.html"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Business (Tepper School)",
+                "href": "https://www.cmu.edu/tepper/index.html"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": ". Lead submitter’s level were 3 PhDs, 3 masters, and 2 undergrads.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": ". Lead submitter’s level were 3 PhDs, 3 masters, and 2 undergrads.",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "350526fb-7d8d-8054-8b0c-dee8391f3f13",
+          "parent": {
+            "type": "page_id",
+            "page_id": "350526fb-7d8d-8051-8acc-df07761dc632"
+          },
+          "created_time": "2026-04-28T05:10:00.000Z",
+          "last_edited_time": "2026-04-28T05:11:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "For a full description of the Prize, eligibility, criteria, and intentions, see the ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "For a full description of the Prize, eligibility, criteria, and intentions, see the ",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "2026 Cybernetics Prize Page",
+                  "link": {
+                    "url": "https://tinyurl.com/L4C-Prize"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "2026 Cybernetics Prize Page",
+                "href": "https://tinyurl.com/L4C-Prize"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": ".",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": ".",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "354526fb-7d8d-8065-8d2f-d65c16d7f901",
+          "parent": {
+            "type": "page_id",
+            "page_id": "350526fb-7d8d-8051-8acc-df07761dc632"
+          },
+          "created_time": "2026-05-02T00:40:00.000Z",
+          "last_edited_time": "2026-05-13T18:43:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "\nThe Pangaro Cybernetics Prize is funded yearly by Paul Pangaro through the generosity of E. Duke Vincent with support from Philip G. Dorn.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": true,
+                  "italic": true,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "\nThe Pangaro Cybernetics Prize is funded yearly by Paul Pangaro through the generosity of E. Duke Vincent with support from Philip G. Dorn.",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "350526fb-7d8d-8116-9a1f-f62e1c0082ef",
+          "parent": {
+            "type": "page_id",
+            "page_id": "350526fb-7d8d-8051-8acc-df07761dc632"
+          },
+          "created_time": "2026-04-28T04:54:00.000Z",
+          "last_edited_time": "2026-04-28T04:54:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        }
+      ]
+    },
+    {
+      "page": {
+        "object": "page",
+        "id": "346526fb-7d8d-804a-a780-e15bbf7474bb",
+        "created_time": "2026-04-18T21:01:00.000Z",
+        "last_edited_time": "2026-04-19T16:29:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "42709e93-b404-4f36-a157-73833fd104fc"
+        },
+        "cover": null,
+        "icon": null,
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "2f5526fb-7d8d-80e9-b097-000b8d596d67",
+          "database_id": "2f5526fb-7d8d-8079-bf8e-c387040c3312"
+        },
+        "in_trash": false,
+        "is_archived": false,
+        "is_locked": false,
+        "properties": {
+          "Date": {
+            "id": "nKls",
+            "type": "date",
+            "date": {
+              "start": "2026-03-25",
+              "end": null,
+              "time_zone": null
+            }
+          },
+          "Type": {
+            "id": "oWrb",
+            "type": "select",
+            "select": {
+              "id": "26855f22-867b-436a-a7f9-068c0691cee4",
+              "name": "Announcement",
+              "color": "default"
+            }
+          },
+          "Summary": {
+            "id": "w%5E%5Cz",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Title": {
+            "id": "title",
+            "type": "title",
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Re-Braiding Cybernetics & AI Project",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Re-Braiding Cybernetics & AI Project",
+                "href": null
+              }
+            ]
+          }
+        },
+        "url": "https://app.notion.com/p/Re-Braiding-Cybernetics-AI-Project-346526fb7d8d804aa780e15bbf7474bb",
+        "public_url": null,
+        "archived": false
+      },
+      "blocks": [
+        {
+          "object": "block",
+          "id": "347526fb-7d8d-8095-96b7-e665eea28923",
+          "parent": {
+            "type": "page_id",
+            "page_id": "346526fb-7d8d-804a-a780-e15bbf7474bb"
+          },
+          "created_time": "2026-04-19T15:36:00.000Z",
+          "last_edited_time": "2026-04-19T16:24:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "42709e93-b404-4f36-a157-73833fd104fc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "42709e93-b404-4f36-a157-73833fd104fc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "The Re-Braiding Cybernetics & Artificial Intelligence Project was launched on March 25, 2026, an online conversation titled “The Split”, using the moment when a group researchers decided to coin a new term—”Artificial Intelligence”—as a means of declaring separation from their grounding in Cybernetics. ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "The Re-Braiding Cybernetics & Artificial Intelligence Project was launched on March 25, 2026, an online conversation titled “The Split”, using the moment when a group researchers decided to coin a new term—”Artificial Intelligence”—as a means of declaring separation from their grounding in Cybernetics. ",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "347526fb-7d8d-8028-8552-df12b6e40ae9",
+          "parent": {
+            "type": "page_id",
+            "page_id": "346526fb-7d8d-804a-a780-e15bbf7474bb"
+          },
+          "created_time": "2026-04-19T16:24:00.000Z",
+          "last_edited_time": "2026-04-19T16:26:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "42709e93-b404-4f36-a157-73833fd104fc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "42709e93-b404-4f36-a157-73833fd104fc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "See this summary page of that first session",
+                  "link": {
+                    "url": "https://tinyurl.com/Re-Braiding-Symp1-Docs"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "See this summary page of that first session",
+                "href": "https://tinyurl.com/Re-Braiding-Symp1-Docs"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": ", including links to the video of the conversation, slides shown, papers mentioned, and ultimately an online conversation to move the discourse forward, exploring how and why each field—Cybernetics and AI—may influence each other.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": ", including links to the video of the conversation, slides shown, papers mentioned, and ultimately an online conversation to move the discourse forward, exploring how and why each field—Cybernetics and AI—may influence each other.",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "347526fb-7d8d-8031-a2e9-ed227eea80ac",
+          "parent": {
+            "type": "page_id",
+            "page_id": "346526fb-7d8d-804a-a780-e15bbf7474bb"
+          },
+          "created_time": "2026-04-19T15:36:00.000Z",
+          "last_edited_time": "2026-04-19T15:36:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "42709e93-b404-4f36-a157-73833fd104fc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "42709e93-b404-4f36-a157-73833fd104fc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        }
+      ]
+    },
+    {
+      "page": {
+        "object": "page",
+        "id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897",
+        "created_time": "2026-01-27T03:28:00.000Z",
+        "last_edited_time": "2026-05-05T23:34:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "245d872b-594c-8106-8297-0002b46a489f"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "245d872b-594c-8106-8297-0002b46a489f"
+        },
+        "cover": null,
+        "icon": null,
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "2f5526fb-7d8d-80e9-b097-000b8d596d67",
+          "database_id": "2f5526fb-7d8d-8079-bf8e-c387040c3312"
+        },
+        "in_trash": false,
+        "is_archived": false,
+        "is_locked": false,
+        "properties": {
+          "Date": {
+            "id": "nKls",
+            "type": "date",
+            "date": {
+              "start": "2026-01-02",
+              "end": null,
+              "time_zone": null
+            }
+          },
+          "Type": {
+            "id": "oWrb",
+            "type": "select",
+            "select": {
+              "id": "26855f22-867b-436a-a7f9-068c0691cee4",
+              "name": "Announcement",
+              "color": "default"
+            }
+          },
+          "Summary": {
+            "id": "w%5E%5Cz",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Title": {
+            "id": "title",
+            "type": "title",
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "2025 #NewMacy Cybernetics Prize Winners Announced",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "2025 #NewMacy Cybernetics Prize Winners Announced",
+                "href": null
+              }
+            ]
+          }
+        },
+        "url": "https://app.notion.com/p/2025-NewMacy-Cybernetics-Prize-Winners-Announced-2f5526fb7d8d8067860fc0b8e68c4897",
+        "public_url": null,
+        "archived": false
+      },
+      "blocks": [
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-80a6-8bdd-d9f29a9b3b06",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-01-27T16:05:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "The Laboratory for Cybernetics is proud to announce the winners of the inaugural #NewMacy Cybernetics Prize. In an unprecedented outcome, two outstanding projects tied for first place and will share the prize equally.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "The Laboratory for Cybernetics is proud to announce the winners of the inaugural #NewMacy Cybernetics Prize. In an unprecedented outcome, two outstanding projects tied for first place and will share the prize equally.",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-802d-a0f4-c4603991cabf",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-04-21T01:59:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "heading_2",
+          "heading_2": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "2025 Winners",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "2025 Winners",
+                "href": null
+              }
+            ],
+            "is_toggleable": false,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-808f-a2b2-d3fbbbcbc88c",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-04-21T01:36:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "heading_4",
+          "heading_4": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Africa Mineral Pulse: Designing Agency in Africa's Extractive Economies",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Africa Mineral Pulse: Designing Agency in Africa's Extractive Economies",
+                "href": null
+              }
+            ],
+            "is_toggleable": false,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-805a-912a-f87c5c492ed5",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-04-21T01:57:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "[Fas Lebbie]",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "[Fas Lebbie]",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-80cf-a333-c697ab936714",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-04-21T01:57:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "This research builds upon doctoral work in Transition Design to explore how mineral transitions in Africa can increase data access and enhance choices for sustainable mineral futures. The pulse model proposes three categories: de-risking investment for sustainable mining practices, developing local benefaction infrastructure, and redistributing mineral wealth to local communities.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "This research builds upon doctoral work in Transition Design to explore how mineral transitions in Africa can increase data access and enhance choices for sustainable mineral futures. The pulse model proposes three categories: de-risking investment for sustainable mining practices, developing local benefaction infrastructure, and redistributing mineral wealth to local communities.",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-80ac-8ea2-d548a80d413a",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-04-21T01:36:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "heading_4",
+          "heading_4": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "IntraNote: Prototyping an AI-Driven Design Rationale System Supporting Participatory Conversations",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "IntraNote: Prototyping an AI-Driven Design Rationale System Supporting Participatory Conversations",
+                "href": null
+              }
+            ],
+            "is_toggleable": false,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-8071-b6b1-ce778ce4fe05",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-04-21T01:57:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "[Franklin Xu, Yixi (Chris) Wu, Yuhan (Max) Wu, Minghao Xu]",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "[Franklin Xu, Yixi (Chris) Wu, Yuhan (Max) Wu, Minghao Xu]",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-803d-8b78-c90cd083b2b4",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-01-27T16:05:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "IntraNote is an AI-assisted Design Rationale System that supports participatory design in complex, multi-stakeholder settings. By making the structure of conversation visible, the system helps participants reflect, identify shared values, and engage with the perspectives of others.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "IntraNote is an AI-assisted Design Rationale System that supports participatory design in complex, multi-stakeholder settings. By making the structure of conversation visible, the system helps participants reflect, identify shared values, and engage with the perspectives of others.",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-80f7-986b-dfc26a62f04a",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-04-21T01:59:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "heading_2",
+          "heading_2": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "2025 Runners-Up",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "2025 Runners-Up",
+                "href": null
+              }
+            ],
+            "is_toggleable": false,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-805d-a6ca-f959dc27a60d",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-04-21T01:36:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "heading_4",
+          "heading_4": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "The RIF Impact Framework: Language, Legibility, and Design for Government Capacity",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "The RIF Impact Framework: Language, Legibility, and Design for Government Capacity",
+                "href": null
+              }
+            ],
+            "is_toggleable": false,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-8081-8588-d99f6aa2c156",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-04-21T01:57:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "[Liv Schaefer, Amy Kang, Jaimie An, David Fuentes]",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "[Liv Schaefer, Amy Kang, Jaimie An, David Fuentes]",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-8029-bab3-de429bc9682f",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-04-21T01:36:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "A cybernetic intervention designed to address workforce disruptions across the U.S. federal government, enabling documentation of lost capacity through structured data and reflexive practice.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "A cybernetic intervention designed to address workforce disruptions across the U.S. federal government, enabling documentation of lost capacity through structured data and reflexive practice.",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-80f3-bb7b-fb8c39f9ba34",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-04-21T02:00:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "heading_4",
+          "heading_4": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Fisherwomen of Mumbai: Rethinking the Cycles of Work & Wealth",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Fisherwomen of Mumbai: Rethinking the Cycles of Work & Wealth",
+                "href": null
+              }
+            ],
+            "is_toggleable": false,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-8061-9f60-c8412365a378",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-04-21T01:57:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "[Sagarika Kulkarni]",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "[Sagarika Kulkarni]",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-80a7-b376-d06a00cb3053",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-01-27T16:05:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Research exploring how formalizing Mumbai fisherwomen's existing informal networks through cooperative models can strengthen their economic security and ensure year-round functioning of fishing value chains.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Research exploring how formalizing Mumbai fisherwomen's existing informal networks through cooperative models can strengthen their economic security and ensure year-round functioning of fishing value chains.",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "349526fb-7d8d-80a0-b232-f5056f5e448b",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-04-21T02:00:00.000Z",
+          "last_edited_time": "2026-04-21T02:00:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "divider",
+          "divider": {},
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-8082-8929-c1172503a266",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-04-21T02:00:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "heading_4",
+          "heading_4": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Inaugural Year Success",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Inaugural Year Success",
+                "href": null
+              }
+            ],
+            "is_toggleable": false,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-80b9-963d-ed26fea05d7e",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-01-27T16:05:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "In its first year, the Prize received 30 submissions from across CMU departments, demonstrating widespread student interest in addressing wicked challenges through cybernetic and systemic approaches.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "In its first year, the Prize received 30 submissions from across CMU departments, demonstrating widespread student interest in addressing wicked challenges through cybernetic and systemic approaches.",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-804a-a72e-c975c8641197",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-01-27T16:05:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "heading_2",
+          "heading_2": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Judging Panel",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Judging Panel",
+                "href": null
+              }
+            ],
+            "is_toggleable": false,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-80ea-8a36-c51ee2ae369b",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-01-27T16:05:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "bulleted_list_item",
+          "bulleted_list_item": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Genevieve Bell, Vice-Chancellor of the Australian National University",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Genevieve Bell, Vice-Chancellor of the Australian National University",
+                "href": null
+              }
+            ],
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-80a0-aa3c-d9847c44753f",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-01-27T16:05:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "bulleted_list_item",
+          "bulleted_list_item": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Hugh Dubberly, Principal, Dubberly Design Office",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Hugh Dubberly, Principal, Dubberly Design Office",
+                "href": null
+              }
+            ],
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-8019-a349-f0844cac0409",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-01-27T16:05:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "bulleted_list_item",
+          "bulleted_list_item": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Deborah Forster, Transdisciplinary Lead at FRAIM, TU Delft",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Deborah Forster, Transdisciplinary Lead at FRAIM, TU Delft",
+                "href": null
+              }
+            ],
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-8026-bb0e-cde3c6834abb",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-01-27T16:05:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "bulleted_list_item",
+          "bulleted_list_item": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Omar Khan, Prof & Head, CMU School of Architecture (Panel Chair)",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Omar Khan, Prof & Head, CMU School of Architecture (Panel Chair)",
+                "href": null
+              }
+            ],
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-801c-83fa-d30a85d01906",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-01-27T16:05:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "bulleted_list_item",
+          "bulleted_list_item": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Ling Tan, Co-founder of HAQUE TAN",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Ling Tan, Co-founder of HAQUE TAN",
+                "href": null
+              }
+            ],
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-80f9-a6d0-fc219565e96a",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-01-27T16:05:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "divider",
+          "divider": {},
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-806d-b139-e55ec3758dc9",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:05:00.000Z",
+          "last_edited_time": "2026-04-18T17:44:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "42709e93-b404-4f36-a157-73833fd104fc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "For more information about the Prize, visit the ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "For more information about the Prize, visit the ",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": "Cybernetics Prize Page",
+                  "link": {
+                    "url": "https://tinyurl.com/L4C-Prize"
+                  }
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Cybernetics Prize Page",
+                "href": "https://tinyurl.com/L4C-Prize"
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": ".",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": ".",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "357526fb-7d8d-80b4-9a5b-cbd89db837bc",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-05-05T23:34:00.000Z",
+          "last_edited_time": "2026-05-05T23:34:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "357526fb-7d8d-80d8-a9d2-ea091750458e",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-05-05T23:34:00.000Z",
+          "last_edited_time": "2026-05-05T23:34:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "The 2025 #NewMacy Cybernetics Prize was funded by Paul Pangaro.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": true,
+                  "italic": true,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "The 2025 #NewMacy Cybernetics Prize was funded by Paul Pangaro.",
+                "href": null
+              }
+            ],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "2f5526fb-7d8d-8086-beee-e2a043ed2f74",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-01-27T16:06:00.000Z",
+          "last_edited_time": "2026-01-27T16:06:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "245d872b-594c-8106-8297-0002b46a489f"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "349526fb-7d8d-80c6-80fb-ef1be52b9af4",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-04-21T01:44:00.000Z",
+          "last_edited_time": "2026-04-21T01:44:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        },
+        {
+          "object": "block",
+          "id": "349526fb-7d8d-8008-a472-ef57b6250cf4",
+          "parent": {
+            "type": "page_id",
+            "page_id": "2f5526fb-7d8d-8067-860f-c0b8e68c4897"
+          },
+          "created_time": "2026-04-21T02:01:00.000Z",
+          "last_edited_time": "2026-04-21T02:01:00.000Z",
+          "created_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "last_edited_by": {
+            "object": "user",
+            "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+          },
+          "has_children": false,
+          "in_trash": false,
+          "type": "paragraph",
+          "paragraph": {
+            "rich_text": [],
+            "icon": null,
+            "color": "default"
+          },
+          "archived": false
+        }
+      ]
+    }
+  ]
+}

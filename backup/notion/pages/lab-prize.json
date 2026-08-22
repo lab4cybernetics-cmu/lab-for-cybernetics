@@ -1,0 +1,1173 @@
+{
+  "page": {
+    "object": "page",
+    "id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4",
+    "created_time": "2026-01-27T01:06:00.000Z",
+    "last_edited_time": "2026-05-13T18:42:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "245d872b-594c-8106-8297-0002b46a489f"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "245d872b-594c-8106-8297-0002b46a489f"
+    },
+    "cover": null,
+    "icon": null,
+    "parent": {
+      "type": "page_id",
+      "page_id": "24b526fb-7d8d-801c-8b59-e5c5dcd94411"
+    },
+    "in_trash": false,
+    "is_archived": false,
+    "is_locked": false,
+    "properties": {
+      "title": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Lab Prize",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Lab Prize",
+            "href": null
+          }
+        ]
+      }
+    },
+    "url": "https://app.notion.com/p/Lab-Prize-2f5526fb7d8d80989ceae4dd3149d9e4",
+    "public_url": null,
+    "archived": false,
+    "request_id": "d895d889-8396-4ea9-8d89-6046b7a1f7a0"
+  },
+  "blocks": [
+    {
+      "object": "block",
+      "id": "344526fb-7d8d-8082-b4c5-c857962fae7a",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-04-16T22:40:00.000Z",
+      "last_edited_time": "2026-04-16T22:40:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "PANGARO CYBERNETICS PRIZE for  OUTSTANDING DESIGN PROPOSAL",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "PANGARO CYBERNETICS PRIZE for  OUTSTANDING DESIGN PROPOSAL",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "344526fb-7d8d-80a7-8aca-d299a65d26fc",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-04-16T22:40:00.000Z",
+      "last_edited_time": "2026-04-16T22:53:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "\nRelated Documents\n→ ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "\nRelated Documents\n→ ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Guide to Lab4C Ecosystem",
+              "link": {
+                "url": "https://tinyurl.com/L4C-Guide"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Guide to Lab4C Ecosystem",
+            "href": "https://tinyurl.com/L4C-Guide"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "\n→ ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "\n→ ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Cybernetics in a Laboratory Context",
+              "link": {
+                "url": "https://tinyurl.com/Cyber4Lab"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Cybernetics in a Laboratory Context",
+            "href": "https://tinyurl.com/Cyber4Lab"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "\n→",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "\n→",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " 2025 Winners of Cybernetics Prize",
+              "link": {
+                "url": "https://tinyurl.com/Lab4C-Prize"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " 2025 Winners of Cybernetics Prize",
+            "href": "https://tinyurl.com/Lab4C-Prize"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "\n→",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "\n→",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " Definition of the Laboratory",
+              "link": {
+                "url": "https://tinyurl.com/Lab4C-2025"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " Definition of the Laboratory",
+            "href": "https://tinyurl.com/Lab4C-2025"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "\n→",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "\n→",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " Description of the Lab’s Course",
+              "link": {
+                "url": "https://tinyurl.com/Lab4C-Spring25"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " Description of the Lab’s Course",
+            "href": "https://tinyurl.com/Lab4C-Spring25"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "\n→",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "\n→",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " Laboratory for Cybernetics Homepage",
+              "link": {
+                "url": "https://www.architecture.cmu.edu/laboratory-cybernetics"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " Laboratory for Cybernetics Homepage",
+            "href": "https://www.architecture.cmu.edu/laboratory-cybernetics"
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "344526fb-7d8d-80a5-a4ac-ffd070de00ed",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-04-16T22:44:00.000Z",
+      "last_edited_time": "2026-04-16T22:44:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "divider",
+      "divider": {},
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "344526fb-7d8d-80e9-b917-e5bb170ae8a6",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-04-16T22:42:00.000Z",
+      "last_edited_time": "2026-04-21T01:44:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "OVERVIEW OF THE 2026 CYBERNETICS PRIZE",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "OVERVIEW OF THE 2026 CYBERNETICS PRIZE",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "344526fb-7d8d-809a-b4f0-cf78574db084",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-04-16T22:42:00.000Z",
+      "last_edited_time": "2026-04-29T01:42:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "245d872b-594c-8106-8297-0002b46a489f"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The primary purpose of the Pangaro Cybernetics Prize is to create incentives for incorporating the systemic rigor and explanatory models of Cybernetics into novel design proposals, aimed at the most difficult 21st-century obstacles to “wicked challenges”, including climate change, artificial intelligence, and social justice.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "The primary purpose of the Pangaro Cybernetics Prize is to create incentives for incorporating the systemic rigor and explanatory models of Cybernetics into novel design proposals, aimed at the most difficult 21st-century obstacles to “wicked challenges”, including climate change, artificial intelligence, and social justice.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "344526fb-7d8d-80d2-a775-ee5df720a0ab",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-04-16T22:42:00.000Z",
+      "last_edited_time": "2026-04-29T01:42:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "245d872b-594c-8106-8297-0002b46a489f"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Cybernetics is a systems discipline uniquely suited to wicked challenges because it forefronts information and purpose for guiding design and action in today’s complex entanglements of natural, technological, and social systems.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Cybernetics is a systems discipline uniquely suited to wicked challenges because it forefronts information and purpose for guiding design and action in today’s complex entanglements of natural, technological, and social systems.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "344526fb-7d8d-80ff-ba1d-d23885542fa4",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-04-16T22:42:00.000Z",
+      "last_edited_time": "2026-04-16T22:42:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Students working individually or in teams are encouraged to tap the resources and network of Lab4C to incorporate concepts and methods into their design proposals for the Prize. Entries may incorporate current coursework or thesis project, or a novel design direction.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Students working individually or in teams are encouraged to tap the resources and network of Lab4C to incorporate concepts and methods into their design proposals for the Prize. Entries may incorporate current coursework or thesis project, or a novel design direction.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "344526fb-7d8d-80ae-b87e-fbf0590805a8",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-04-16T22:42:00.000Z",
+      "last_edited_time": "2026-04-29T01:43:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "245d872b-594c-8106-8297-0002b46a489f"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The primary criterion for this $5,000 Prize is to increase human agency in the face of complex systems through design. (See further explanation on the ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "The primary criterion for this $5,000 Prize is to increase human agency in the face of complex systems through design. (See further explanation on the ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Cybernetics Prize Page",
+              "link": {
+                "url": "https://tinyurl.com/L4C-Prize"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Cybernetics Prize Page",
+            "href": "https://tinyurl.com/L4C-Prize"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ".)",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ".)",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "344526fb-7d8d-8066-95dd-d8ad2a6050d1",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-04-16T22:42:00.000Z",
+      "last_edited_time": "2026-04-29T01:44:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "245d872b-594c-8106-8297-0002b46a489f"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The Cybernetics Prize competition will be held every year in the Spring semester. ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "The Cybernetics Prize competition will be held every year in the Spring semester. ",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "344526fb-7d8d-8033-81fa-ea1d52921655",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-04-16T22:45:00.000Z",
+      "last_edited_time": "2026-04-16T22:45:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "divider",
+      "divider": {},
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "344526fb-7d8d-803e-8010-e26c5134baee",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-04-16T22:44:00.000Z",
+      "last_edited_time": "2026-04-21T01:44:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_2",
+      "heading_2": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "SUBMITTING: WHO SHOULD APPLY & WHY",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "SUBMITTING: WHO SHOULD APPLY & WHY",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "344526fb-7d8d-80f2-a3c1-d32ee99c1bca",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-04-16T22:45:00.000Z",
+      "last_edited_time": "2026-04-16T22:45:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Submissions to the Cybernetics Prize are invited from individual CMU students registered in any program during the current academic year, or teams led by a student registered in that period.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Submissions to the Cybernetics Prize are invited from individual CMU students registered in any program during the current academic year, or teams led by a student registered in that period.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "344526fb-7d8d-80ce-8b18-e0a50653537f",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-04-16T22:49:00.000Z",
+      "last_edited_time": "2026-05-05T22:38:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "245d872b-594c-8106-8297-0002b46a489f"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "heading_3",
+      "heading_3": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "2026 PANGARO CYBERNETICS PRIZE WINNERS",
+              "link": {
+                "url": "https://tinyurl.com/L4C-2026-Prize"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "2026 PANGARO CYBERNETICS PRIZE WINNERS",
+            "href": "https://tinyurl.com/L4C-2026-Prize"
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "344526fb-7d8d-8037-af78-ecffeba83e66",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-04-16T22:49:00.000Z",
+      "last_edited_time": "2026-05-05T22:43:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "245d872b-594c-8106-8297-0002b46a489f"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The window for submissions for the 2026 Cybernetics Prize is closed and will re-open for the 2027 Prize in January 2027.",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "The window for submissions for the 2026 Cybernetics Prize is closed and will re-open for the 2027 Prize in January 2027.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "344526fb-7d8d-807d-930b-d66ee62e79f2",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-04-16T22:49:00.000Z",
+      "last_edited_time": "2026-04-17T00:23:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The competition is especially well-suited to students who…",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "The competition is especially well-suited to students who…",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "344526fb-7d8d-80f5-bcb9-f11fab163085",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-04-16T22:49:00.000Z",
+      "last_edited_time": "2026-04-29T01:45:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "245d872b-594c-8106-8297-0002b46a489f"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "have coursework or a thesis project that tangles with “wicked challenges”",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "have coursework or a thesis project that tangles with “wicked challenges”",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "344526fb-7d8d-80c1-834c-d20bfa6fbef8",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-04-16T22:49:00.000Z",
+      "last_edited_time": "2026-04-16T22:49:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "wish to learn more about how to apply Cybernetics to designing effective interventions in complex adaptive systems",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "wish to learn more about how to apply Cybernetics to designing effective interventions in complex adaptive systems",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "344526fb-7d8d-80a4-82be-f09a6bb6aba4",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-04-16T22:49:00.000Z",
+      "last_edited_time": "2026-04-16T22:49:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "have a novel design concept for approaching complex systems.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "have a novel design concept for approaching complex systems.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "344526fb-7d8d-80a6-b92a-f332d66391a5",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-04-16T22:49:00.000Z",
+      "last_edited_time": "2026-05-02T00:39:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "245d872b-594c-8106-8297-0002b46a489f"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The Judging Panel will select the winner of the $5,000 cash prize. The winner and finalists / honorable mentions will have their submission added to a repository of valuable approaches to critically important 21st-century design challenges.\n",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "The Judging Panel will select the winner of the $5,000 cash prize. The winner and finalists / honorable mentions will have their submission added to a repository of valuable approaches to critically important 21st-century design challenges.\n",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "35f526fb-7d8d-805e-a547-c8bb4303e18d",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-05-13T18:42:00.000Z",
+      "last_edited_time": "2026-05-13T18:42:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "245d872b-594c-8106-8297-0002b46a489f"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "245d872b-594c-8106-8297-0002b46a489f"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The Pangaro Cybernetics Prize is funded yearly by Paul Pangaro through the generosity of E. Duke Vincent with support from Philip G. Dorn.",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "The Pangaro Cybernetics Prize is funded yearly by Paul Pangaro through the generosity of E. Duke Vincent with support from Philip G. Dorn.",
+            "href": null
+          }
+        ],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    },
+    {
+      "object": "block",
+      "id": "345526fb-7d8d-80e5-9e3b-f9eed965c312",
+      "parent": {
+        "type": "page_id",
+        "page_id": "2f5526fb-7d8d-8098-9cea-e4dd3149d9e4"
+      },
+      "created_time": "2026-04-17T00:22:00.000Z",
+      "last_edited_time": "2026-04-17T00:22:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "a1863291-3f2b-499c-99b9-789ceec151cc"
+      },
+      "has_children": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [],
+        "icon": null,
+        "color": "default"
+      },
+      "archived": false
+    }
+  ]
+}

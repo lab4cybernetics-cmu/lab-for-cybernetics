@@ -1,0 +1,196 @@
+{
+  "database": {
+    "object": "database",
+    "id": "2f5526fb-7d8d-8041-99d1-fa6dd5e4df30",
+    "title": [
+      {
+        "type": "text",
+        "text": {
+          "content": "Projects Database",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": "Projects Database",
+        "href": null
+      }
+    ],
+    "description": [],
+    "parent": {
+      "type": "page_id",
+      "page_id": "24b526fb-7d8d-801c-8b59-e5c5dcd94411"
+    },
+    "is_inline": false,
+    "in_trash": false,
+    "is_locked": false,
+    "created_time": "2026-01-27T01:09:24.237+00:00",
+    "last_edited_time": "2026-01-27T02:59:24.133+00:00",
+    "data_sources": [
+      {
+        "id": "2f5526fb-7d8d-80ae-ab91-000b862a68fa",
+        "name": "Projects Database"
+      }
+    ],
+    "icon": null,
+    "cover": null,
+    "url": "https://app.notion.com/p/2f5526fb7d8d804199d1fa6dd5e4df30",
+    "public_url": null,
+    "archived": false,
+    "request_id": "827de381-5c5d-4d31-8add-e23f87f5a531"
+  },
+  "entries": [
+    {
+      "page": {
+        "object": "page",
+        "id": "2f5526fb-7d8d-803e-8b0a-e8b88b5d79c4",
+        "created_time": "2026-01-27T01:44:00.000Z",
+        "last_edited_time": "2026-01-27T03:19:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "245d872b-594c-8106-8297-0002b46a489f"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "245d872b-594c-8106-8297-0002b46a489f"
+        },
+        "cover": null,
+        "icon": null,
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "2f5526fb-7d8d-80ae-ab91-000b862a68fa",
+          "database_id": "2f5526fb-7d8d-8041-99d1-fa6dd5e4df30"
+        },
+        "in_trash": false,
+        "is_archived": false,
+        "is_locked": false,
+        "properties": {
+          "Type": {
+            "id": "c%5BFv",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Event",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Event",
+                "href": null
+              }
+            ]
+          },
+          "Description": {
+            "id": "iGOg",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "The goal is to bring Cybernetics and Artificial Intelligence back into conversation. The intention is to enrich their approaches to machine intelligence and human-machine collaboration, out of the productive friction of re-considering both their intertwined histories and how their futures might “re-braid” constructively for the benefit of both. The structure of the project is to present a critical compare-and-contrast of concepts and models from Cybernetics and AI, beginning with an historical sweep, moving through reflections of their  insights, accomplishments, influences, and critiques of each other, concluding with perspectives on how each field may evolve to have a positive future influence on the other. \nThe Re-Braiding Project is supported by the CARNEGIE MELLON— ARCHITECTURE Computational Design Laboratory (CodeLab)→ and the Posner Center for Special Collections→, with additional funding being sought.\nThis effort is a project of the Laboratory for Cybernetics→ within CARNEGIE MELLON—ARCHITECTURE→, launched in Spring 2025 with a related graduate course→ and competitive prize.→",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "The goal is to bring Cybernetics and Artificial Intelligence back into conversation. The intention is to enrich their approaches to machine intelligence and human-machine collaboration, out of the productive friction of re-considering both their intertwined histories and how their futures might “re-braid” constructively for the benefit of both. The structure of the project is to present a critical compare-and-contrast of concepts and models from Cybernetics and AI, beginning with an historical sweep, moving through reflections of their  insights, accomplishments, influences, and critiques of each other, concluding with perspectives on how each field may evolve to have a positive future influence on the other. \nThe Re-Braiding Project is supported by the CARNEGIE MELLON— ARCHITECTURE Computational Design Laboratory (CodeLab)→ and the Posner Center for Special Collections→, with additional funding being sought.\nThis effort is a project of the Laboratory for Cybernetics→ within CARNEGIE MELLON—ARCHITECTURE→, launched in Spring 2025 with a related graduate course→ and competitive prize.→",
+                "href": null
+              }
+            ]
+          },
+          "Cover Image": {
+            "id": "k%5DUv",
+            "type": "files",
+            "files": [
+              {
+                "name": "SCR-20260126-thfq.png",
+                "type": "file",
+                "file": {
+                  "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4bd526fb-7d8d-8194-a62d-000393ba02cd/d511fe01-c144-4db0-b906-3589e4900d3d/SCR-20260126-thfq.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4667ZUEOEXW%2F20260822%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260822T162326Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEPf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIQC7aTgChf4YVQ%2FCYxiTimi%2Fmxy%2BXlHPNeEts4UH0%2BrB9gIgNxVbeOYWwERiynKS%2BOXGZzNzT0XEwYNXCBcm0WvTPQIqiAQIwP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDP87LkM3A9EuVql29CrcA6Xr5rqLequOkmHGLHfGpF3YIeACqSztV3b4DEi58zBhq7u6%2FYU9Lg3OrB8xPMVuaZdl%2FVHOOMMjD68tTytIsE32BDDyVP2zxJRF3jQzgxe0aP%2BiPYUq1kYxexJ7wtqzLQ9iZeb0Y3zKY%2BL%2FUx5%2F39ncgbPlbTxka9zht3miuYRmzDZuF09gwuBirTkweqbs4RY%2B26gIx%2FEkLCruADLvmuyUZGGV9893OYQWUoS%2B6Qhm78LL7wx4YDOXzUZm5tAirFvzQau1DV%2BzyrOoXMMToTndif7le0q2FKEnxvGLJvZcmlgv5arOK85qOw62zpMrsMhDydzjOIx6qscEV48FeOQJQjtWsLkWsg%2Fnn30P%2B2Xn%2B3Pdk4I0CMvPMXlsp4obApnHgGrtQJIyOG%2B0i7zy59mIc5fWsWC7mmhAwzm8euKfissUDOJvU0ePmOfjiRUvOUkBuLkkqhzjINGkgSDyzJcc%2FQq0TbrYYEr%2Fpr1Mma0wvy1r61O5SnfOSxWEHkihU2X6UGKvlwJ9euPjFrfu3Bxz6rREJX3gog6flkT2eqP%2BvkD0obRx5sWuZ3HkGFQlT9Pxf4XJ1K9OiDzWMAJql8E8%2FcMGViduuOWz3zevzpFtc4MhcqQfcrJMHc2FMKfzptQGOqUB%2FFs2dvDhhYNizu9VwMYYfv%2BmcY7s7Oitzfhq6KlnUxEa51TsuZocU69O94oDklZzgj%2BV3ScoByUhIepW9JbUOHlzS4YsBIqsgh69F3dyTXWqxoHBUpCBwtk57xZDJp3sT6YUG0ilYfLEzxyeRtWrZArqy28b0xb11d9vvJNxlleOFuMvkMz81ccC2YunaRg2w4EQnF9tY6R9T6fFM3vlFd%2FSpjgS&X-Amz-Signature=e966bc928b4d36d4ccbb97affd9838648aebc5b965c6bbca81a18a734a4f536f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+                  "expiry_time": "2026-08-22T17:23:26.430Z"
+                }
+              }
+            ]
+          },
+          "Status": {
+            "id": "oD%3FG",
+            "type": "status",
+            "status": {
+              "id": "aWLM",
+              "name": "In progress",
+              "color": "gray"
+            }
+          },
+          "Slug": {
+            "id": "~yP%3F",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "rebraiding",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "rebraiding",
+                "href": null
+              }
+            ]
+          },
+          "Name": {
+            "id": "title",
+            "type": "title",
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Re-braiding",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Re-braiding",
+                "href": null
+              }
+            ]
+          }
+        },
+        "url": "https://app.notion.com/p/Re-braiding-2f5526fb7d8d803e8b0ae8b88b5d79c4",
+        "public_url": null,
+        "archived": false
+      },
+      "blocks": []
+    }
+  ]
+}
