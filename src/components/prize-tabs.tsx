@@ -30,4 +30,4 @@ export function PrizeTabs({ active }: PrizeTabsProps) {
         );
     })
     );
-}Page_Down
+}
