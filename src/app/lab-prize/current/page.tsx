@@ -1,5 +1,4 @@
 import { TitleBar } from "@/components/title-bar";
-import { PrizeTabs } from "@/components/prize-tabs";
 import { fetchPageBlocks } from "@/lib/notion";
 import { BlockRenderer } from "@/components/block-renderer";
 import { ArrowRight } from "lucide-react";
@@ -65,9 +64,8 @@ return h(
       ),
   }),
   h(
-         "div",
+    "div",
     { className: "pb-[var(--sys-padding)]" },
-    h(PrizeTabs, { active: "current" }),
     h(
       "section",
       { className: "max-w-3xl" },
