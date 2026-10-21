@@ -30,6 +30,7 @@
     "database_type": null,
     "in_trash": false,
     "is_locked": false,
+    "show_data_source_title": true,
     "created_time": "2026-01-27T01:12:28.154+00:00",
     "last_edited_time": "2026-04-28T05:13:44.845+00:00",
     "data_sources": [
@@ -43,7 +44,7 @@
     "url": "https://app.notion.com/p/2f5526fb7d8d8079bf8ec387040c3312",
     "public_url": null,
     "archived": false,
-    "request_id": "e00251fe-a453-4aea-aea5-a36ea4e86d34"
+    "request_id": "1f70dd17-cf7a-4aa0-aca0-fa64200ae670"
   },
   "entries": [
     {

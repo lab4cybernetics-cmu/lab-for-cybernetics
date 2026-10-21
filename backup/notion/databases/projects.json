@@ -30,6 +30,7 @@
     "database_type": null,
     "in_trash": false,
     "is_locked": false,
+    "show_data_source_title": true,
     "created_time": "2026-01-27T01:09:24.237+00:00",
     "last_edited_time": "2026-01-27T02:59:24.133+00:00",
     "data_sources": [
@@ -43,7 +44,7 @@
     "url": "https://app.notion.com/p/2f5526fb7d8d804199d1fa6dd5e4df30",
     "public_url": null,
     "archived": false,
-    "request_id": "1a1b965f-67a0-42c5-b5a5-21fc69a52ee7"
+    "request_id": "9d12f5af-1c7f-45f2-b151-134f34a64842"
   },
   "entries": [
     {
@@ -125,8 +126,8 @@
                 "name": "SCR-20260126-thfq.png",
                 "type": "file",
                 "file": {
-                  "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4bd526fb-7d8d-8194-a62d-000393ba02cd/d511fe01-c144-4db0-b906-3589e4900d3d/SCR-20260126-thfq.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466S473JHSB%2F20261020%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20261020T132353Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHwaCXVzLXdlc3QtMiJHMEUCIQDkb%2FPfzY2k1wpLG2AdwGo4AAgLpEalCA00JYuDbnBtzAIgG5lHezUPEeImq2AvtGwM86sz4uA51xpEBDTxPM7FmJcq%2FwMIRRAAGgw2Mzc0MjMxODM4MDUiDBzP9USwogpkNzQWYyrcA8qDqacl0z7z82zbW0lg5Yidy%2FXBa5W350nx%2F1upTfawQykxW0RlKSSL5N2Nt7%2F5n%2FdVmWCnx%2B3yhSQ%2BjoVdDfFsfEEOmke19NxVDK3QGGVQIirtWIYKD2Do%2BmaJbzDu%2Fwr0GXtYXcaU1iGf8czlde%2FCW43BZBv0zPd%2FahcIt2y76jR43myKrnmFVV7beMhSqXnVuPG6PqkHv1WcNoic2xmhsK5xYO4a1rKCPnVvTLf7NO3i%2Bf6ZFbYMYD1IusRnHSDJL9KbKDAwr02%2BgpdU67CXhFKaaSudWVAMsIiyfoUNqP7beQ1a9JOvrZ2bedlrKRh9ibdtxlmj%2Fl5yZDZ8pmOO4pZOeWmP0B44Z2DgkKmNWqSXG0usLMdHCFFIUYD582Q%2F7GCFL8N5VrCpv%2F79xJjeg76V3ui4tKpQ27eaxM6cIguuIS6DGOmyIsCGP1UxmZliOd433tP4orDMllVB2jr2CAFP7CBr6zyQzMFMYBB9zqTKaKpZYyJ1WR3zaBsM6ib%2BXID%2BiKf2kHkUt6IOO9J2X3GBOkr4ytT5RUCzFijwyg%2BrTQCQmwDeebRh%2FXFhKtiVjZpJfZnusBmOhYBLAEWkPDjL9S0Z2Q%2FGTudYtaycxj2K2pjPBhfqUyKXMIGh3dYGOqUBpUJ7zRRcsMQNGCUr4VjknSQ%2FWS0K5OHYFMXn9hlDW6e7JMEKiiUDFCebsuVtsG0eMfVlJrZsq8ygOc5Wn7AEDWlc0WaaDoCYIq5RCjjWK7TKsuSt2P3ghGMaSXv%2F%2Bg%2FX1ta7v3aeJXuSk10TFh7yHlAGjgk3bb7qSGeDK9lDc%2BpCdkqbkQ8yKbvGPt2VOQAvKkcbPY1xAf%2FNjLus4ycnjvrS2ymz&X-Amz-Signature=343c801eef285711b94d211045f9ae247c8b5d71dc9d5592ef169564a8203ed3&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
-                  "expiry_time": "2026-10-20T14:23:53.698Z"
+                  "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4bd526fb-7d8d-8194-a62d-000393ba02cd/d511fe01-c144-4db0-b906-3589e4900d3d/SCR-20260126-thfq.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466ZMP7JZUG%2F20261021%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20261021T133228Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQD31EhDnZXIfmRHPilTHK07y5rzfIgyRMXWHvjsqW%2Bu2wIhAN0OYPjPQzDjfmW%2F9u8gMPct40bj3tT%2B0Z2lyBVHVJzmKv8DCF0QABoMNjM3NDIzMTgzODA1IgxMHWF7VGfcyjQ9x5Uq3APXqj8fje%2FyDkZaoyb%2BEXppkHmmcFvN40gdW9oRIl5lYpblMwDJbGF0PKnrwl7hXxzeddLXghDSwTOxvp7tS1vwy3y7tg%2FLK4PA2yml3VYhEa4Lb8%2F9SMsEtyDT3XoXwoP%2FqIvYavEjtphtECyU6nMGQiXCD2Zhx8nP6HUM2RXdr4N3bpyIAxupeJuzxYBfSSKQNMAd%2B0AfV8LN3z9ePF0zf8llD3K3M04Rr9nKfSwJfZMrmh9eBQuG1F%2FshdCDpsssI1D%2BCNDn2gz%2FrXHBTzSCb9sfXznfHIiOupHdCcgeFPTeuftZSn7srxcq3Fr8oAFTHVYFt0DDwcJKN%2BTaZnWp0D4T9zm72QBFZBtYDiWU5H76D3PqoRQp7KooyIHthwKq0toMpe%2BB0JmFSfEDVrAAOd1fVr1iDV9grkICI1PwZnPf%2B37XPWEUQqhLigUkwYxbrSLrWT2JqLjcUFmK4427COo6K8kNft6Ufqlrz0O5%2F2nuGYDRrzUs902Y0Z6xbJ1nwkAtZzmJXMCX32e9Vmm2qSrbdex8U1ub4%2FwynMQaTXgsmxxOAwB2GhXsbT8bqdjFBcDtWLOKn0c5w0qy%2FtZ2fdVM4wyOMh%2FM1eBD8qDXowlngVCp10kOrcXHkzDdz%2BLWBjqkAUYWfHId9%2FG6TSren%2BO8BJgGuP0DBasO9hKnIc5NxyPV7NNiynhyYOJiouH2%2BTu%2BN4AuBJBEufrrWL11aJfHkbU6NZyeBUivd%2Fy1Qe4i%2BnOQysfg%2BNNEQaEPRE9vjU8LEdIgFPgQZqvBRpH4kLvu5SozbNt0%2FHiRdqfub1ePZ0CBZnViyuDuOwTnRUN3WmCC8a35nBwR4GZEYCK2Jdi2GbZU7%2BbT&X-Amz-Signature=bc978554cd474e6affcf1083e45d9b5cbfc76613957fcfb3d72f39f43ed0cfd7&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+                  "expiry_time": "2026-10-21T14:32:28.056Z"
                 }
               }
             ]
