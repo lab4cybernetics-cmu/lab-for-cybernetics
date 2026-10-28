@@ -15,8 +15,8 @@
     "cover": {
       "type": "file",
       "file": {
-        "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4bd526fb-7d8d-8194-a62d-000393ba02cd/10da3792-7a64-4720-89a3-4eb8d73a73d4/unnamed.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB46622LA55RP%2F20261027%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20261027T140517Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECYaCXVzLXdlc3QtMiJGMEQCIBnhrcafCImw8H4tyC9Bhl5yUDfqJMZa7KTVgAKDyA2lAiANqPkJd4Fd3UYOdDPXIiWfhULdVTYGGAcmvA3ik5bESCqIBAjv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDYzNzQyMzE4MzgwNSIMPuPka8sTcWbZ1igPKtwDFF2Xx080C590Dj9xXLHwRxvM110okIO5OwLNasAWBlZAoFJ%2BXF%2BfpkghGurFwI0KqgmDqO8zY7Bmfp3Kzl9onWsMV9jmNJcLQdKz2DiRGRfYY9eh8PozJCRk%2FoteoJfGERJ%2BVX33uMCyy2E3gN1fo6hgQMvrIGIaZYyHfv1wdgfZb%2BGqbwZNsocbRN%2B09VAPQ0d98r%2FfcoeJOZVaaZBdtqouzdp%2FKNykJbSzA2GWq6xtMOwXiLxUZYPOS5NJw8%2FHu3sNpPhBceoHzbMDC8lJPIAthNSVocBFgHcrqwcnuOYKgqUSVPcPv%2B2GFm1RyAwCaNfgQjoYJjQMOO8sLcUT%2BSSYzMcZanzDJobhaVtszL86PA%2BTProkiQQm6QCVzR5PBtkM6efyKf855NQifwqGf8mGhF1WSmBKKmR%2FakgkBgZH9eBuB5vn7uMreSOyFCpdNvFrxTGFKsnCBF495ysCaRaqhxlEV6IWyUrwCtH6AqiBGsgcg%2Bu9F%2Fb8VY36wE%2Bf0FXXDOo1aB2u56hMPIVa6XsPoQD9esRraMjh2lUgszMqk0Su1XWUb9Q4RjOv%2BtAMSTT%2FPNDBj1APXPTHDqBkBAOcPAvi7MLVJkt5uBywd%2Bc5DZTfxPytCpZS9NYwx9OC1wY6pgGikVn9Wuj4waMBBH6KeGBX06wX0bWYIzn5BQwRcFSrnVtGjuDL15iygEDswjTGJmRu0zqTTpLs18xkNa3IqDgUURrWF5cfgeEiT%2BGvrTcGyWTtST9C029gREwV71tAtCsFjw9W4poC%2FA9K11Mj%2BJtqBkjH4IRcbEtMLArr%2FHnYtgeOq3iZ3bUftO8imyFAP%2FrFb1fW3D21e1AcbabDHn0GTHLYr3wF&X-Amz-Signature=b47ce7b03b2f0a73052ff546918fb984e81c0bdc3f014b17a49782b02a76aef1&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
-        "expiry_time": "2026-10-27T15:05:17.275Z"
+        "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4bd526fb-7d8d-8194-a62d-000393ba02cd/10da3792-7a64-4720-89a3-4eb8d73a73d4/unnamed.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466UV5ZPIXX%2F20261028%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20261028T145508Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjED0aCXVzLXdlc3QtMiJIMEYCIQD%2BN5vqnv2WUe4lYHUXqguFTdMzKJk2PAt8LVbRztLZZQIhAIYoHH8u1PCj%2FB2024xF2INmAtkPfXcYJ%2B8XpxO4Yu8EKv8DCAYQABoMNjM3NDIzMTgzODA1IgztaTD9eeA2BOVEAwcq3AMzdB01E9IOGltL3rhS1Cx8ZKBieunyBp9UjlkJDXfSkoU0rhPJj4gG9QjgthzhtoLOI0d%2FN8tukYLpSvFyJzAoXFDzywcL3r1ajFXVLIqM2Q73wGDoxsJZ9rHkmDrxSZBQx5essl1WnyGYIAcLTtb%2FtpUKWfI3EHyIVvKtlTMuxK4yqJtEx4NssOgOCJDcMA5MwP9p8ldMQz1WBCUKVZdUZhJWEWap0p4r%2FWyMhj4uW7xpIidVbCVxMO7BPKYFRlwXZwLIftDz%2BVDdrPwCZP3Coc%2BzT%2B%2Fwmp9iYVYu0d%2BlQgRHY%2Fct7yTT%2FTo4qQwjgNzexwDfg4kkk8QaiZd52OlP7qedY9FbHEIH%2FzEu9Y3xHVx%2F5%2FYNJS%2BClFVDjI1cwg7fv7fr%2BwAflCO4xqS43Kfzh3qieOXZg7JF4n0%2FBAoD63JqNTaFSOyJESEPtBoWhdsA5aHRryBR0j5hui%2BvwfOT1gKFM190q1NIcUKvrTPP2hi8qa4VqIpc7t%2BtPejSY9G6rvT0j5qmGlcyltJ5RnquzkEJb6Asq0%2FJWXGbgRQV6k977L8T2BXueX5O%2B0p%2FiHhAKgwav0d%2BkosVvGQX8eRi%2BZKxe3dHWnnZg9lMTkjw012yZYGHFTVxtOP1sTDe4IfXBjqkAfSZptZRV7YHj9qkRYluT8%2FnK%2Ft54EO2Uphnj517Qa9S4hYno0ju6uX9cYAZzCng6A9TxTDfBCAY2n%2Fc2LoT2641PtohXp9clRPzF93Zd5oWtfnUI9VcpRkt8xZ5Ce2vcWtmdYB9yhCRyosscn2FvajJ%2FKmFgOmUFMAjfbcgRtkDAUqdk7WEY7%2FRb%2FuRw1Dmt0cXY2Te6z4bYhyzHtaMVqRIOO5j&X-Amz-Signature=2ba5d0b5ee38e1b0228025644aae055e759e80e24e1175acef7aa4069db74270&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "expiry_time": "2026-10-28T15:55:08.125Z"
       }
     },
     "icon": null,
@@ -72,7 +72,7 @@
     "url": "https://app.notion.com/p/Guide-Laboratory-for-Cybernetics-Lab4C-2f5526fb7d8d8005a152c0fd94aab18c",
     "public_url": null,
     "archived": false,
-    "request_id": "935d09ef-ed53-4172-b290-af7497bc0dea"
+    "request_id": "1dac4477-e55c-4000-b584-c674bb31c5ff"
   },
   "blocks": [
     {
