@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T15:57:36.626Z",
+  "generatedAt": "2026-11-14T14:50:39.122Z",
   "pages": {
     "home": {
       "id": "2f5526fb7d8d8005a152c0fd94aab18c",
@@ -29,7 +29,7 @@
     },
     "matching": {
       "id": "2f5526fb7d8d80e89ea0d8ace193eef7",
-      "entryCount": 22
+      "entryCount": 23
     }
   }
 }

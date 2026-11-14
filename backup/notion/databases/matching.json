@@ -44,9 +44,346 @@
     "url": "https://app.notion.com/p/2f5526fb7d8d80e89ea0d8ace193eef7",
     "public_url": null,
     "archived": false,
-    "request_id": "6da0f06f-1055-4b29-8e43-2f7260496bc6"
+    "request_id": "97f31fec-b982-45e3-ba1c-9e5f8ef3008f"
   },
   "entries": [
+    {
+      "page": {
+        "object": "page",
+        "id": "417526fb-7d8d-8187-83dc-ce8f14c7daf0",
+        "created_time": "2026-11-13T22:51:00.000Z",
+        "last_edited_time": "2026-11-13T22:51:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "332526fb-7d8d-81f4-9bb4-002752c7b608"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "332526fb-7d8d-81f4-9bb4-002752c7b608"
+        },
+        "cover": null,
+        "icon": null,
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "2f5526fb-7d8d-807a-898e-000b5108f5e6",
+          "database_id": "2f5526fb-7d8d-80e8-9ea0-d8ace193eef7"
+        },
+        "in_trash": false,
+        "is_archived": false,
+        "is_locked": false,
+        "properties": {
+          "Email": {
+            "id": "%3AaWC",
+            "type": "email",
+            "email": "bencarpenter1985@gmail.com"
+          },
+          "Practitioner Status": {
+            "id": "%3BW%3AD",
+            "type": "status",
+            "status": {
+              "id": "b6f47401-cae9-47d0-90d2-9e7e3f0d11c1",
+              "name": "Not a Scholar",
+              "color": "default"
+            }
+          },
+          "Verification Code": {
+            "id": "%3FKkC",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Website": {
+            "id": "Jl%3CE",
+            "type": "url",
+            "url": null
+          },
+          "Domain": {
+            "id": "KOgJ",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Applying Cybernetics to the management of large, complex construction projects.  \nWith a focus on increasing agency, autonomy and learning for the individual construction workers.\nTo enable self-organization, self-regulation and self-governance. \nBy re-organizing communication channels, increasing access to information, and moving the industry away from the old scientific management paradigm by demonstrating the gains possible from a cybernetic paradigm of management. ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Applying Cybernetics to the management of large, complex construction projects.  \nWith a focus on increasing agency, autonomy and learning for the individual construction workers.\nTo enable self-organization, self-regulation and self-governance. \nBy re-organizing communication channels, increasing access to information, and moving the industry away from the old scientific management paradigm by demonstrating the gains possible from a cybernetic paradigm of management. ",
+                "href": null
+              }
+            ]
+          },
+          "Survey Feedback": {
+            "id": "Oo%3DL",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "The membership to relevant organization field seems not to allow for new additions. But this could be my own limitations. ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "The membership to relevant organization field seems not to allow for new additions. But this could be my own limitations. ",
+                "href": null
+              }
+            ]
+          },
+          "Code Expires At": {
+            "id": "S%3Cnn",
+            "type": "date",
+            "date": null
+          },
+          "What to Conserve": {
+            "id": "SdGV",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "The people. Both the workers and the managers. My approach is not intended to abolish the profession of management, but rather to demonstrate the limitations of the old model to manage the variety of a complex construction project. Also the craft knowledge, customs and practices of the workers. All are at risk of being lost due to the fractured and discontinuous nature of the project environment, and the industries reliance on statistics and published data. ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "The people. Both the workers and the managers. My approach is not intended to abolish the profession of management, but rather to demonstrate the limitations of the old model to manage the variety of a complex construction project. Also the craft knowledge, customs and practices of the workers. All are at risk of being lost due to the fractured and discontinuous nature of the project environment, and the industries reliance on statistics and published data. ",
+                "href": null
+              }
+            ]
+          },
+          "Effective Collaboration": {
+            "id": "VHk%7D",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "To pair strengths with weaknesses. My weakness is technology and traditional research methods. My experience in construction and construction management is extensive, but to bring the kind of agency I hope to bring will require a communication and information system designed to engage the workers, and enable Paskian style mutual understanding. \nBut, the workers must be protected from retaliation. This is a unfortunately a common occurrence inside the industry. ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "To pair strengths with weaknesses. My weakness is technology and traditional research methods. My experience in construction and construction management is extensive, but to bring the kind of agency I hope to bring will require a communication and information system designed to engage the workers, and enable Paskian style mutual understanding. \nBut, the workers must be protected from retaliation. This is a unfortunately a common occurrence inside the industry. ",
+                "href": null
+              }
+            ]
+          },
+          "Resend Count": {
+            "id": "YSwa",
+            "type": "number",
+            "number": null
+          },
+          "Time Commitment": {
+            "id": "%5Cl%5B_",
+            "type": "select",
+            "select": {
+              "id": "6f5260e4-4984-4222-9a7b-1b9df7ad6f18",
+              "name": "Mix of live conversation and email follow up",
+              "color": "brown"
+            }
+          },
+          "User Type": {
+            "id": "_ZHz",
+            "type": "select",
+            "select": {
+              "id": "65c8c2c3-9e7e-4548-bc17-579f1c55b436",
+              "name": "Practitioner",
+              "color": "blue"
+            }
+          },
+          "Submission Date": {
+            "id": "aIFv",
+            "type": "date",
+            "date": {
+              "start": "2026-11-13T22:51:00.000+00:00",
+              "end": null,
+              "time_zone": null
+            }
+          },
+          "Committed To": {
+            "id": "ayzX",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "The mental health crisis among the workers, and the rising suicide rate. This is a recent phenomena, however I believe it is an emergent consequence of the continued adherence to the old model of Hierarchical, top down, command and control management. \nThe industry has not evolved to adapt to the changing environment of high complexity. The results are visible in the industry's own literature. Continued dysfunction and decline. The current mental health crisis is only the most recent development. ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "The mental health crisis among the workers, and the rising suicide rate. This is a recent phenomena, however I believe it is an emergent consequence of the continued adherence to the old model of Hierarchical, top down, command and control management. \nThe industry has not evolved to adapt to the changing environment of high complexity. The results are visible in the industry's own literature. Continued dysfunction and decline. The current mental health crisis is only the most recent development. ",
+                "href": null
+              }
+            ]
+          },
+          "Keywords": {
+            "id": "kpPn",
+            "type": "multi_select",
+            "multi_select": [
+              {
+                "id": "5025dcdf-9eaa-439f-8319-b623aa150476",
+                "name": "Viable System Model",
+                "color": "blue"
+              },
+              {
+                "id": "331db287-191a-494d-93cf-db62145c720c",
+                "name": "Conversation Design",
+                "color": "pink"
+              },
+              {
+                "id": "a9f50e2a-4346-4e0f-bc2e-3fc23f805127",
+                "name": "Interaction Design",
+                "color": "default"
+              },
+              {
+                "id": "38c0c033-7010-4b68-af4f-9558f07f4d89",
+                "name": "2nd order cybernetics",
+                "color": "orange"
+              },
+              {
+                "id": "d22051bc-ed27-449d-871e-c82e847c9e96",
+                "name": "Constructivism",
+                "color": "pink"
+              },
+              {
+                "id": "710e2286-a73f-429b-aecd-9f54374b9603",
+                "name": "Creative Technology",
+                "color": "blue"
+              },
+              {
+                "id": "b99cecef-e8bf-4fbe-945b-e65a6417b713",
+                "name": "Community-Based Participatory Research",
+                "color": "gray"
+              },
+              {
+                "id": "a9c5812d-0789-45cc-a629-dda74e5fe5f9",
+                "name": "Cybernetics",
+                "color": "gray"
+              },
+              {
+                "id": "b14b168b-2d41-4fe5-923f-f71b9c2839a8",
+                "name": "AgileLearning",
+                "color": "gray"
+              }
+            ]
+          },
+          "About": {
+            "id": "oust",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "",
+                "href": null
+              }
+            ]
+          },
+          "Organization": {
+            "id": "s%60Xh",
+            "type": "select",
+            "select": {
+              "id": "353cf165-1bfb-4c04-9d01-f394918439cf",
+              "name": "American Society for Cybernetics",
+              "color": "yellow"
+            }
+          },
+          "Why Important": {
+            "id": "zec%7C",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "I am a project consultant. I have positioned myself to intervene into troubled projects. My framework is heavily influenced by Stafford Beer's Viable System Model, Bateson style Family Systems Therapy, as well as 1st and 2nd Order Cybernetics. It is an open ended framework, designed for worker initiated experimentation.  ",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "I am a project consultant. I have positioned myself to intervene into troubled projects. My framework is heavily influenced by Stafford Beer's Viable System Model, Bateson style Family Systems Therapy, as well as 1st and 2nd Order Cybernetics. It is an open ended framework, designed for worker initiated experimentation.  ",
+                "href": null
+              }
+            ]
+          },
+          "Name": {
+            "id": "title",
+            "type": "title",
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Ben Wood",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Ben Wood",
+                "href": null
+              }
+            ]
+          }
+        },
+        "url": "https://app.notion.com/p/Ben-Wood-417526fb7d8d818783dcce8f14c7daf0",
+        "public_url": null,
+        "archived": false
+      },
+      "blocks": []
+    },
     {
       "page": {
         "object": "page",
@@ -6703,7 +7040,7 @@
         "object": "page",
         "id": "2f5526fb-7d8d-8005-a351-ddcdf54cb4ae",
         "created_time": "2026-01-27T02:16:00.000Z",
-        "last_edited_time": "2026-04-29T13:40:00.000Z",
+        "last_edited_time": "2026-11-13T21:52:00.000Z",
         "created_by": {
           "object": "user",
           "id": "245d872b-594c-8106-8297-0002b46a489f"
@@ -6744,7 +7081,7 @@
               {
                 "type": "text",
                 "text": {
-                  "content": "659524",
+                  "content": "251936",
                   "link": null
                 },
                 "annotations": {
@@ -6755,7 +7092,7 @@
                   "code": false,
                   "color": "default"
                 },
-                "plain_text": "659524",
+                "plain_text": "251936",
                 "href": null
               }
             ]
@@ -6815,7 +7152,7 @@
             "id": "S%3Cnn",
             "type": "date",
             "date": {
-              "start": "2026-04-29T13:55:00.000+00:00",
+              "start": "2026-11-13T22:07:00.000+00:00",
               "end": null,
               "time_zone": null
             }
