@@ -15,8 +15,8 @@
     "cover": {
       "type": "file",
       "file": {
-        "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4bd526fb-7d8d-8194-a62d-000393ba02cd/10da3792-7a64-4720-89a3-4eb8d73a73d4/unnamed.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466XTEVCY5V%2F20261119%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20261119T170825Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEFAaCXVzLXdlc3QtMiJHMEUCIH8FlKW8tRXYnFPAEJ0hOYq9prP%2BPNXR%2Be5GJstjlMS4AiEA%2BF96aPp5UNaSz3dgZXaVh%2F6J2Ef6k1242tPXXKqwdWcq%2FwMIGBAAGgw2Mzc0MjMxODM4MDUiDOCfPoC1sZOjQ31cwyrcA5nrsAAkJgkil4uUCWYg3B0TO3X9QFzWRWk8L6opRkuo%2BnfPbvBz0QeyNvd2cQfIiRzNrbcRo0L3IobEIYysyvjvAdYcduinJS3Os1hQ7bk3RFP6hRfeEwoV4TcZwOjyLRQPFgH1Ais4yKae1LLDcj%2FpRvGDd7Sewj%2B3D5jTftEf2ig7xR2mJd8%2FYy9pibXafTv7Lq3PjyZUXNCYzf3887sGqWXfVVtyIKMotERzvB%2FeFIkI%2BCaJ1lguFQuWNTU8S2acgtcjXTWTB3MEbQppo7pjegFGTVXqSkd9Ax2NqQS02SnXx55%2F8OHSDzO0f9f2i0FAcnHCqQaxRWwzOKceTUABn05UumMhs%2FaLy1rjJxDj3bocKq3qVBaqxPhYAYh%2FBXA5retl8dfeticzytCbAiT8WCG2BRRl9tYK%2F%2FkREIAOozmGv52gB0mdWDCivirmO%2FArbqc4b1H2nlQ%2FbR%2F1r3QWvq9t%2FpV8s1Tr6Lxe2X4p3h4IaXXWqAMP78EIHHa8wVokmGegqj7u4RJBWQqBLM1DNRxpvj3OpohsSiVsn41ug3bNejBHXk%2F2PCmL4f55VK0XbDTpNBcjri9thycDLfenJ6wlmm%2FHD2cO5mHh1Wz555g%2BnN19gQX9nbOIMIyx%2FNcGOqUBpPveJvr4%2BeHOPHUosTmdDz1xXBiQv3wkrfqsAU4IUcCWla19qigHkj%2Fzbg9nfa3OffGL72xyiFmnYAmymRSHGWOU3upWpLcW9PMNxm07pZ%2Ft8kpHNcbAHD5Pg1ZpOY0uyU1qUBVa8xwqDabJGEMAClDfqTBui6Nknbt3%2F3cYqJ%2FrteRpNHYGGP5VMtpKiF25vcwBo%2F9Cqm3hwEeRe3jqnbsHPsfh&X-Amz-Signature=d234c872432c367bb2bb6e9cc80de5a6bfdfa79c5bf86e91b79e7189bf4ab83f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
-        "expiry_time": "2026-11-19T18:08:25.643Z"
+        "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4bd526fb-7d8d-8194-a62d-000393ba02cd/10da3792-7a64-4720-89a3-4eb8d73a73d4/unnamed.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466Z5ITPESB%2F20261120%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20261120T164615Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEGgaCXVzLXdlc3QtMiJHMEUCIQD2K%2BeBuDUE7luHZ46HnviF6ZSdx8wEKJIaizkd0rVU2wIgTnhtpDMohhjWZmr5X7yf52sMq0s6HDTN8wkR2FgH4Zgq%2FwMIMRAAGgw2Mzc0MjMxODM4MDUiDIYMwfBC54B5xNEqPSrcA%2FdkTFlSd5HcaQs7IsjzgC6VUOJjv7mDs3oC0lLoey%2F4i0X4m5gYr5n8pc%2Bjix%2BfkvlRcmnZ3D1lhgGoTbEQwH7Y7ZCpmvbYBPhwW2OXASPyUnmBNHW1mE4V5ciOVB1HEp5xdHbZPciLY5lA5ztgM50oiSETRUvKpEKrppltE4SOGy57PGskJZcFuw8Xlk8mFwfLhW2Cu%2FEnmtaDbD2UlApiemvXiqmgLVLilNbR%2Fo710uNH0sWtLazWeNEzJtoX5ngB1%2BB3goBQ1ZkTNew2TmgLGbuIqHvPHz6iHzkYqdEIyfh3SITJVNog4BzhFfg8NMCln3WjwLckRu5iW7Z57rl2Tgr1XxpWhcd8%2BAvbymf5jVAwV8RxAaQGuLhDaGV1LIgNlmXqAxpnBdbEbDbCi5f5UjGnbQnkBovq6nUIlOJI88XdL3Z0yVjlItYLOiWyHhQiLw2TcuofmIiiaRnSIj0IJs85eZ%2FzyfbkGHvrcFNRq7dU1Te2LUn2YRONkjx0ELwnfPp%2BG%2BkBZi9aRlSXiKj10Z2JmoWcFMhWRzAdsQ2my%2BtbR6p91v4s83MU%2FC%2Fwx7xJazDRiIHX7WXtJzomzndrDx7WBvWyw47S%2FZpavXM8v6IRWq%2BYnWCzU20fMI%2FhgdgGOqUBJ4xOy04wEdiSq4eZj955Y2dX7qZvaTOspzubTb00yTrIqycZGMQ9LOYs045DIqc5UFaBQOSckrKy7LGmOzN5HbT38vCzfUY50jhSZglyL1SdcnWRQps40gFp5WxIFi8NFTseZXUSA1XCAKHjtJaiAQFguNXuL8OvABWFFtD9ul4z5oqjoklh25a4npXPLMmirD6Dg0is7al23jxD%2FFAB5i4Pa0IQ&X-Amz-Signature=3738cd015e6e68cfa20b19ff32964ab4005a7e6939add09b5cd17d3b976252e7&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "expiry_time": "2026-11-20T17:46:15.704Z"
       }
     },
     "icon": null,
@@ -72,7 +72,7 @@
     "url": "https://app.notion.com/p/Guide-Laboratory-for-Cybernetics-Lab4C-2f5526fb7d8d8005a152c0fd94aab18c",
     "public_url": null,
     "archived": false,
-    "request_id": "b4cd7fd3-6166-41dc-86ca-714832db9d78"
+    "request_id": "d71460be-1df8-4c9f-ae18-fb4e1bfed1de"
   },
   "blocks": [
     {
