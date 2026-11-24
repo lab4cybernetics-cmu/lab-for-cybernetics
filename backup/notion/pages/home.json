@@ -15,8 +15,8 @@
     "cover": {
       "type": "file",
       "file": {
-        "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4bd526fb-7d8d-8194-a62d-000393ba02cd/10da3792-7a64-4720-89a3-4eb8d73a73d4/unnamed.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4664UROW65C%2F20261123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20261123T195515Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjELT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDVVEwBCEfoS8v274oGbmgXjofzBe2gN6ObIuctOq%2FQbAIhALEJFOvl41ZKf%2F49tHKWVg9uighrbPNlgcmd4bTUJIfYKv8DCHwQABoMNjM3NDIzMTgzODA1IgwPtdV%2BpodlRR14j5kq3APAJOwrxFXBNfWQsRIfuLZ36DROz8jE7mbETabNnia4Q3u3Ckx2rtRPMgllNJsyEoyfqStbZzWyaP07o2QJcLSBHB8mp8WFDJYefykH8rpT%2Blxu%2FoiR1ZAD4v%2FVqQtUe2RZnlPeHcg3e%2FxghKxLOUa70X5xTGHsMSlqsECklLC9SzjuyImFmWPy2An1%2Fsppb5oMh9nYQ%2BvQkNuC0VDqdOHdge9cUDV4hi8EuAe4EuI436kX6X2qhegjeJWTzfWdtxEp%2BmrF5DHja7f2aGICAAIsNoTs7GjnRqyYiVfN1SnKQU3VUlulZ50OUjj4Togw%2BDa2F%2BwY13UvR74TA6nTGdccwGa1l3%2FJ87ThATPFWBRPZtzkLoP7aSJWM%2FAPYf8bYSfx582Q9y1rZKgg%2FKqTRzhI%2FNIANPKyXExqJUFn%2BJNByziPHD1dwir%2BhFGCuD1vYRroBb7pFsQ08se4F6czUbe58L1yKuoO9sLZvo7FhA2nYKl7I7bGYNFFhn3Y2XOdiGU0HqfHEWjSs%2FGkwPNOKPgXAJ9%2BY%2BM9rNLiEX1zkRA5DucqzF%2BicIm6yv%2B49Q%2FgnDuQIvBrWJPzFBYbBnst9ZpoA3WUc4a6pKlJ2uoG%2BJnV1pFp3QT%2BWGJDEc7TNzCjqJLYBjqkARVPJNyWc2%2F27OJjYsAWkDcETQWCdvu7Kv9aqhTxCRBjWGAlyqk6dEzAHPFvty%2BgQPQASRF08qVifm6LH43D%2F6r%2Fd88BkcUow1TfI8dZfhBveqFiJEK8jf5vIGHp7zp%2BopWWhhnG58P%2FWz3pmEHsenZGjNJt7SamyqwtksCqOhCBa%2BDbkyyayBkWBdHuGGLovDkVbkCluIy2J0fpDB7Ry9FExH%2BQ&X-Amz-Signature=b115a011eb716ccbfc8411365c2290cad5246d0d512ff5b90f641c1b55981861&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
-        "expiry_time": "2026-11-23T20:55:15.442Z"
+        "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/4bd526fb-7d8d-8194-a62d-000393ba02cd/10da3792-7a64-4720-89a3-4eb8d73a73d4/unnamed.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4664EQIMUBI%2F20261124%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20261124T192351Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIC%2B9iXv%2B24xIa5ayZMHkw3YaN6wjxZaVq%2BBnaUa%2BQILqAiEA5Xl%2Fm4j%2Frrb8XMCbG50D4LfXXMLAx7g2GCP797h%2FsQcqiAQIlP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDPouPngVLYm5HfgX3CrcA%2Bsu0TnnTocOyoJTwR8A2Iai79dRMZJ8pzhaX5hJ7vLuqRDvYsRg6o8EDjqv7x6R1AHiLs3SyYkgm1bWEkI8lNkhVd%2BNgCFxhaS%2B7yBUNTbnjv3TTyR1N4i9FLUP47vqEj2Zi%2BhY1UTF1DT3rYBjY5c5X34XbzpVtMD9m2ic%2FxyGSeVQC9hJgKll511fgIblhyPl1%2BFCgbtGiemtU5aEMsV5Mi15bpttCkjIr38KXOCKsmE6yBt9cYWMfJnCYNUspCJb%2FVuGIdIgnX9eOhpSRsWnuEMHwbkBOfXocJa8eunSIQUBKmSnR5fWR5iWXK15Fbt%2Fb9w%2FRCi6Pg67DdczIldDkAgboOrXyLWZyeg9xY2mVvZ%2By%2F3DXH4HkjoORUGUHFveSluKfgmvcXdceE7DQfoBAA2dQwTkKMWUkOpzCBP2M8JRpK8N5AOi0zQCXJgd2xlDHrMOLg4HD3DuLVzfSZEXdI%2BALMiyiwoXEVYoAbld0f9GQk3CvxSIgx4QKL3I3lyBTTyOD1nsunjuGSCELxY4%2FyuD7MIaDYrxYH1HmZkd6q1za7aYTTOrdJPolQv4HSr4jDbIJbyfsThUJLSqcJC3jTl3s96Ejd2HmVuAo3HEgVOT1DmIfX5HNfg4MPDGl9gGOqUBmTEK%2BJ8ottObBfwEVxZAM5Vtgos8t1VSE0qhndticzn0hSESM5fSrSWFVvwhwBiM4ZYV351kGPKeMxUst02GKT%2FJ%2BoWQWwal1VDrTtPF%2BXGdN%2FCydBNIycD%2Bm4X3o%2FgO3wUpCbpuDhkBgkuXyrfHtYvi8%2Bgq3daJ23ruIIPHoGS%2B943Kp84fQMAqQnB0%2BjbMDDpdxc4mxdKh9plustLzeR03nePx&X-Amz-Signature=c378172d74bb150ae06e39cb70f5053dc691645e3a32420a7026f955e0df27c5&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "expiry_time": "2026-11-24T20:23:51.512Z"
       }
     },
     "icon": null,
@@ -72,7 +72,7 @@
     "url": "https://app.notion.com/p/Guide-Laboratory-for-Cybernetics-Lab4C-2f5526fb7d8d8005a152c0fd94aab18c",
     "public_url": null,
     "archived": false,
-    "request_id": "2844099c-9297-4bd1-8e34-9eab44135673"
+    "request_id": "7533ce10-dbad-412a-acfa-05e2c56ff04d"
   },
   "blocks": [
     {
